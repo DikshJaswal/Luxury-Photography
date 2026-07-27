@@ -1,0 +1,88 @@
+const portfolioData = [
+  {
+    id: 1,
+    title: "Aarav & Kiara",
+    category: "mountains",
+    location: "Manali, Himachal Pradesh",
+    image: "https://picsum.photos/id/1018/800/1000",
+  },
+  {
+    id: 2,
+    title: "Rohan & Ananya",
+    category: "waterfalls",
+    location: "Jogini Falls, Himachal Pradesh",
+    image: "https://picsum.photos/id/1015/800/1000",
+  },
+  {
+    id: 3,
+    title: "Aditya & Meera",
+    category: "river-side",
+    location: "Kasol, Himachal Pradesh",
+    image: "https://picsum.photos/id/1016/800/1000",
+  },
+  {
+    id: 4,
+    title: "Karan & Ishita",
+    category: "luxury-resorts",
+    location: "The Oberoi Udaivilas, Udaipur",
+    image: "https://picsum.photos/id/1025/800/1000",
+  },
+  {
+    id: 5,
+    title: "Vihaan & Siya",
+    category: "forest",
+    location: "Shimla, Himachal Pradesh",
+    image: "https://picsum.photos/id/1039/800/1000",
+  },
+  {
+    id: 6,
+    title: "Arjun & Kavya",
+    category: "sunrise",
+    location: "Spiti Valley",
+    image: "https://picsum.photos/id/1043/800/1000",
+  },
+  {
+    id: 7,
+    title: "Yash & Aanya",
+    category: "sunset",
+    location: "Goa Beach",
+    image: "https://picsum.photos/id/1050/800/1000",
+  },
+  {
+    id: 8,
+    title: "Kabir & Tara",
+    category: "drone",
+    location: "Jaipur",
+    image: "https://picsum.photos/id/1060/800/1000",
+  },
+  {
+    id: 9,
+    title: "Dev & Riya",
+    category: "cinematic-films",
+    location: "Leh, Ladakh",
+    image: "https://picsum.photos/id/1068/800/1000",
+  },
+  {
+    id: 10,
+    title: "Ayaan & Naina",
+    category: "mountains",
+    location: "Kullu Valley",
+    image: "https://picsum.photos/id/1074/800/1000",
+  },
+  {
+    id: 11,
+    title: "Neil & Zara",
+    category: "forest",
+    location: "Nainital",
+    image: "https://picsum.photos/id/1084/800/1000",
+  },
+  {
+    id: 12,
+    title: "Aryan & Myra",
+    category: "luxury-resorts",
+    location: "Rambagh Palace, Jaipur",
+    image: "https://picsum.photos/id/1080/800/1000",
+  },
+];
+
+export default portfolioData;

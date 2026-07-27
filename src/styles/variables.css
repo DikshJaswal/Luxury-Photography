@@ -1,0 +1,51 @@
+:root{
+
+  /* ========= Colors ========= */
+
+  --color-background:#0F0F0F;
+  --color-surface:#171717;
+  --color-surface-light:#202020;
+
+  --color-primary:#C8A96A;
+  --color-primary-hover:#D6B87D;
+
+  --color-white:#FFFFFF;
+
+  --color-text:#E5E5E5;
+
+  --color-text-light:#B8B8B8;
+
+  --color-border:#2B2B2B;
+
+
+  /* ========= Radius ========= */
+
+  --radius-sm:10px;
+
+  --radius-md:16px;
+
+  --radius-lg:24px;
+
+  --radius-xl:32px;
+
+
+  /* ========= Shadows ========= */
+
+  --shadow-soft:
+    0 15px 35px rgba(0,0,0,.18);
+
+  --shadow-large:
+    0 25px 60px rgba(0,0,0,.30);
+
+
+  /* ========= Transition ========= */
+
+  --transition:
+    all .35s ease;
+
+
+  /* ========= Layout ========= */
+
+  --container-width:1320px;
+
+}
