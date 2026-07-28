@@ -11,7 +11,18 @@ export const COMPANY = {
 
   address: "Shimla, Himachal Pradesh",
 
-  instagram: "#",
-  youtube: "#",
-  facebook: "#",
+  instagram: "https://instagram.com/luxepreweddings",
+  youtube: "https://youtube.com/@luxepreweddings",
+  facebook: "https://facebook.com/luxepreweddings",
+  pinterest: "https://pinterest.com/luxepreweddings",
 };
+
+export const DEMO_MEDIA = {
+  heroVideo:
+    "https://videos.pexels.com/video-files/3015510/3015510-hd_1920_1080_24fps.mp4",
+  heroPoster:
+    "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=2200&q=80",
+};
+
+export const buildWhatsAppLink = (message) =>
+  `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(message)}`;

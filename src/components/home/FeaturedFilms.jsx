@@ -12,7 +12,7 @@ function FeaturedFilms() {
       <SectionHeading
         badge="Featured Films"
         title="Love Stories Captured In Motion"
-        description="Experience wedding moments through beautifully crafted cinematic films."
+        description="See pre-wedding stories unfold through cinematic films, movement, music, and real chemistry."
       />
 
       <div className="grid gap-8 md:grid-cols-2">

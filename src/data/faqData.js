@@ -2,37 +2,32 @@ const faqData = [
   {
     question: "How far in advance should we book?",
     answer:
-      "Most couples reserve their wedding date 6–12 months in advance, especially during peak wedding season.",
+      "Most couples reserve their pre-wedding shoot 2-6 months in advance, especially for mountain, resort, or destination locations.",
   },
-
   {
-    question: "Do you travel for destination weddings?",
+    question: "Do you travel for destination shoots?",
     answer:
-      "Yes. We specialize in destination weddings across India and international locations.",
+      "Yes. We plan destination pre-wedding shoots across India and can guide you on travel, timing, and location permissions.",
   },
-
   {
     question: "How many edited photographs do we receive?",
     answer:
-      "Every wedding is unique, but couples typically receive between 500 and 1000 professionally edited images.",
+      "Every shoot is different, but couples usually receive a curated set of professionally edited images based on the selected experience.",
   },
-
   {
     question: "When will we receive our gallery?",
     answer:
-      "Wedding galleries are usually delivered within 4–8 weeks after the event.",
+      "Demo timelines are listed as 2-4 weeks for photos and 4-6 weeks for cinematic films, depending on the shoot scope.",
   },
-
   {
-    question: "Do you provide cinematic wedding films?",
+    question: "Do you provide cinematic films?",
     answer:
-      "Absolutely. We create emotional cinematic wedding films that beautifully preserve your memories.",
+      "Yes. We create cinematic pre-wedding films with direction, music, drone shots, and storytelling edits.",
   },
-
   {
-    question: "Can packages be customized?",
+    question: "Can experiences be customized?",
     answer:
-      "Yes. Every celebration is unique, so we tailor our services according to your vision and requirements.",
+      "Yes. Every quote is tailored around your location, dates, outfits, team size, drone needs, and film requirements.",
   },
 ];
 

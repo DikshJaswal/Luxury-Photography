@@ -3,10 +3,10 @@ const contactFormFields = [
   "Partner's Name",
   "Email Address",
   "Phone Number",
-  "Wedding Date",
-  "Wedding Location",
+  "Shoot Date",
+  "Shoot Location",
   "Photography Service",
-  "Tell Us About Your Wedding",
+  "Tell Us About Your Shoot",
 ];
 
 export default contactFormFields;

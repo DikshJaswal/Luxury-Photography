@@ -8,11 +8,11 @@ import testimonials from "../../data/testimonialsData";
 
 function Testimonials() {
   return (
-    <Section>
+    <Section className="bg-[#0b0b0b]">
       <SectionHeading
         badge="Testimonials"
-        title="Kind Words From Our Couples"
-        description="Nothing means more to us than preserving memories that couples will treasure forever."
+        title="Loved By Couples Across India"
+        description="Every story we capture is built on trust, creativity, and unforgettable memories."
       />
 
       <div className="grid gap-8 lg:grid-cols-3">
@@ -26,11 +26,14 @@ function Testimonials() {
               delay: index * 0.15,
             }}
             viewport={{ once: true }}
-            className="group rounded-2xl border border-white/10 bg-white/5 p-8 backdrop-blur-md transition-all duration-300 hover:-translate-y-2 hover:border-[var(--color-primary)]"
+            className="group rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition duration-500 hover:-translate-y-2 hover:border-[var(--color-primary)]"
           >
-            <div className="mb-6 flex gap-1 text-[var(--color-primary)]">
-              {[...Array(5)].map((_, i) => (
-                <FaStar key={i} />
+            <div className="mb-6 flex">
+              {[...Array(testimonial.rating)].map((_, i) => (
+                <FaStar
+                  key={i}
+                  className="mr-1 text-[var(--color-primary)]"
+                />
               ))}
             </div>
 
@@ -46,11 +49,11 @@ function Testimonials() {
               />
 
               <div>
-                <h3 className="font-serif text-2xl text-white">
+                <h4 className="font-semibold text-white">
                   {testimonial.name}
-                </h3>
+                </h4>
 
-                <p className="mt-1 text-sm uppercase tracking-[0.25em] text-neutral-500">
+                <p className="text-sm text-neutral-400">
                   {testimonial.location}
                 </p>
               </div>

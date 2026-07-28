@@ -1,12 +1,24 @@
-import PagePlaceholder from "../components/common/PagePlaceholder";
+import AboutHero from "../components/about/AboutHero";
+import StorySection from "../components/about/StorySection";
+import Philosophy from "../components/about/Philosophy";
+import Achievements from "../components/about/Achievements";
+import MeetPhotographer from "../components/about/MeetPhotographer";
+import BehindTheScenes from "../components/about/BehindTheScenes";
+import TestimonialsHighlight from "../components/about/TestimonialsHighlight";
+import AboutCTA from "../components/about/AboutCTA";
 
 function About() {
   return (
-    <PagePlaceholder
-      badge="About"
-      title="The Story Behind ShutterInk"
-      description="Meet the passionate storytellers capturing timeless moments with creativity and emotion."
-    />
+    <>
+      <AboutHero />
+      <StorySection />
+      <Philosophy />
+      <Achievements />
+      <MeetPhotographer />
+      <BehindTheScenes />
+      <TestimonialsHighlight />
+      <AboutCTA />
+    </>
   );
 }
 

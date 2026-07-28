@@ -11,13 +11,13 @@ const features = [
     icon: <FaCamera />,
     title: "Candid Photography",
     description:
-      "Real emotions captured naturally without interrupting your celebration.",
+      "Real chemistry captured naturally with gentle direction and space to move.",
   },
   {
     icon: <FaVideo />,
     title: "Cinematic Films",
     description:
-      "Wedding films crafted with storytelling, emotion, and timeless visuals.",
+      "Cinematic pre-wedding films crafted with emotion, movement, and timeless visuals.",
   },
   {
     icon: <FaHeart />,
@@ -45,7 +45,7 @@ function WhyChooseUs() {
       <SectionHeading
         badge="Why Choose Us"
         title="More Than Photography"
-        description="We don't just document weddings—we preserve emotions, traditions, and unforgettable moments."
+        description="We plan cinematic pre-wedding stories with location guidance, creative direction, and honest emotion."
       />
 
       <div className="grid items-center gap-16 lg:grid-cols-2">
@@ -58,7 +58,7 @@ function WhyChooseUs() {
         >
           <img
             src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80"
-            alt="Wedding"
+            alt="Couple during a pre-wedding shoot"
             className="h-[700px] w-full rounded-2xl object-cover"
           />
         </motion.div>
@@ -99,9 +99,9 @@ function WhyChooseUs() {
               </motion.div>
             ))}
 
-            <Link to="/book">
+            <Link to="/contact">
                 <Button variant="primary">
-                    Book Consultation
+                    Get Free Consultation
                 </Button>
             </Link>
           </div>

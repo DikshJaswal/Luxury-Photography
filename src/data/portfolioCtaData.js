@@ -6,7 +6,7 @@ const portfolioCtaData = {
   description:
     "From intimate moments to grand celebrations, let's create timeless memories that you'll cherish for generations.",
 
-  primaryButton: "Book Consultation",
+  primaryButton: "Get Free Consultation",
 
   secondaryButton: "Contact Us",
 };

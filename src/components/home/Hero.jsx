@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { DEMO_MEDIA } from "../../utils/constants";
 
 function Hero() {
   return (
@@ -12,10 +13,11 @@ function Hero() {
         muted
         loop
         playsInline
+        poster={DEMO_MEDIA.heroPoster}
         className="absolute inset-0 h-full w-full object-cover brightness-90 contrast-110 saturate-75 transition-transform duration-[20000ms] scale-105"
       >
         <source
-          src="https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/720/Big_Buck_Bunny_720_10s_1MB.mp4"
+          src={DEMO_MEDIA.heroVideo}
           type="video/mp4"
         />
       </motion.video>

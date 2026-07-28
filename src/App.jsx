@@ -3,6 +3,8 @@ import AppRoutes from "./routes/AppRoutes";
 
 import ScrollToTop from "./components/common/ScrollToTop";
 import FloatingActions from "./components/common/FloatingActions";
+import Footer from "./components/layout/Footer";
+import ExitIntentPopup from "./components/common/ExitIntentPopup";
 
 function App() {
   return (
@@ -13,7 +15,10 @@ function App() {
 
       <AppRoutes />
 
+      <Footer />
+
       <FloatingActions />
+      <ExitIntentPopup />
     </>
   );
 }

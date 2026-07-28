@@ -1,17 +1,17 @@
 const youtubeVideos = [
   {
-    title: "Destination Wedding Film",
-    videoId: "VIDEO_ID_1",
+    title: "Mountain Love Story",
+    embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
   },
 
   {
-    title: "Luxury Wedding Highlights",
-    videoId: "VIDEO_ID_2",
+    title: "Cinematic Couple Film",
+    embedUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ",
   },
 
   {
-    title: "Pre Wedding Story",
-    videoId: "VIDEO_ID_3",
+    title: "Behind the Scenes",
+    embedUrl: "https://www.youtube.com/embed/tgbNymZ7vqY",
   },
 ];
 

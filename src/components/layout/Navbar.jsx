@@ -6,6 +6,7 @@ import Container from "../common/Container";
 import Button from "../common/Button";
 
 import navigation from "../../data/navigation";
+import { COMPANY } from "../../utils/constants";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -66,11 +67,13 @@ function Navbar() {
 
           {/* CTA */}
           <div className="hidden justify-self-end lg:block">
-            <NavLink to="/book">
-                <Button className="px-7 py-3">
-                    Book Consultation
-                </Button>
-            </NavLink>
+            <a
+              href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("Hi, I would like to book a pre-wedding consultation.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="px-7 py-3">Book on WhatsApp</Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -111,11 +114,14 @@ function Navbar() {
             </NavLink>
           ))}
 
-          <NavLink to="/book" onClick={() => setMenuOpen(false)}>
-            <Button className="mt-2 w-full">
-                Book Consultation
-            </Button>
-          </NavLink>
+          <a
+            href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("Hi, I would like to book a pre-wedding consultation.")}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+          >
+            <Button className="mt-2 w-full">Book on WhatsApp</Button>
+          </a>
         </Container>
       </div>
     </header>

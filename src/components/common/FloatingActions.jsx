@@ -5,6 +5,7 @@ import {
 } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
+import { COMPANY, buildWhatsAppLink } from "../../utils/constants";
 
 function FloatingActions() {
   const [showTop, setShowTop] = useState(false);
@@ -49,7 +50,7 @@ function FloatingActions() {
 
       {/* Call */}
       <a
-        href="tel:+919999999999"
+        href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
         className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-black/80 text-white shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-black"
       >
         <FiPhone size={22} />
@@ -61,7 +62,7 @@ function FloatingActions() {
 
       {/* WhatsApp */}
       <a
-        href="https://wa.me/919999999999"
+        href={buildWhatsAppLink("Hi, I want to check availability for a pre-wedding shoot.")}
         target="_blank"
         rel="noopener noreferrer"
         className="group relative flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-all duration-300 hover:-translate-y-1 hover:scale-105"

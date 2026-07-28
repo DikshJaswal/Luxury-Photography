@@ -10,7 +10,7 @@ const whyChooseData = [
     icon: FaCameraRetro,
     title: "Artistic Vision",
     description:
-      "Every wedding is captured with creativity, elegance, and timeless storytelling that never goes out of style.",
+      "Every pre-wedding shoot is captured with creativity, elegance, and timeless storytelling that never goes out of style.",
   },
   {
     id: 2,
@@ -24,7 +24,7 @@ const whyChooseData = [
     icon: FaVideo,
     title: "Cinematic Films",
     description:
-      "Beautiful wedding films crafted with emotion, music, and storytelling to relive your special day forever.",
+      "Beautiful pre-wedding films crafted with emotion, music, and storytelling to relive your story forever.",
   },
 ];
 

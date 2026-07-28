@@ -2,7 +2,7 @@ const contactData = {
   title: "Let's Create Something Beautiful Together",
 
   subtitle:
-    "Whether you're planning an intimate celebration or a grand destination wedding, we'd love to hear your story.",
+    "Whether you're planning a mountain shoot, resort story, or grand destination pre-wedding film, we'd love to hear your story.",
 
   phone: "+91 98765 43210",
 

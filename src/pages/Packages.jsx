@@ -1,12 +1,18 @@
-import PagePlaceholder from "../components/common/PagePlaceholder";
+import PackagesHero from "../components/packages/PackagesHero";
+import PricingCards from "../components/packages/PricingCards";
+import AddOns from "../components/packages/AddOns";
+import FAQ from "../components/packages/FAQ";
+import PackagesCTA from "../components/packages/PackagesCTA";
 
 function Packages() {
   return (
-    <PagePlaceholder
-      badge="Packages"
-      title="Tailored Wedding Experiences"
-      description="Every couple is unique. Request a personalized quote crafted for your celebration."
-    />
+    <>
+      <PackagesHero />
+      <PricingCards />
+      <AddOns />
+      <FAQ />
+      <PackagesCTA />
+    </>
   );
 }
 

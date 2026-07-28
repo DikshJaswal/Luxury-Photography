@@ -1,12 +1,569 @@
-import PagePlaceholder from "../components/common/PagePlaceholder";
+import {
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  Camera,
+  Send,
+  ExternalLink,
+} from "lucide-react";
+import { Link } from "react-router-dom";
+import { COMPANY } from "../utils/constants";
 
 function Contact() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const data = new FormData(event.currentTarget);
+    const message = [
+      "Hi, I want to enquire about a luxury pre-wedding shoot.",
+      `Name: ${data.get("name") || "-"}`,
+      `Partner: ${data.get("partner") || "-"}`,
+      `Email: ${data.get("email") || "-"}`,
+      `Phone: ${data.get("phone") || "-"}`,
+      `Preferred date: ${data.get("date") || "-"}`,
+      `Location: ${data.get("location") || "-"}`,
+      `Budget: ${data.get("budget") || "-"}`,
+      `Vision: ${data.get("message") || "-"}`,
+    ].join("\n");
+
+    window.open(
+      `https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent(message)}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+    event.currentTarget.reset();
+  };
+
   return (
-    <PagePlaceholder
-      badge="Contact"
-      title="Let's Create Something Beautiful Together"
-      description="Reach out to discuss your wedding, availability, or destination plans."
-    />
+    <main className="bg-[#0B0B0B] text-white">
+
+      {/* ================= HERO ================= */}
+
+      <section className="relative flex min-h-screen items-center overflow-hidden">
+
+        <div className="absolute inset-0">
+
+          <img
+            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2070&auto=format&fit=crop"
+            alt="Luxury pre-wedding photographer"
+            className="h-full w-full object-cover"
+          />
+
+          <div className="absolute inset-0 bg-black/60" />
+
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />
+
+        </div>
+
+        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl items-center px-6 lg:px-10">
+
+          <div className="max-w-4xl">
+
+            <span className="inline-flex rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-5 py-2 text-xs uppercase tracking-[0.35em] text-[var(--color-primary)]">
+
+              Contact
+
+            </span>
+
+            <h1 className="mt-8 font-serif text-5xl font-light leading-tight sm:text-6xl lg:text-8xl">
+
+              Let's Tell
+              <br />
+
+              <span className="text-[var(--color-primary)]">
+
+                Your Story
+
+              </span>
+
+            </h1>
+
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-neutral-300">
+
+              Tell us about your vision, dream location, and preferred dates.
+              We&apos;ll help shape a cinematic pre-wedding story around you.
+
+            </p>
+
+            <div className="mt-12 flex flex-wrap gap-5">
+
+              <a
+                href="#contact-form"
+                className="inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] px-8 py-4 font-medium text-black transition hover:scale-105"
+              >
+
+                Start Your Inquiry
+
+                <ArrowRight size={18} />
+
+              </a>
+
+              <Link
+                to="/portfolio"
+                className="rounded-full border border-white/20 bg-white/5 px-8 py-4 font-medium backdrop-blur-md transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+              >
+
+                View Portfolio
+
+              </Link>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= CONTACT CARDS ================= */}
+
+      <section className="py-24">
+
+        <div className="mx-auto grid max-w-7xl gap-8 px-6 md:grid-cols-2 xl:grid-cols-4 lg:px-10">
+
+          <div className="rounded-[28px] border border-white/10 bg-white/[0.04] p-8">
+
+            <Mail
+              className="text-[var(--color-primary)]"
+              size={32}
+            />
+
+            <h3 className="mt-6 font-serif text-2xl">
+
+              Email
+
+            </h3>
+
+            <p className="mt-4 text-neutral-400">
+
+              {COMPANY.email}
+
+            </p>
+
+          </div>
+
+          <div className="rounded-[28px] border border-white/10 bg-white/[0.04] p-8">
+
+            <Phone
+              className="text-[var(--color-primary)]"
+              size={32}
+            />
+
+            <h3 className="mt-6 font-serif text-2xl">
+
+              Phone
+
+            </h3>
+
+            <p className="mt-4 text-neutral-400">
+
+              {COMPANY.phone}
+
+            </p>
+
+          </div>
+
+          <div className="rounded-[28px] border border-white/10 bg-white/[0.04] p-8">
+
+            <MapPin
+              className="text-[var(--color-primary)]"
+              size={32}
+            />
+
+            <h3 className="mt-6 font-serif text-2xl">
+
+              Studio
+
+            </h3>
+
+            <p className="mt-4 text-neutral-400">
+
+              {COMPANY.address}, India
+
+            </p>
+
+          </div>
+
+          <div className="rounded-[28px] border border-white/10 bg-white/[0.04] p-8">
+
+            <Clock
+              className="text-[var(--color-primary)]"
+              size={32}
+            />
+
+            <h3 className="mt-6 font-serif text-2xl">
+
+              Response
+
+            </h3>
+
+            <p className="mt-4 text-neutral-400">
+
+              Within 24 Hours
+
+            </p>
+
+          </div>
+
+        </div>
+
+      </section>
+
+            {/* ================= CONTACT FORM ================= */}
+
+      <section
+        id="contact-form"
+        className="pb-24"
+      >
+        <div className="mx-auto grid max-w-7xl gap-16 px-6 lg:grid-cols-[1.25fr_0.75fr] lg:px-10">
+
+          {/* Form */}
+
+          <div className="rounded-[36px] border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl md:p-10">
+
+            <span className="inline-flex rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-5 py-2 text-xs uppercase tracking-[0.35em] text-[var(--color-primary)]">
+              Pre-Wedding Inquiry
+            </span>
+
+            <h2 className="mt-8 font-serif text-4xl font-light text-white lg:text-5xl">
+              Tell Us About
+              <span className="text-[var(--color-primary)]">
+                {" "}Your Story
+              </span>
+            </h2>
+
+            <p className="mt-6 max-w-2xl leading-8 text-neutral-400">
+              Share a few details and we&apos;ll get back within one business day
+              with availability and a custom quote.
+            </p>
+
+            <form
+              onSubmit={handleSubmit}
+              className="mt-12 space-y-6"
+            >
+
+              <div className="grid gap-6 md:grid-cols-2">
+
+                <input
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Your Name"
+                  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 outline-none transition focus:border-[var(--color-primary)]"
+                />
+
+                <input
+                  name="partner"
+                  type="text"
+                  placeholder="Partner's Name"
+                  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 outline-none transition focus:border-[var(--color-primary)]"
+                />
+
+              </div>
+
+              <div className="grid gap-6 md:grid-cols-2">
+
+                <input
+                  name="email"
+                  type="email"
+                  required
+                  placeholder="Email Address"
+                  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 outline-none transition focus:border-[var(--color-primary)]"
+                />
+
+                <input
+                  name="phone"
+                  type="tel"
+                  required
+                  placeholder="Phone Number"
+                  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 outline-none transition focus:border-[var(--color-primary)]"
+                />
+
+              </div>
+
+              <div className="grid gap-6 md:grid-cols-2">
+
+                <input
+                  name="date"
+                  type="date"
+                  required
+                  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 outline-none transition focus:border-[var(--color-primary)]"
+                />
+
+                <input
+                  name="location"
+                  type="text"
+                  required
+                  placeholder="Preferred Location / Venue"
+                  className="rounded-2xl border border-white/10 bg-white/5 px-5 py-4 outline-none transition focus:border-[var(--color-primary)]"
+                />
+
+              </div>
+
+              <select
+                name="budget"
+                className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 outline-none transition focus:border-[var(--color-primary)]"
+              >
+                <option>Budget Range</option>
+                <option>Under Rs. 50,000</option>
+                <option>Rs. 50,000 - Rs. 1,00,000</option>
+                <option>Rs. 1,00,000 - Rs. 2,00,000</option>
+                <option>Rs. 2,00,000+</option>
+              </select>
+
+              <textarea
+                name="message"
+                rows={7}
+                placeholder="Tell us about your shoot vision, location, dates, and anything you would love us to know..."
+                className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 outline-none transition focus:border-[var(--color-primary)]"
+              />
+
+              <button
+                type="submit"
+                className="inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] px-8 py-4 font-medium text-black transition hover:scale-105"
+              >
+                Send Inquiry
+
+                <Send size={18} />
+
+              </button>
+
+            </form>
+
+          </div>
+
+          {/* Studio Details */}
+
+          <div className="space-y-8">
+
+            <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-8">
+
+              <Camera
+                className="text-[var(--color-primary)]"
+                size={34}
+              />
+
+              <h3 className="mt-6 font-serif text-3xl">
+
+                Why Couples Choose Us
+
+              </h3>
+
+              <p className="mt-6 leading-8 text-neutral-400">
+
+                Every shoot is approached as a story, balancing cinematic
+                portraits with natural moments, movement, and genuine emotion.
+
+              </p>
+
+            </div>
+
+            <div className="rounded-[32px] border border-white/10 bg-white/[0.04] p-8">
+
+              <h4 className="text-sm uppercase tracking-[0.35em] text-[var(--color-primary)]">
+
+                Availability
+
+              </h4>
+
+              <div className="mt-6 space-y-5">
+
+                <div className="flex justify-between border-b border-white/10 pb-4">
+
+                  <span className="text-neutral-400">
+                    Shoots Per Year
+                  </span>
+
+                  <span>25</span>
+
+                </div>
+
+                <div className="flex justify-between border-b border-white/10 pb-4">
+
+                  <span className="text-neutral-400">
+                    Destination Shoots
+                  </span>
+
+                  <span>Worldwide</span>
+
+                </div>
+
+                <div className="flex justify-between border-b border-white/10 pb-4">
+
+                  <span className="text-neutral-400">
+                    Response Time
+                  </span>
+
+                  <span>&lt; 24 Hours</span>
+
+                </div>
+
+                <div className="flex justify-between">
+
+                  <span className="text-neutral-400">
+                    Consultation
+                  </span>
+
+                  <span>Complimentary</span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+            {/* ================= MAP ================= */}
+
+      <section className="pb-24">
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+
+          <div className="mb-12 text-center">
+
+            <span className="inline-flex rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-5 py-2 text-xs uppercase tracking-[0.35em] text-[var(--color-primary)]">
+              Studio Location
+            </span>
+
+            <h2 className="mt-6 font-serif text-4xl font-light lg:text-5xl">
+              Visit Our
+              <span className="text-[var(--color-primary)]">
+                {" "}Studio
+              </span>
+            </h2>
+
+            <p className="mx-auto mt-6 max-w-2xl leading-8 text-neutral-400">
+              Whether you are planning locally or travelling for your shoot,
+              we&apos;d love to discuss your vision over coffee.
+            </p>
+
+          </div>
+
+          <div className="overflow-hidden rounded-[36px] border border-white/10">
+
+            <iframe
+              title="Studio Location"
+              src="https://www.google.com/maps?q=Shimla,+Himachal+Pradesh&output=embed"
+              className="h-[550px] w-full"
+              loading="lazy"
+            />
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= INSTAGRAM CTA ================= */}
+
+      <section className="pb-24">
+
+        <div className="mx-auto max-w-7xl px-6 lg:px-10">
+
+          <div className="overflow-hidden rounded-[40px] border border-white/10 bg-gradient-to-br from-white/[0.05] to-white/[0.02] p-10 md:p-16">
+
+            <div className="grid items-center gap-12 lg:grid-cols-2">
+
+              <div>
+
+                <span className="inline-flex rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-5 py-2 text-xs uppercase tracking-[0.35em] text-[var(--color-primary)]">
+
+                  Follow Along
+
+                </span>
+
+                <h2 className="mt-8 font-serif text-4xl font-light leading-tight lg:text-6xl">
+
+                  Daily Moments.
+                  <br />
+
+                  <span className="text-[var(--color-primary)]">
+
+                    Timeless Stories.
+
+                  </span>
+
+                </h2>
+
+                <p className="mt-8 max-w-xl leading-8 text-neutral-400">
+
+                  Discover behind-the-scenes moments, destination shoots,
+                  editorial portraits, and our latest love stories on Instagram.
+
+                </p>
+
+              </div>
+
+              <div className="flex justify-start lg:justify-end">
+
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] px-8 py-4 font-medium text-black transition hover:scale-105"
+                >
+
+                  <ExternalLink size={20} />
+
+                  Follow Our Studio
+
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* ================= FINAL CTA ================= */}
+
+      <section className="pb-32">
+
+        <div className="mx-auto max-w-5xl px-6 text-center">
+
+          <h2 className="font-serif text-4xl font-light lg:text-6xl">
+
+            Your Story
+            <span className="text-[var(--color-primary)]">
+              {" "}Starts Here
+            </span>
+
+          </h2>
+
+          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-neutral-400">
+
+            Every pre-wedding story deserves to be remembered beautifully.
+            We can't wait to hear your story and create photographs
+            you'll cherish for a lifetime.
+
+          </p>
+
+          <a
+            href="#contact-form"
+            className="mt-12 inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] px-10 py-5 font-medium text-black transition hover:scale-105"
+          >
+
+            Begin Your Journey
+
+            <ArrowRight size={18} />
+
+          </a>
+
+        </div>
+
+      </section>
+
+    </main>
   );
 }
 

@@ -2,11 +2,15 @@ import Hero from "../components/home/Hero";
 import FeaturedCouples from "../components/home/FeaturedCouples";
 import FeaturedFilms from "../components/home/FeaturedFilms";
 import WhyChooseUs from "../components/home/WhyChooseUs";
-import LocationsSection from "../components/home/LocationsSection";
 import Testimonials from "../components/home/Testimonials";
-import InstagramGallery from "../components/home/InstagramGallery";
-import CallToAction from "../components/home/CallToAction";
-import Footer from "../components/layout/Footer";
+import InstagramFeed from "../components/home/InstagramFeed";
+import SignatureLocations from "../components/locations/SignatureLocations";
+import PackagesPreview from "../components/home/PackagesPreview";
+import AvailabilityForm from "../components/home/AvailabilityForm";
+import BehindScenes from "../components/home/BehindScenes";
+import BlogPreview from "../components/home/BlogPreview";
+import FinalCTA from "../components/home/FinalCTA";
+import YouTubeVideos from "../components/home/YouTubeVideos";
 
 function Home() {
   return (
@@ -15,11 +19,15 @@ function Home() {
       <FeaturedCouples />
       <FeaturedFilms />
       <WhyChooseUs />
-      <LocationsSection />
+      <SignatureLocations />
+      <PackagesPreview />
+      <AvailabilityForm />
       <Testimonials />
-      <InstagramGallery/>
-      <CallToAction />
-      <Footer />
+      <BehindScenes />
+      <YouTubeVideos />
+      <InstagramFeed />
+      <BlogPreview />
+      <FinalCTA />
     </>
   );
 }

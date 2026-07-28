@@ -27,7 +27,7 @@ function NotFound() {
 
         <p className="mt-6 text-lg leading-8 text-neutral-400">
           The page you're looking for doesn't exist or may have been moved.
-          Let's take you back to our beautiful wedding stories.
+          Let&apos;s take you back to our beautiful pre-wedding stories.
         </p>
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">

@@ -1,12 +1,16 @@
-import PagePlaceholder from "../components/common/PagePlaceholder";
+import FAQHero from "../components/faq/FAQHero";
+import FAQCategories from "../components/faq/FAQCategories";
+import FAQAccordion from "../components/faq/FAQAccordion";
+import FAQCTA from "../components/faq/FAQCTA";
 
 function FAQ() {
   return (
-    <PagePlaceholder
-      badge="FAQs"
-      title="Frequently Asked Questions"
-      description="Everything you need to know before planning your dream wedding shoot."
-    />
+    <>
+      <FAQHero />
+      <FAQCategories />
+      <FAQAccordion />
+      <FAQCTA />
+    </>
   );
 }
 

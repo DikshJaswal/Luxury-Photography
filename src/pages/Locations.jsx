@@ -1,12 +1,18 @@
-import PagePlaceholder from "../components/common/PagePlaceholder";
+import LocationsHero from "../components/locations/LocationsHero";
+import FeaturedLocations from "../components/locations/FeaturedLocations";
+import TravelProcess from "../components/locations/TravelProcess";
+import TravelAvailability from "../components/locations/TravelAvailability";
+import LocationsCTA from "../components/locations/LocationsCTA";
 
 function Locations() {
   return (
-    <PagePlaceholder
-      badge="Locations"
-      title="Dream Destinations Await"
-      description="Explore breathtaking pre-wedding and destination wedding locations across India."
-    />
+    <>
+      <LocationsHero />
+      <FeaturedLocations />
+      <TravelProcess />
+      <TravelAvailability />
+      <LocationsCTA />
+    </>
   );
 }
 

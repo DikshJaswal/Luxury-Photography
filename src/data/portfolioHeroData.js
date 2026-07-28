@@ -1,12 +1,12 @@
 const portfolioHeroData = {
   badge: "Portfolio",
 
-  title: "Timeless Wedding Stories",
+  title: "Timeless Pre-Wedding Stories",
 
   description:
-    "Every photograph tells a story of love, emotion, and unforgettable moments. Explore our collection of destination weddings, pre-wedding shoots, and cinematic celebrations.",
+    "Every photograph tells a story of love, emotion, and unforgettable moments. Explore our collection of destination shoots, pre-wedding portraits, and cinematic films.",
 
-  buttonText: "Book Consultation",
+  buttonText: "Get Free Consultation",
 };
 
 export default portfolioHeroData;
