@@ -1,12 +1,23 @@
 import PortfolioHero from "../components/portfolio/PortfolioHero";
 import PortfolioCategoryGrid from "../components/portfolio/PortfolioCategoryGrid";
 import PortfolioCTA from "../components/portfolio/PortfolioCTA";
+import PageIntro from "../components/common/PageIntro";
 
 function Portfolio() {
   return (
     <main className="bg-[#0B0B0B] text-white">
       {/* Hero */}
       <PortfolioHero />
+
+      <PageIntro
+        eyebrow="Portfolio Overview"
+        title="Explore Our Signature Pre-Wedding Worlds"
+        description="From mountains and waterfalls to luxury resorts, drone frames, and cinematic films, each category is built as a dedicated story experience with its own gallery and SEO page."
+        primaryLabel="Request Quote"
+        primaryTo="/contact"
+        secondaryLabel="Book on WhatsApp"
+        secondaryTo="/contact"
+      />
 
       {/* Portfolio Categories */}
       <PortfolioCategoryGrid />

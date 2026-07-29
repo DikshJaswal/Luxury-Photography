@@ -19,7 +19,6 @@ function BehindScenes() {
       />
 
       <div className="grid gap-8 lg:grid-cols-2">
-        {/* Left */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -30,17 +29,17 @@ function BehindScenes() {
           <img
             src={featured.image}
             alt={featured.title}
-            className="h-[650px] w-full object-cover transition duration-700 hover:scale-105"
+            className="h-[320px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[480px] lg:h-[650px]"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
 
-          <div className="absolute bottom-0 p-10">
-            <h3 className="mb-4 font-serif text-4xl text-white">
+          <div className="absolute bottom-0 p-6 sm:p-10">
+            <h3 className="mb-4 font-serif text-3xl text-white sm:text-4xl">
               {featured.title}
             </h3>
 
-            <p className="mb-8 max-w-lg leading-8 text-neutral-300">
+            <p className="mb-8 max-w-lg text-sm leading-7 text-neutral-300 sm:text-base sm:leading-8">
               {featured.description}
             </p>
 
@@ -49,17 +48,15 @@ function BehindScenes() {
               className="group inline-flex items-center gap-2 text-[var(--color-primary)]"
             >
               Discover Our Story
-
               <ArrowRight className="transition group-hover:translate-x-1" />
             </Link>
           </div>
 
-          <button className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 backdrop-blur-md transition hover:scale-110">
-            <Play className="ml-1 text-white" size={28} />
+          <button className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 backdrop-blur-md transition hover:scale-110 sm:h-20 sm:w-20">
+            <Play className="ml-1 text-white" size={22} />
           </button>
         </motion.div>
 
-        {/* Right */}
         <div className="flex flex-col gap-8">
           {[left, right].map((item, index) => (
             <motion.div
@@ -76,7 +73,7 @@ function BehindScenes() {
               <img
                 src={item.image}
                 alt=""
-                className="h-[310px] w-full object-cover transition duration-700 hover:scale-105"
+                className="h-[220px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[260px] lg:h-[310px]"
               />
             </motion.div>
           ))}

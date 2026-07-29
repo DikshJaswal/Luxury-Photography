@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import { FaYoutube } from "react-icons/fa";
+
 import Section from "../common/Section";
 import SectionHeading from "../common/SectionHeading";
 import videos from "../../data/youtubeVideos";
@@ -9,15 +11,23 @@ function YouTubeVideos() {
       <SectionHeading
         badge="Featured on YouTube"
         title="Stories Beyond the Frame"
-        description="Watch cinematic highlights, location films, and behind-the-scenes moments from our studio."
+        description="Every embedded video is shown as a full-screen viewing block, with the title sitting below the media instead of on top of it."
       />
-      <div className="grid gap-6 md:grid-cols-3">
-        {videos.map((video) => (
-          <article
+
+      <div className="space-y-12">
+        {videos.map((video, index) => (
+          <motion.article
             key={video.title}
-            className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition hover:-translate-y-1 hover:border-[var(--color-primary)]/60"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: index * 0.08,
+            }}
+            viewport={{ once: true }}
+            className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]"
           >
-            <div className="aspect-video bg-black">
+            <div className="h-[100svh] bg-black">
               <iframe
                 title={video.title}
                 src={video.embedUrl}
@@ -28,13 +38,13 @@ function YouTubeVideos() {
               />
             </div>
 
-            <div className="p-6">
+            <div className="p-6 sm:p-8">
               <FaYoutube className="text-3xl text-[var(--color-primary)]" />
               <h3 className="mt-5 font-serif text-2xl text-white">
                 {video.title}
               </h3>
             </div>
-          </article>
+          </motion.article>
         ))}
       </div>
     </Section>

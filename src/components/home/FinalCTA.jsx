@@ -5,26 +5,20 @@ import { COMPANY } from "../../utils/constants";
 
 function FinalCTA() {
   return (
-    <section className="relative overflow-hidden py-32">
-      {/* Background Image */}
+    <section className="relative overflow-hidden py-24 md:py-32">
       <img
         src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1800&q=80"
         alt="Luxury pre-wedding couple shoot"
         className="absolute inset-0 h-full w-full object-cover"
       />
 
-      {/* Dark Overlay */}
       <div className="absolute inset-0 bg-black/70" />
-
-      {/* Gold Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-black" />
 
-      {/* Decorative Blur */}
-      <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-[var(--color-primary)]/20 blur-[140px]" />
-      <div className="absolute -right-32 bottom-10 h-72 w-72 rounded-full bg-[var(--color-primary)]/10 blur-[140px]" />
+      <div className="absolute -left-20 top-16 h-56 w-56 rounded-full bg-[var(--color-primary)]/20 blur-[140px] sm:-left-32 sm:h-72 sm:w-72" />
+      <div className="absolute -right-20 bottom-10 h-56 w-56 rounded-full bg-[var(--color-primary)]/10 blur-[140px] sm:-right-32 sm:h-72 sm:w-72" />
 
       <div className="relative mx-auto flex max-w-7xl flex-col items-center px-6 text-center">
-
         <motion.span
           initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +33,7 @@ function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
-          className="max-w-4xl font-serif text-5xl leading-tight text-white md:text-7xl"
+          className="max-w-4xl font-serif text-4xl leading-tight text-white sm:text-5xl md:text-7xl"
         >
           Your Love Story Deserves
           <br />
@@ -53,14 +47,13 @@ function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-8 max-w-2xl text-lg leading-8 text-neutral-300"
+          className="mt-8 max-w-2xl text-base leading-8 text-neutral-300 sm:text-lg"
         >
           Every smile, every glance, every emotion deserves to be preserved
           beautifully. Let's turn your moments into memories you'll treasure
           forever.
         </motion.p>
 
-        {/* Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -87,13 +80,12 @@ function FinalCTA() {
           </a>
         </motion.div>
 
-        {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
           viewport={{ once: true }}
-          className="mt-20 grid w-full max-w-5xl grid-cols-2 gap-8 border-t border-white/10 pt-10 md:grid-cols-4"
+          className="mt-16 grid w-full max-w-5xl grid-cols-1 gap-6 border-t border-white/10 pt-10 sm:grid-cols-2 md:mt-20 md:grid-cols-4 md:gap-8"
         >
           <div className="flex flex-col items-center">
             <Heart className="mb-3 text-[var(--color-primary)]" />

@@ -1,39 +1,41 @@
 import { motion } from "framer-motion";
 import { getHeroMedia } from "../../utils/constants";
 
-function Hero() {
-  const { video, poster } = getHeroMedia("home");
+function VideoHero({
+  mediaKey = "home",
+  video,
+  poster,
+  className = "",
+}) {
+  const media = getHeroMedia(mediaKey);
+  const heroVideo = video ?? media.video;
+  const heroPoster = poster ?? media.poster;
 
   return (
-    <section className="relative h-screen overflow-hidden">
-      {/* Background Video */}
+    <section className={`relative h-[100svh] overflow-hidden ${className}`.trim()}>
       <motion.video
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
+        transition={{ duration: 1.8 }}
         autoPlay
         muted
         loop
         playsInline
-        poster={poster}
-        className="absolute inset-0 h-full w-full object-cover brightness-90 contrast-110 saturate-75 transition-transform duration-[20000ms] scale-105"
+        poster={heroPoster}
+        className="absolute inset-0 h-full w-full object-cover brightness-90 contrast-110 saturate-75"
       >
         <source
-          src={video}
+          src={heroVideo}
           type="video/mp4"
         />
       </motion.video>
 
-      {/* Cinematic Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/70" />
 
-      {/* Warm Film Tone */}
-      <div className="absolute inset-0 bg-[#2a1c12]/15 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-[#2a1c12]/10 mix-blend-multiply" />
 
-      {/* Vignette */}
-      <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_250px_rgba(0,0,0,0.7)]" />
+      <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_240px_rgba(0,0,0,0.72)]" />
 
-      {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 z-20 -translate-x-1/2">
         <motion.div
           animate={{ y: [0, 12, 0] }}
@@ -65,4 +67,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default VideoHero;

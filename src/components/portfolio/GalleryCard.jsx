@@ -19,7 +19,7 @@ function GalleryCard({ image, index }) {
           src={image.image}
           alt={image.title}
           loading="lazy"
-          className={`${image.height} w-full object-cover transition duration-700 group-hover:scale-110`}
+          className="h-[280px] w-full object-cover transition duration-700 group-hover:scale-110 sm:h-[360px] lg:h-[420px]"
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />

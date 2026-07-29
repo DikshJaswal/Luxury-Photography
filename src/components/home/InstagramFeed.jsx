@@ -16,7 +16,7 @@ function InstagramFeed() {
         description="A glimpse of our latest stories, destination shoots, and behind-the-scenes moments."
       />
 
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
         {instagramPosts.map((post, index) => (
           <motion.a
             key={post.id}
@@ -50,7 +50,7 @@ function InstagramFeed() {
           href={COMPANY.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 rounded-full border border-[var(--color-primary)] px-8 py-4 text-[var(--color-primary)] transition hover:bg-[var(--color-primary)] hover:text-black"
+          className="inline-flex items-center gap-3 rounded-full border border-[var(--color-primary)] px-6 py-3.5 text-sm text-[var(--color-primary)] transition hover:bg-[var(--color-primary)] hover:text-black sm:px-8 sm:py-4 sm:text-base"
         >
           <FaInstagram />
           Follow @luxepreweddings

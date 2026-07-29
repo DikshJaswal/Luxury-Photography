@@ -8,8 +8,9 @@ import {
   Send,
   ExternalLink,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import { COMPANY } from "../utils/constants";
+import VideoHero from "../components/common/VideoHero";
+import PageIntro from "../components/common/PageIntro";
 
 function Contact() {
   const handleSubmit = (event) => {
@@ -41,81 +42,17 @@ function Contact() {
 
       {/* ================= HERO ================= */}
 
-      <section className="relative flex min-h-screen items-center overflow-hidden">
+      <VideoHero mediaKey="contact" />
 
-        <div className="absolute inset-0">
-
-          <img
-            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2070&auto=format&fit=crop"
-            alt="Luxury pre-wedding photographer"
-            className="h-full w-full object-cover"
-          />
-
-          <div className="absolute inset-0 bg-black/60" />
-
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/60 to-black/40" />
-
-        </div>
-
-        <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl items-center px-6 lg:px-10">
-
-          <div className="max-w-4xl">
-
-            <span className="inline-flex rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-5 py-2 text-xs uppercase tracking-[0.35em] text-[var(--color-primary)]">
-
-              Contact
-
-            </span>
-
-            <h1 className="mt-8 font-serif text-5xl font-light leading-tight sm:text-6xl lg:text-8xl">
-
-              Let's Tell
-              <br />
-
-              <span className="text-[var(--color-primary)]">
-
-                Your Story
-
-              </span>
-
-            </h1>
-
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-neutral-300">
-
-              Tell us about your vision, dream location, and preferred dates.
-              We&apos;ll help shape a cinematic pre-wedding story around you.
-
-            </p>
-
-            <div className="mt-12 flex flex-wrap gap-5">
-
-              <a
-                href="#contact-form"
-                className="inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] px-8 py-4 font-medium text-black transition hover:scale-105"
-              >
-
-                Start Your Inquiry
-
-                <ArrowRight size={18} />
-
-              </a>
-
-              <Link
-                to="/portfolio"
-                className="rounded-full border border-white/20 bg-white/5 px-8 py-4 font-medium backdrop-blur-md transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
-              >
-
-                View Portfolio
-
-              </Link>
-
-            </div>
-
-          </div>
-
-        </div>
-
-      </section>
+      <PageIntro
+        eyebrow="Contact"
+        title="Tell Us What You Want To Create"
+        description="This demo keeps the inquiry flow direct and visible so couples can move from inspiration to WhatsApp without friction."
+        primaryLabel="Check Availability"
+        primaryTo="#contact-form"
+        secondaryLabel="View Portfolio"
+        secondaryTo="/portfolio"
+      />
 
       {/* ================= CONTACT CARDS ================= */}
 
