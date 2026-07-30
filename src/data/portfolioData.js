@@ -6,7 +6,7 @@ const portfolioData = [
     title: "Snowy Romance",
     location: "Manali, Himachal Pradesh",
     image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401667/gallery-02.jpg_girpir.jpg",
     height: "h-[620px]",
   },
   {
@@ -15,7 +15,7 @@ const portfolioData = [
     title: "Above The Clouds",
     location: "Shimla",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401670/gallery-01.jpg_ggaslz.jpg",
     height: "h-[460px]",
   },
   {
@@ -24,7 +24,7 @@ const portfolioData = [
     title: "Golden Peaks",
     location: "Kashmir",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401690/gallery-03.jpg_yxlewc.jpg",
     height: "h-[540px]",
   },
 
@@ -35,7 +35,7 @@ const portfolioData = [
     title: "Nature's Symphony",
     location: "Jog Falls",
     image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401692/gallery-04.jpg_tpgeq9.jpg",
     height: "h-[500px]",
   },
   {
@@ -44,7 +44,7 @@ const portfolioData = [
     title: "Misty Love",
     location: "Athirappilly",
     image:
-      "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401704/gallery-08.jpg_tmegpy.jpg",
     height: "h-[660px]",
   },
   {
@@ -53,7 +53,7 @@ const portfolioData = [
     title: "Hidden Paradise",
     location: "Meghalaya",
     image:
-      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401704/gallery-07.jpg_sqgyej.jpg",
     height: "h-[420px]",
   },
 
@@ -64,7 +64,7 @@ const portfolioData = [
     title: "Flow Together",
     location: "Rishikesh",
     image:
-      "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401704/gallery-09.jpg_qicwil.jpg",
     height: "h-[620px]",
   },
   {
@@ -73,7 +73,7 @@ const portfolioData = [
     title: "Peaceful Reflections",
     location: "Ganga",
     image:
-      "https://images.unsplash.com/photo-1473773508845-188df298d2d1?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401705/gallery-11.jpg_dpz0yc.jpg",
     height: "h-[470px]",
   },
   {
@@ -82,7 +82,7 @@ const portfolioData = [
     title: "River Breeze",
     location: "Tehri",
     image:
-      "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401705/gallery-12.jpg_fe6df9.jpg",
     height: "h-[560px]",
   },
 
@@ -93,7 +93,7 @@ const portfolioData = [
     title: "Royal Escape",
     location: "Udaipur",
     image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401710/gallery-06.jpg_newjkz.jpg",
     height: "h-[520px]",
   },
   {
@@ -102,8 +102,7 @@ const portfolioData = [
     title: "Luxury Moments",
     location: "Goa",
     image:
-      "https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1400&q=80",
-    height: "h-[640px]",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401706/gallery-10.jpg_zqgznq.jpg"
   },
   {
     id: 12,
@@ -111,7 +110,7 @@ const portfolioData = [
     title: "Grand Celebration",
     location: "Jaipur",
     image:
-      "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401710/gallery-05.jpg_rp38km.jpg",
     height: "h-[440px]",
   },
 
@@ -122,7 +121,7 @@ const portfolioData = [
     title: "Into The Woods",
     location: "Coorg",
     image:
-      "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401710/gallery-14.jpg_n0qqlt.jpg",
     height: "h-[650px]",
   },
   {
@@ -131,7 +130,7 @@ const portfolioData = [
     title: "Green Dreams",
     location: "Ooty",
     image:
-      "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401713/gallery-15.jpg_qyhusk.jpg",
     height: "h-[430px]",
   },
   {
@@ -140,7 +139,7 @@ const portfolioData = [
     title: "Nature's Embrace",
     location: "Munnar",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401716/gallery-16.jpg_a3a93s.jpg",
     height: "h-[560px]",
   },
 
@@ -151,7 +150,7 @@ const portfolioData = [
     title: "Morning Bliss",
     location: "Nainital",
     image:
-      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401725/gallery-21.jpg_epsgtc.jpg",
     height: "h-[480px]",
   },
   {
@@ -160,7 +159,7 @@ const portfolioData = [
     title: "Golden Beginning",
     location: "Shimla",
     image:
-      "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401720/gallery-19.jpg_nr5y7b.jpg",
     height: "h-[620px]",
   },
   {
@@ -169,7 +168,7 @@ const portfolioData = [
     title: "First Light",
     location: "Mussoorie",
     image:
-      "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401726/gallery-22.jpg_sqgumb.jpg",
     height: "h-[500px]",
   },
 
@@ -180,7 +179,7 @@ const portfolioData = [
     title: "Golden Hour",
     location: "Goa",
     image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401729/gallery-23.jpg_hoeom1.jpg",
     height: "h-[640px]",
   },
   {
@@ -189,7 +188,7 @@ const portfolioData = [
     title: "Evening Glow",
     location: "Jaisalmer",
     image:
-      "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401731/gallery-24.jpg_akmvit.jpg",
     height: "h-[420px]",
   },
   {
@@ -198,7 +197,7 @@ const portfolioData = [
     title: "Romantic Dusk",
     location: "Udaipur",
     image:
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401745/gallery-26.jpg_j3i9sg.jpg",
     height: "h-[570px]",
   },
 
@@ -209,7 +208,7 @@ const portfolioData = [
     title: "Above Everything",
     location: "Manali",
     image:
-      "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401745/gallery-28.jpg_q3getz.jpg",
     height: "h-[500px]",
   },
   {
@@ -218,7 +217,7 @@ const portfolioData = [
     title: "Sky Perspective",
     location: "Goa",
     image:
-      "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401748/gallery-27.jpg_niwgsu.jpg",
     height: "h-[660px]",
   },
   {
@@ -227,7 +226,7 @@ const portfolioData = [
     title: "Epic Landscapes",
     location: "Kashmir",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401746/gallery-25.jpg_g97xkw.jpg",
     height: "h-[450px]",
   },
 
@@ -238,7 +237,7 @@ const portfolioData = [
     title: "A Timeless Story",
     location: "Udaipur",
     image:
-      "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401729/gallery-23.jpg_hoeom1.jpg",
     height: "h-[640px]",
   },
   {
@@ -247,7 +246,7 @@ const portfolioData = [
     title: "Love In Motion",
     location: "Shimla",
     image:
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401708/gallery-13.jpg_nxgdzs.jpg",
     height: "h-[470px]",
   },
   {
@@ -256,7 +255,7 @@ const portfolioData = [
     title: "Forever Begins",
     location: "Goa",
     image:
-      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401723/gallery-20.jpg_zxepkd.jpg",
     height: "h-[580px]",
   },
 ];

@@ -45,7 +45,7 @@ function FAQCTA() {
               <div className="mt-12 flex flex-wrap gap-5">
 
                 <Link
-                  to="/contact"
+                  to="/book"
                   className="inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] px-8 py-4 font-medium text-black transition-all duration-300 hover:scale-105"
                 >
                   Schedule Consultation

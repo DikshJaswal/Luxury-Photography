@@ -14,9 +14,9 @@ function Portfolio() {
         title="Explore Our Signature Pre-Wedding Worlds"
         description="From mountains and waterfalls to luxury resorts, drone frames, and cinematic films, each category is built as a dedicated story experience with its own gallery and SEO page."
         primaryLabel="Request Quote"
-        primaryTo="/contact"
-        secondaryLabel="Book on WhatsApp"
-        secondaryTo="/contact"
+        primaryTo="/book"
+        secondaryLabel="Book Now"
+        secondaryTo="/book"
       />
 
       {/* Portfolio Categories */}

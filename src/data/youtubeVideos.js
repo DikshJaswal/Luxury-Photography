@@ -1,17 +1,7 @@
 const youtubeVideos = [
   {
     title: "Mountain Love Story",
-    embedUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-  },
-
-  {
-    title: "Cinematic Couple Film",
-    embedUrl: "https://www.youtube.com/embed/aqz-KE-bpKQ",
-  },
-
-  {
-    title: "Behind the Scenes",
-    embedUrl: "https://www.youtube.com/embed/tgbNymZ7vqY",
+    embedUrl: "https://res.cloudinary.com/drlcnp9vf/video/upload/v1785400508/home-hero.mp4_f4ntvc.mp4",
   },
 ];
 

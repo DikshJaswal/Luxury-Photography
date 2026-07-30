@@ -16,7 +16,7 @@ function Locations() {
         primaryLabel="Explore Portfolio"
         primaryTo="/portfolio"
         secondaryLabel="Request Quote"
-        secondaryTo="/contact"
+        secondaryTo="/book"
       />
       <FeaturedLocations />
       <TravelProcess />

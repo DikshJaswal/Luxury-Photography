@@ -28,7 +28,7 @@ function FeaturedPost() {
 
           <div className="relative h-[420px] overflow-hidden lg:h-[650px]">
             <img
-              src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2070&auto=format&fit=crop"
+              src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401962/blog-01.jpg_t6i22c.jpg"
               alt="Luxury Destination Pre-Wedding Shoot"
               className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
             />

@@ -57,7 +57,7 @@ function WhyChooseUs() {
           viewport={{ once: true }}
         >
           <img
-            src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80"
+            src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401745/gallery-28.jpg_q3getz.jpg"
             alt="Couple during a pre-wedding shoot"
             className="h-[700px] w-full rounded-2xl object-cover"
           />
@@ -99,7 +99,7 @@ function WhyChooseUs() {
               </motion.div>
             ))}
 
-            <Link to="/contact">
+            <Link to="/book">
                 <Button variant="primary">
                     Get Free Consultation
                 </Button>

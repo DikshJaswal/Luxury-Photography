@@ -62,23 +62,6 @@ function FeaturedCouples() {
                     />
 
                     <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-
-                    <div className="absolute bottom-0 left-0 w-full p-5 sm:p-8">
-                      <p className="mb-2 text-xs uppercase tracking-[0.28em] text-[var(--color-primary)] sm:text-sm sm:tracking-[0.35em]">
-                        {story.location}
-                      </p>
-
-                      <h3 className="font-serif text-3xl text-white sm:text-4xl">
-                        {story.title}
-                      </h3>
-
-                      <div className="mt-4 flex items-center gap-2 text-sm text-white transition-all duration-300 group-hover:text-[var(--color-primary)] sm:text-base">
-                        <span>View Story</span>
-                        <span className="transition-transform duration-300 group-hover:translate-x-2">
-                          →
-                        </span>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </motion.div>

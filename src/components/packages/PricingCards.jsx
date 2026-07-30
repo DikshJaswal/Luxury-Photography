@@ -137,7 +137,7 @@ function PricingCards() {
               </ul>
 
               <Link
-                to="/contact"
+                to="/book"
                 className="mt-10 inline-flex items-center gap-3 font-medium text-[var(--color-primary)] transition hover:gap-5"
               >
                 Request Quote

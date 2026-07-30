@@ -9,7 +9,7 @@ function PackagesCTA() {
       <div className="absolute inset-0">
 
         <img
-          src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2070&auto=format&fit=crop"
+          src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401560/cover-editorial.jpg_xrxrew.jpg"
           alt="Luxury pre-wedding couple"
           className="h-full w-full object-cover"
         />
@@ -47,7 +47,7 @@ function PackagesCTA() {
           <div className="mt-12 flex flex-col justify-center gap-5 sm:flex-row">
 
             <Link
-              to="/contact"
+              to="/book"
               className="inline-flex items-center justify-center gap-3 rounded-full bg-[var(--color-primary)] px-8 py-4 font-medium text-black transition hover:scale-105"
             >
               Request Quote

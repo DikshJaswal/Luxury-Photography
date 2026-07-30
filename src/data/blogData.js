@@ -6,7 +6,7 @@ const blogPosts = [
     category: "Locations",
     date: "June 15, 2026",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401974/blog-06.jpg_zcqzc5.jpg",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ const blogPosts = [
     category: "Guide",
     date: "June 28, 2026",
     image:
-      "https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401962/blog-01.jpg_t6i22c.jpg",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ const blogPosts = [
     category: "Inspiration",
     date: "July 5, 2026",
     image:
-      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401966/blog-03.jpg_reaeqj.jpg",
   },
 ];
 

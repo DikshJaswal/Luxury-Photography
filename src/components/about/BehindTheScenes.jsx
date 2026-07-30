@@ -57,7 +57,7 @@ function BehindTheScenes() {
 
           <div className="lg:col-span-2">
             <img
-              src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2070&auto=format&fit=crop"
+              src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401820/about-03.jpg_pmjgtv.jpg"
               alt="Photographer at work"
               className="h-[550px] w-full rounded-[32px] object-cover transition duration-500 hover:scale-[1.02]"
             />
@@ -68,13 +68,13 @@ function BehindTheScenes() {
           <div className="space-y-6">
 
             <img
-              src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1200&auto=format&fit=crop"
+              src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401822/about-02.jpg_dddhol.jpg"
               alt="Pre-wedding details"
               className="h-[262px] w-full rounded-[28px] object-cover transition duration-500 hover:scale-[1.02]"
             />
 
             <img
-              src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop"
+              src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401805/about-01.jpg_d7dibu.jpg"
               alt="Bride and groom"
               className="h-[262px] w-full rounded-[28px] object-cover transition duration-500 hover:scale-[1.02]"
             />

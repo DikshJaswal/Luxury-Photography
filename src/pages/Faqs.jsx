@@ -15,7 +15,7 @@ function FAQ() {
         primaryLabel="Browse FAQs"
         primaryTo="#faq"
         secondaryLabel="Request Quote"
-        secondaryTo="/contact"
+        secondaryTo="/book"
       />
       <FAQCategories />
       <FAQAccordion />

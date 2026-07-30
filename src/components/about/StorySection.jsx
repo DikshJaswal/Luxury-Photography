@@ -9,7 +9,7 @@ function StorySection() {
         <div className="relative">
 
           <img
-            src="https://images.unsplash.com/photo-1525258946800-98cfd641d0de?q=80&w=2070&auto=format&fit=crop"
+            src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401822/about-02.jpg_dddhol.jpg"
             alt="Pre-wedding photographer"
             className="h-[650px] w-full rounded-[32px] object-cover"
           />

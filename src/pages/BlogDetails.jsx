@@ -122,7 +122,7 @@ function BlogDetails() {
           </p>
 
           <Link
-            to="/contact"
+            to="/book"
             className="mt-10 inline-flex items-center rounded-full bg-[var(--color-primary)] px-8 py-4 font-medium text-black transition hover:scale-105"
           >
             Get Free Consultation

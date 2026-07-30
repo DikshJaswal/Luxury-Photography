@@ -31,7 +31,7 @@ function Blog() {
         primaryLabel="Read Articles"
         primaryTo="#articles"
         secondaryLabel="Contact Us"
-        secondaryTo="/contact"
+        secondaryTo="/book"
       />
 
       <FeaturedPost />

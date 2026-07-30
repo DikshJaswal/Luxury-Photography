@@ -19,7 +19,7 @@ function About() {
         primaryLabel="View Portfolio"
         primaryTo="/portfolio"
         secondaryLabel="Get Free Consultation"
-        secondaryTo="/contact"
+        secondaryTo="/book"
       />
       <StorySection />
       <Philosophy />

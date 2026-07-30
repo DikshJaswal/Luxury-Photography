@@ -2,7 +2,7 @@ const behindScenes = [
   {
     id: 1,
     image:
-      "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?auto=format&fit=crop&w=1200&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401731/gallery-24.jpg_akmvit.jpg",
     title: "Every Frame Begins With A Story",
     description:
       "From scouting breathtaking locations to directing natural moments, we craft every shoot with precision, passion, and creativity.",
@@ -10,12 +10,12 @@ const behindScenes = [
   {
     id: 2,
     image:
-      "https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401706/gallery-10.jpg_zqgznq.jpg",
   },
   {
     id: 3,
     image:
-      "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401710/gallery-05.jpg_rp38km.jpg",
   },
 ];
 

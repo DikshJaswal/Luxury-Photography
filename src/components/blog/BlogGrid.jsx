@@ -10,7 +10,7 @@ function BlogGrid() {
       excerpt:
         "A practical guide to choosing your location, outfits, travel timing, permissions, and shoot flow before the camera day.",
       image:
-        "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop",
+        "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401978/blog-07.jpg_ku8otp.jpg",
       date: "June 20, 2026",
       readTime: "6 min read",
       slug: "destination-pre-wedding-guide",
@@ -22,7 +22,7 @@ function BlogGrid() {
       excerpt:
         "From quiet close-ups to wide cinematic landscapes, these are the frames that make a pre-wedding gallery feel complete.",
       image:
-        "https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=2070&auto=format&fit=crop",
+        "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401974/blog-06.jpg_zcqzc5.jpg",
       date: "June 15, 2026",
       readTime: "5 min read",
       slug: "must-have-pre-wedding-frames",
@@ -34,7 +34,7 @@ function BlogGrid() {
       excerpt:
         "Learn why photographers love golden hour and how natural light creates elegant, timeless portraits you will cherish forever.",
       image:
-        "https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=2070&auto=format&fit=crop",
+        "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401972/blog-05.jpg_k3dtje.jpg",
       date: "June 10, 2026",
       readTime: "4 min read",
       slug: "golden-hour-couple-photography",
@@ -46,7 +46,7 @@ function BlogGrid() {
       excerpt:
         "Go behind the camera and see how styling, direction, scouting, drone planning, and lighting come together on shoot day.",
       image:
-        "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?q=80&w=2070&auto=format&fit=crop",
+        "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401967/blog-02.jpg_cs5bza.jpg",
       date: "June 4, 2026",
       readTime: "7 min read",
       slug: "behind-the-scenes",
@@ -58,7 +58,7 @@ function BlogGrid() {
       excerpt:
         "A carefully planned schedule keeps travel, makeup, outfits, light, and location changes calm and beautifully timed.",
       image:
-        "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop",
+        "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401962/blog-01.jpg_t6i22c.jpg",
       date: "May 28, 2026",
       readTime: "5 min read",
       slug: "pre-wedding-timeline",
@@ -70,7 +70,7 @@ function BlogGrid() {
       excerpt:
         "Explore elegant styling, cinematic films, destination concepts, and modern couple portraits that inspire premium shoots.",
       image:
-        "https://images.unsplash.com/photo-1513278974582-3e1b4a4fa21d?q=80&w=2070&auto=format&fit=crop",
+        "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401966/blog-03.jpg_reaeqj.jpg",
       date: "May 20, 2026",
       readTime: "8 min read",
       slug: "pre-wedding-trends-2026",

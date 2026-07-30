@@ -51,7 +51,7 @@ function FloatingActions() {
       {/* Call */}
       <a
         href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
-        className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-black/80 text-white shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-black"
+        className="group relative flex h-14 w-14 items-center justify-center rounded-full border border-white/10 bg-black/80 text-white shadow-2xl backdrop-blur-xl transition-all duration-300 hover:-translate-y-1 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-black md:hidden"
       >
         <FiPhone size={22} />
 

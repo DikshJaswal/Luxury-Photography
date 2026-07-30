@@ -62,7 +62,7 @@ function FeaturedFilms() {
                 </Link>
 
                 <Link
-                  to="/contact"
+                  to="/book"
                   className="inline-flex items-center gap-2 rounded-full border border-white/15 px-5 py-3 text-sm font-medium text-white transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
                 >
                   Request Quote

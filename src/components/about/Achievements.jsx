@@ -45,7 +45,7 @@ function Achievements() {
       <div className="absolute inset-0">
 
         <img
-          src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=2070&auto=format&fit=crop"
+          src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401820/about-03.jpg_pmjgtv.jpg"
           alt="Luxury pre-wedding shoot"
           className="h-full w-full object-cover brightness-90 contrast-110"
         />

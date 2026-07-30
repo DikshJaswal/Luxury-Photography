@@ -91,7 +91,7 @@ function MeetPhotographer() {
 
           <div className="mt-12 flex flex-col gap-5 sm:flex-row">
             <Link
-              to="/contact"
+              to="/book"
               className="inline-flex items-center justify-center gap-3 rounded-full bg-[var(--color-primary)] px-8 py-4 font-medium text-black transition hover:scale-105"
             >
               Let&apos;s Connect

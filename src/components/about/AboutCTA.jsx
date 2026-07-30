@@ -10,7 +10,7 @@ function AboutCTA() {
       <div className="absolute inset-0">
 
         <img
-          src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070&auto=format&fit=crop"
+          src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401805/about-01.jpg_d7dibu.jpg"
           alt="Luxury pre-wedding couple"
           className="h-full w-full object-cover brightness-90 contrast-110"
         />
@@ -48,7 +48,7 @@ function AboutCTA() {
         <div className="mt-12 flex flex-col justify-center gap-5 sm:flex-row">
 
           <Link
-            to="/contact"
+            to="/book"
             className="inline-flex items-center justify-center gap-3 rounded-full bg-[var(--color-primary)] px-8 py-4 font-medium text-black transition duration-300 hover:scale-105"
           >
             Get Free Consultation

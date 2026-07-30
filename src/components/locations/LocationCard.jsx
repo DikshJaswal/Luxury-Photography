@@ -66,7 +66,7 @@ function LocationCard({ location }) {
 
         {/* Button */}
         <Link
-          to="/contact"
+          to="/book"
           className="inline-flex items-center gap-3 font-medium text-[var(--color-primary)] transition group-hover:gap-5"
         >
           Plan This Location

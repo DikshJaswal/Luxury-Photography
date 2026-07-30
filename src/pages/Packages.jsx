@@ -14,7 +14,7 @@ function Packages() {
         title="Pricing Hidden, Planning Made Simple"
         description="The demo keeps pricing out of the way and focuses on the custom quote workflow your client asked for."
         primaryLabel="Request Quote"
-        primaryTo="/contact"
+        primaryTo="/book"
         secondaryLabel="View Portfolio"
         secondaryTo="/portfolio"
       />

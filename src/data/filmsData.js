@@ -4,14 +4,7 @@ const films = [
     title: "Aditi & Rohan",
     location: "Udaipur",
     video:
-      "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
-  },
-  {
-    id: 2,
-    title: "Sneha & Aryan",
-    location: "Goa",
-    video:
-      "https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4",
+      "https://res.cloudinary.com/drlcnp9vf/video/upload/v1785400508/home-hero.mp4_f4ntvc.mp4",
   },
 ];
 

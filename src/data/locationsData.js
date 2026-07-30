@@ -5,7 +5,7 @@ const locationsData = [
     slug: "manali",
     category: "Mountains",
     image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401867/location-01.jpg_hczq8m.jpg",
     tagline: "Snow-Capped Romance",
     description:
       "Majestic Himalayan landscapes, pine forests, rivers, and snowy peaks create unforgettable pre-wedding stories.",
@@ -19,7 +19,7 @@ const locationsData = [
     slug: "kashmir",
     category: "Mountains",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401868/location-02.jpg_wp2ilg.jpg",
     tagline: "Paradise on Earth",
     description:
       "Snowy valleys, alpine lakes, and breathtaking mountain views for cinematic destination shoots.",
@@ -33,7 +33,7 @@ const locationsData = [
     slug: "shimla",
     category: "Mountains",
     image:
-      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401868/location-03.jpg_ltelrx.jpg",
     tagline: "Colonial Charm",
     description:
       "Elegant hills, heritage architecture, and misty mornings create timeless pre-wedding portraits.",
@@ -47,7 +47,7 @@ const locationsData = [
     slug: "goa",
     category: "Beach",
     image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401878/location-04.jpg_rydre3.jpg",
     tagline: "Luxury Beach Shoots",
     description:
       "Golden beaches, luxury resorts, sunsets, and cinematic movement by the sea.",
@@ -61,7 +61,7 @@ const locationsData = [
     slug: "udaipur",
     category: "Royal",
     image:
-      "https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401867/location-01.jpg_hczq8m.jpg",
     tagline: "City of Lakes",
     description:
       "Royal palaces, grand architecture, and luxury heritage venues perfect for destination pre-wedding shoots.",
@@ -75,7 +75,7 @@ const locationsData = [
     slug: "jaipur",
     category: "Royal",
     image:
-      "https://images.unsplash.com/photo-1599661046827-dacff0c0f09d?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401868/location-02.jpg_wp2ilg.jpg",
     tagline: "Pink City Frames",
     description:
       "Historic forts, royal palaces, and timeless architecture for luxury couple portraits.",
@@ -89,7 +89,7 @@ const locationsData = [
     slug: "kerala",
     category: "Backwaters",
     image:
-      "https://images.unsplash.com/photo-1593693411515-c20261bcad6e?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401868/location-03.jpg_ltelrx.jpg",
     tagline: "Nature Meets Luxury",
     description:
       "Backwaters, houseboats, lush greenery, and tropical elegance for intimate couple stories.",
@@ -103,7 +103,7 @@ const locationsData = [
     slug: "mussoorie",
     category: "Mountains",
     image:
-      "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=80",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401878/location-04.jpg_rydre3.jpg",
     tagline: "Queen of Hills",
     description:
       "Foggy mornings, winding roads, and panoramic Himalayan views for romantic pre-wedding frames.",
