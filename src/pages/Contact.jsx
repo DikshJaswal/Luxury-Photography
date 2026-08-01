@@ -241,13 +241,17 @@ function Contact() {
 
               <select
                 name="budget"
-                className="w-full rounded-2xl border border-white/10 bg-white/5 px-5 py-4 outline-none transition focus:border-[var(--color-primary)]"
+                defaultValue=""
+                className="w-full rounded-2xl border border-white/10 bg-[#151515] px-5 py-4 text-white outline-none focus:border-[var(--color-primary)]"
               >
-                <option>Budget Range</option>
-                <option>Under Rs. 50,000</option>
-                <option>Rs. 50,000 - Rs. 1,00,000</option>
-                <option>Rs. 1,00,000 - Rs. 2,00,000</option>
-                <option>Rs. 2,00,000+</option>
+                <option value="" disabled>
+                  Select Budget Range
+                </option>
+
+                <option value="Under ₹50,000">Under ₹50,000</option>
+                <option value="₹50,000 - ₹1,00,000">₹50,000 - ₹1,00,000</option>
+                <option value="₹1,00,000 - ₹2,00,000">₹1,00,000 - ₹2,00,000</option>
+                <option value="Above ₹2,00,000">Above ₹2,00,000</option>
               </select>
 
               <textarea
@@ -362,22 +366,20 @@ function Contact() {
       <section className="pb-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-10">
 
-          <div className="mb-12 text-center">
+          <div className="mx-auto mb-12 flex max-w-3xl flex-col items-center text-center">
 
             <span className="inline-flex rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-5 py-2 text-xs uppercase tracking-[0.35em] text-[var(--color-primary)]">
               Studio Location
             </span>
 
-            <h2 className="mt-6 font-serif text-4xl font-light lg:text-5xl">
+            <h2 className="mt-6 font-serif text-4xl font-light leading-tight lg:text-5xl">
               Visit Our
-              <span className="text-[var(--color-primary)]">
-                {" "}Studio
-              </span>
+              <span className="text-[var(--color-primary)]"> Studio</span>
             </h2>
 
-            <p className="mx-auto mt-6 max-w-2xl leading-8 text-neutral-400">
+            <p className="mt-6 max-w-2xl text-center leading-8 text-neutral-400">
               Whether you are planning locally or travelling for your shoot,
-              we&apos;d love to discuss your vision over coffee.
+              we'd love to discuss your vision over coffee.
             </p>
 
           </div>

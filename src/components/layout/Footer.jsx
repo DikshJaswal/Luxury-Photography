@@ -86,7 +86,6 @@ function Footer() {
             <div className="space-y-4 leading-8 text-neutral-400">
               <p>{COMPANY.email}</p>
               <p>{COMPANY.phone}</p>
-              <p>{COMPANY.address}, India</p>
             </div>
 
             <div className="mt-10 flex gap-4">

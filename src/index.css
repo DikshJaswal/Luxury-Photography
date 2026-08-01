@@ -6,7 +6,7 @@
    GLOBAL RESET
 ========================================== */
 
-*,
+*
 *::before,
 *::after {
   box-sizing: border-box;
@@ -83,6 +83,24 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+/* ==========================================
+   SELECT
+========================================== */
+
+select {
+  background: #151515;
+  color: #fff;
+  color-scheme: dark;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select option {
+  background: #151515;
+  color: #fff;
 }
 
 ul,
