@@ -10,11 +10,11 @@ import blogPosts from "../../data/blogData";
 function BlogPreview() {
   return (
     <Section>
-      <SectionHeading
-        badge="Journal"
-        title="Stories, Tips & Inspiration"
-        description="Explore destination guides, pre-wedding inspiration, and planning tips from our latest journal."
-      />
+      <div className="mx-auto mb-16 max-w-3xl text-center">
+        <h2 className="font-serif text-4xl text-white md:text-5xl lg:text-6xl">
+          Our <span className="text-[var(--color-primary)]">Journal</span>
+        </h2>
+      </div>
 
       <div className="grid gap-8 lg:grid-cols-3">
         {blogPosts.map((post, index) => (
@@ -38,30 +38,9 @@ function BlogPreview() {
             </div>
 
             <div className="p-8">
-              <span className="rounded-full bg-[var(--color-primary)]/10 px-4 py-1 text-xs uppercase tracking-[0.25em] text-[var(--color-primary)]">
-                {post.category}
-              </span>
-
-              <h3 className="mt-5 text-2xl font-serif text-white transition group-hover:text-[var(--color-primary)]">
+              <h3 className="text-2xl font-serif text-white transition group-hover:text-[var(--color-primary)]">
                 {post.title}
               </h3>
-
-              <div className="mt-5 flex items-center gap-2 text-sm text-neutral-400">
-                <Calendar size={16} />
-                {post.date}
-              </div>
-
-              <Link
-                to={`/blog/${post.slug}`}
-                className="mt-8 inline-flex items-center gap-2 text-[var(--color-primary)]"
-              >
-                Read Article
-
-                <ArrowRight
-                  size={18}
-                  className="transition group-hover:translate-x-1"
-                />
-              </Link>
             </div>
           </motion.article>
         ))}

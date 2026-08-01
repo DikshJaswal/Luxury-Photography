@@ -51,37 +51,6 @@ function PortfolioCategoryGrid() {
                   />
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-
-                  <div className="absolute right-5 top-5 flex items-center gap-2 rounded-full bg-black/50 px-4 py-2 backdrop-blur-md">
-                    <Images
-                      size={16}
-                      className="text-[var(--color-primary)]"
-                    />
-
-                    <span className="text-sm text-white">
-                      {category.totalPhotos}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="p-6 sm:p-8">
-                  <h3 className="font-serif text-2xl text-white transition group-hover:text-[var(--color-primary)] sm:text-3xl">
-                    {category.name}
-                  </h3>
-
-                  <p className="mt-4 text-sm leading-7 text-neutral-400 sm:text-base">
-                    {category.shortDescription}
-                  </p>
-
-                  <div className="mt-8 flex items-center justify-between gap-4">
-                    <span className="text-xs uppercase tracking-[0.2em] text-neutral-500 sm:text-sm sm:tracking-[0.25em]">
-                      Explore Collection
-                    </span>
-
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full border border-white/10 transition group-hover:border-[var(--color-primary)] group-hover:bg-[var(--color-primary)]">
-                      <ArrowRight className="transition group-hover:text-black" />
-                    </div>
-                  </div>
                 </div>
               </Link>
             </motion.div>

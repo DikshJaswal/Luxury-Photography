@@ -1,9 +1,6 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { ArrowRight, Play } from "lucide-react";
 
 import Section from "../common/Section";
-import SectionHeading from "../common/SectionHeading";
 
 import behindScenes from "../../data/btsData";
 
@@ -12,12 +9,6 @@ function BehindScenes() {
 
   return (
     <Section>
-      <SectionHeading
-        badge="Behind The Scenes"
-        title="Creating Magic Beyond The Camera"
-        description="Take a glimpse behind the lens and discover how every unforgettable story comes to life."
-      />
-
       <div className="grid gap-8 lg:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -33,28 +24,6 @@ function BehindScenes() {
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-
-          <div className="absolute bottom-0 p-6 sm:p-10">
-            <h3 className="mb-4 font-serif text-3xl text-white sm:text-4xl">
-              {featured.title}
-            </h3>
-
-            <p className="mb-8 max-w-lg text-sm leading-7 text-neutral-300 sm:text-base sm:leading-8">
-              {featured.description}
-            </p>
-
-            <Link
-              to="/about"
-              className="group inline-flex items-center gap-2 text-[var(--color-primary)]"
-            >
-              Discover Our Story
-              <ArrowRight className="transition group-hover:translate-x-1" />
-            </Link>
-          </div>
-
-          <button className="absolute left-1/2 top-1/2 flex h-16 w-16 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-white/20 backdrop-blur-md transition hover:scale-110 sm:h-20 sm:w-20">
-            <Play className="ml-1 text-white" size={22} />
-          </button>
         </motion.div>
 
         <div className="flex flex-col gap-8">

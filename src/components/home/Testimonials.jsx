@@ -52,10 +52,6 @@ function Testimonials() {
                 <h4 className="font-semibold text-white">
                   {testimonial.name}
                 </h4>
-
-                <p className="text-sm text-neutral-400">
-                  {testimonial.location}
-                </p>
               </div>
             </div>
           </motion.div>

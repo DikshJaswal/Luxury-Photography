@@ -44,11 +44,7 @@ function FeaturedFilms() {
             </div>
 
             <div className="mx-auto mt-6 max-w-4xl px-1 sm:px-4">
-              <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-primary)]">
-                {film.location}
-              </p>
-
-              <h3 className="mt-3 font-serif text-3xl text-white sm:text-4xl">
+              <h3 className="font-serif text-3xl text-white sm:text-4xl">
                 {film.title}
               </h3>
 

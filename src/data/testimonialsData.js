@@ -1,8 +1,7 @@
 const testimonials = [
   {
     id: 1,
-    name: "Aditi & Rohan",
-    location: "Udaipur Pre-Wedding",
+    name: "Happy Couple",
     image:
       "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80",
     review:
@@ -11,8 +10,7 @@ const testimonials = [
   },
   {
     id: 2,
-    name: "Sneha & Aryan",
-    location: "Goa Pre-Wedding",
+    name: "Happy Couple",
     image:
       "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=500&q=80",
     review:
@@ -21,8 +19,7 @@ const testimonials = [
   },
   {
     id: 3,
-    name: "Megha & Kunal",
-    location: "Shimla Shoot",
+    name: "Happy Couple",
     image:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80",
     review:

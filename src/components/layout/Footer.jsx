@@ -44,7 +44,6 @@ function Footer() {
               {[
                 ["Home", "/"],
                 ["Portfolio", "/portfolio"],
-                ["Locations", "/locations"],
                 ["Packages", "/packages"],
                 ["About", "/about"],
                 ["Blog", "/blog"],

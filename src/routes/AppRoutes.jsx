@@ -2,8 +2,6 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "../pages/Home";
 import Portfolio from "../pages/Portfolio";
-import PortfolioCategory from "../pages/PortfolioCategory";
-import Locations from "../pages/Locations";
 import Packages from "../pages/Packages";
 import About from "../pages/About";
 import Blog from "../pages/Blog";
@@ -19,13 +17,6 @@ const AppRoutes = () => {
       <Route path="/" element={<Home />} />
 
       <Route path="/portfolio" element={<Portfolio />} />
-
-      <Route
-        path="/portfolio/:category"
-        element={<PortfolioCategory />}
-      />
-
-      <Route path="/locations" element={<Locations />} />
 
       <Route path="/packages" element={<Packages />} />
 

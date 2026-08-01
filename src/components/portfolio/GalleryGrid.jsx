@@ -1,6 +1,10 @@
+import { useState } from "react";
 import GalleryCard from "./GalleryCard";
+import Lightbox from "./Lightbox";
 
 function GalleryGrid({ images }) {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   if (!images || images.length === 0) {
     return (
       <section className="py-24">
@@ -26,10 +30,17 @@ function GalleryGrid({ images }) {
               key={image.id}
               image={image}
               index={index}
+              onClick={() => setSelectedImage(image)}
             />
           ))}
         </div>
       </div>
+
+      <Lightbox
+        image={selectedImage}
+        isOpen={!!selectedImage}
+        onClose={() => setSelectedImage(null)}
+      />
     </section>
   );
 }

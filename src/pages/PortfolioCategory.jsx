@@ -60,25 +60,6 @@ function PortfolioCategory() {
         poster={heroMedia.poster}
       />
 
-      <section className="bg-[#0B0B0B] py-20">
-        <div className="mx-auto max-w-5xl px-6 text-center">
-          <span className="inline-flex rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-5 py-2 text-xs uppercase tracking-[0.35em] text-[var(--color-primary)]">
-            {currentCategory.name}
-          </span>
-
-          <h2 className="mt-6 font-serif text-4xl md:text-6xl">
-            {currentCategory.name} Pre-Wedding
-            <span className="text-[var(--color-primary)]">
-              {" "}Gallery
-            </span>
-          </h2>
-
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-neutral-400">
-            {currentCategory.description}
-          </p>
-        </div>
-      </section>
-
       <GalleryGrid images={images} />
 
       <RelatedCategories currentCategory={category} />
