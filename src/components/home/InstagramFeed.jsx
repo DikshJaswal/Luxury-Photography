@@ -32,11 +32,22 @@ function InstagramFeed() {
             viewport={{ once: true }}
             className="group relative overflow-hidden rounded-2xl"
           >
-            <img
-              src={post.image}
-              alt="Instagram Post"
-              className="aspect-square w-full object-cover transition duration-700 group-hover:scale-110"
-            />
+            {post.video ? (
+              <video
+                src={post.video}
+                muted
+                loop
+                autoPlay
+                playsInline
+                className="aspect-square w-full object-cover transition duration-700 group-hover:scale-110"
+              />
+            ) : (
+              <img
+                src={post.image}
+                alt="Instagram Post"
+                className="aspect-square w-full object-cover transition duration-700 group-hover:scale-110"
+              />
+            )}
 
             <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition duration-500 group-hover:bg-black/50">
               <FaInstagram className="scale-50 text-4xl text-white opacity-0 transition duration-500 group-hover:scale-100 group-hover:opacity-100" />

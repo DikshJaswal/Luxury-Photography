@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 
 function StickyBookNow() {
   return (
-    <div className="fixed right-0 top-1/2 z-[998] hidden -translate-y-1/2 md:block">
+    <div className="fixed bottom-8 right-24 z-[998]">
       <Link
         to="/contact#contact-form"
-        className="group flex items-center gap-3 rounded-l-full border border-[var(--color-primary)]/40 bg-[var(--color-primary)] px-5 py-4 pr-6 font-medium text-black shadow-2xl shadow-black/30 transition-all duration-300 hover:translate-x-[-4px] hover:bg-[#e7c766]"
+        className="group flex items-center gap-2 rounded-l-full border border-[var(--color-primary)]/40 bg-[var(--color-primary)] px-4 py-3 pr-5 text-sm font-medium text-black shadow-2xl shadow-black/30 transition-all duration-300 hover:-translate-x-1 hover:bg-[#e7c766] sm:gap-3 sm:px-5 sm:py-4 sm:pr-6 sm:text-base"
       >
         <CalendarDays size={18} />
         <span className="tracking-wide">Book Now</span>

@@ -78,8 +78,11 @@ function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
+            type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="justify-self-end text-white lg:hidden"
+            className="col-start-3 justify-self-end text-white lg:hidden"
+            aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={menuOpen}
           >
             {menuOpen ? (
               <HiOutlineX size={28} />

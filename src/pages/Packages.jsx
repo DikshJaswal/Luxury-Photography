@@ -12,7 +12,7 @@ function Packages() {
       <PageIntro
         eyebrow="Packages"
         title="Pricing Hidden, Planning Made Simple"
-        description="The demo keeps pricing out of the way and focuses on the custom quote workflow your client asked for."
+        description="Choose an experience that fits your vision, or speak with us about a custom package for your locations, outfits, team, and film requirements."
         primaryLabel="Request Quote"
         primaryTo="/book"
         secondaryLabel="View Portfolio"

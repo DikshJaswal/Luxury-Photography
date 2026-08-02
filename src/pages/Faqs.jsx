@@ -11,7 +11,7 @@ function FAQ() {
       <PageIntro
         eyebrow="FAQs"
         title="Quick Answers Before You Enquire"
-        description="The basics on booking, timing, travel, galleries, and how the demo inquiry flow works."
+        description="Clear answers about booking, shoot planning, styling, delivery, pricing, and everything you can expect from our team."
         primaryLabel="Browse FAQs"
         primaryTo="#faq"
         secondaryLabel="Request Quote"

@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Images } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import portfolioCategories from "../../data/portfolioCategories";

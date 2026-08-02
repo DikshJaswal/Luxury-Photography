@@ -1,9 +1,30 @@
+import { useEffect } from "react";
+
 import BlogHero from "../components/blog/BlogHero";
 import BlogGrid from "../components/blog/BlogGrid";
 import Newsletter from "../components/blog/Newsletter";
 import PageIntro from "../components/common/PageIntro";
 
 function Blog() {
+  useEffect(() => {
+    const previousTitle = document.title;
+    const meta = document.querySelector('meta[name="description"]');
+    const previousDescription = meta?.getAttribute("content") || "";
+
+    document.title = "Pre-Wedding Photography Journal | LUXE";
+    if (meta) {
+      meta.setAttribute(
+        "content",
+        "Short guides to pre-wedding shoot locations, planning, outfits, light, and cinematic photography across India."
+      );
+    }
+
+    return () => {
+      document.title = previousTitle;
+      meta?.setAttribute("content", previousDescription);
+    };
+  }, []);
+
   return (
     <main className="bg-[#0B0B0B]">
       <BlogHero />

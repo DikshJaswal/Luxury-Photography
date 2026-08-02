@@ -26,9 +26,9 @@ function AvailabilityForm() {
       <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr]">
         <SectionHeading
           align="left"
-          badge="Check Availability"
+          badge="Start Your Inquiry"
           title="Lock The Right Date Before It Goes"
-          description="Share your date, location, and preferred shoot mood. For the demo, this form opens a pre-filled WhatsApp inquiry so the flow works without a backend."
+          description="Share your date, location, and preferred shoot mood. We’ll confirm availability and continue the consultation on WhatsApp."
         />
 
         <form
@@ -114,7 +114,7 @@ function AvailabilityForm() {
               className="inline-flex items-center justify-center gap-3 rounded-full bg-[var(--color-primary)] px-7 py-4 font-semibold text-black transition hover:-translate-y-0.5"
             >
               <Send size={18} />
-              Check Availability
+              Send Inquiry on WhatsApp
             </button>
 
             <a

@@ -11,6 +11,7 @@ import {
 import { COMPANY } from "../utils/constants";
 import VideoHero from "../components/common/VideoHero";
 import PageIntro from "../components/common/PageIntro";
+import TravelProcess from "../components/locations/TravelProcess";
 
 function Contact() {
   const handleSubmit = (event) => {
@@ -47,8 +48,8 @@ function Contact() {
       <PageIntro
         eyebrow="Contact"
         title="Tell Us What You Want To Create"
-        description="This demo keeps the inquiry flow direct and visible so couples can move from inspiration to WhatsApp without friction."
-        primaryLabel="Check Availability"
+        description="Tell us your preferred date, location, style, and expectations. We’ll confirm availability and guide you through every next step."
+        primaryLabel="Start Your Inquiry"
         primaryTo="#contact-form"
         secondaryLabel="View Portfolio"
         secondaryTo="/portfolio"
@@ -360,6 +361,8 @@ function Contact() {
         </div>
 
       </section>
+
+      <TravelProcess />
 
             {/* ================= MAP ================= */}
 

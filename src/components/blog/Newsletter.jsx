@@ -93,7 +93,7 @@ function Newsletter() {
 
           <p className="mt-6 text-center text-sm text-neutral-400">
             {submitted
-              ? "Thanks, your demo subscription was captured on this page."
+              ? "Thanks. We’ll use your email only for occasional journal updates."
               : "No spam. Only elegant pre-wedding inspiration, exclusive stories, and photography insights delivered occasionally."}
           </p>
 

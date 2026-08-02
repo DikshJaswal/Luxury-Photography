@@ -22,7 +22,7 @@ function VideoHero({
         loop
         playsInline
         poster={heroPoster}
-        className="absolute inset-0 h-full w-full object-cover brightness-90 contrast-110 saturate-75"
+        className="absolute inset-0 h-full w-full bg-black object-contain brightness-100 contrast-105 saturate-90 md:object-cover"
       >
         <source
           src={heroVideo}
@@ -30,11 +30,11 @@ function VideoHero({
         />
       </motion.video>
 
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/15 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/5 to-black/45" />
 
-      <div className="absolute inset-0 bg-[#2a1c12]/10 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-[#2a1c12]/5 mix-blend-multiply" />
 
-      <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_240px_rgba(0,0,0,0.72)]" />
+      <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_240px_rgba(0,0,0,0.38)]" />
 
       <div className="absolute bottom-10 left-1/2 z-20 -translate-x-1/2">
         <motion.div

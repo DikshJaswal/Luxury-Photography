@@ -4,6 +4,7 @@ import { FaYoutube } from "react-icons/fa";
 import Section from "../common/Section";
 import SectionHeading from "../common/SectionHeading";
 import videos from "../../data/youtubeVideos";
+import { COMPANY } from "../../utils/constants";
 
 function YouTubeVideos() {
   return (
@@ -11,7 +12,7 @@ function YouTubeVideos() {
       <SectionHeading
         badge="Featured on YouTube"
         title="Stories Beyond the Frame"
-        description="Every embedded video is shown as a full-screen viewing block, with the title sitting below the media instead of on top of it."
+        description="Watch a preview here, then visit our official YouTube channel for complete films and latest uploads."
       />
 
       <div className="space-y-12">
@@ -27,22 +28,38 @@ function YouTubeVideos() {
             viewport={{ once: true }}
             className="overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03]"
           >
-            <div className="h-[100svh] bg-black">
-              <iframe
+            <a
+              href={COMPANY.youtube}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Watch ${video.title} on YouTube`}
+              className="block h-[min(70svh,720px)] bg-black"
+            >
+              <video
                 title={video.title}
                 src={video.embedUrl}
-                className="h-full w-full"
-                loading="lazy"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
+                poster={video.poster}
+                muted
+                loop
+                autoPlay
+                playsInline
+                className="h-full w-full object-contain"
               />
-            </div>
+            </a>
 
             <div className="p-6 sm:p-8">
               <FaYoutube className="text-3xl text-[var(--color-primary)]" />
               <h3 className="mt-5 font-serif text-2xl text-white">
                 {video.title}
               </h3>
+              <a
+                href={COMPANY.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-4 inline-flex text-sm text-[var(--color-primary)] hover:underline"
+              >
+                Visit our YouTube channel
+              </a>
             </div>
           </motion.article>
         ))}

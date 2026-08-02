@@ -1,5 +1,6 @@
 import { ArrowRight, CalendarDays, Mail } from "lucide-react";
 import { Link } from "react-router-dom";
+import { COMPANY } from "../../utils/constants";
 
 function FAQCTA() {
   return (
@@ -53,7 +54,7 @@ function FAQCTA() {
                 </Link>
 
                 <a
-                  href="mailto:hello@luxe.com"
+                  href={`mailto:${COMPANY.email}`}
                   className="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-8 py-4 font-medium text-white transition-all duration-300 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
                 >
                   <Mail size={18} />

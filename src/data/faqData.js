@@ -1,34 +1,34 @@
 const faqData = [
-  {
-    question: "How far in advance should we book?",
-    answer:
-      "Most couples reserve their pre-wedding shoot 2-6 months in advance, especially for mountain, resort, or destination locations.",
-  },
-  {
-    question: "Do you travel for destination shoots?",
-    answer:
-      "Yes. We plan destination pre-wedding shoots across India and can guide you on travel, timing, and location permissions.",
-  },
-  {
-    question: "How many edited photographs do we receive?",
-    answer:
-      "Every shoot is different, but couples usually receive a curated set of professionally edited images based on the selected experience.",
-  },
-  {
-    question: "When will we receive our gallery?",
-    answer:
-      "Demo timelines are listed as 2-4 weeks for photos and 4-6 weeks for cinematic films, depending on the shoot scope.",
-  },
-  {
-    question: "Do you provide cinematic films?",
-    answer:
-      "Yes. We create cinematic pre-wedding films with direction, music, drone shots, and storytelling edits.",
-  },
-  {
-    question: "Can experiences be customized?",
-    answer:
-      "Yes. Every quote is tailored around your location, dates, outfits, team size, drone needs, and film requirements.",
-  },
-];
+  ["Booking & Availability", "How do we book our pre-wedding shoot?", "Simply contact us on WhatsApp or fill out our inquiry form. We'll confirm availability and guide you through the booking process."],
+  ["Booking & Availability", "How much advance payment is required?", "A booking advance is required to reserve your preferred date. The remaining amount can be paid as per our booking terms."],
+  ["Booking & Availability", "How far in advance should we book?", "We recommend booking at least 1–3 months in advance, especially during the wedding season."],
+  ["Booking & Availability", "Can we book at the last minute?", "Yes, subject to date availability."],
+  ["Booking & Availability", "Can we reschedule our shoot?", "Yes. Rescheduling is possible according to our booking policy and date availability."],
+  ["Shoot Planning", "How long does the shoot take?", "Most pre-wedding shoots take between 9–12 hours a day depending on the selected locations and outfits."],
+  ["Shoot Planning", "How many locations can we cover?", "It depends on the package and travel time."],
+  ["Shoot Planning", "Can you help us choose locations?", "Absolutely. We'll recommend the best locations based on your preferred style and season."],
+  ["Shoot Planning", "Do you only shoot in Rishikesh?", "No. We also travel to destination locations across India."],
+  ["Shoot Planning", "What is the best season for a pre-wedding shoot?", "October to March generally offers the most comfortable weather and beautiful natural light."],
+  ["Outfits & Styling", "What should we wear?", "We recommend coordinated outfits with solid colors and comfortable footwear."],
+  ["Outfits & Styling", "How many outfits should we bring?", "Usually 5–6 outfits work best."],
+  ["Outfits & Styling", "Do you provide makeup artists?", "Yes, professional makeup services can be arranged."],
+  ["Outfits & Styling", "Can you provide gowns or accessories?", "Yes, selected gowns and styling accessories are available."],
+  ["Photography & Videography", "Do you provide both photography and videography?", "Yes, we offer both professional photography and cinematic videography."],
+  ["Photography & Videography", "Will we receive edited photos?", "Yes. Every delivered image is professionally edited."],
+  ["Photography & Videography", "Do you use drones?", "Yes, drone coverage is available wherever local regulations permit."],
+  ["Photography & Videography", "Can we suggest pose ideas?", "Absolutely. You're welcome to share inspiration, and we'll also guide you naturally throughout the shoot."],
+  ["Photography & Videography", "We are camera shy. Can you help?", "Of course. Most couples feel nervous initially, and our team will help you feel comfortable."],
+  ["Delivery", "How many edited photos will we receive?", "The number depends on your selected package."],
+  ["Delivery", "When will we receive our photos?", "Delivery timelines vary by package, but we always share the expected timeline before booking."],
+  ["Delivery", "When will we receive the cinematic video?", "Video delivery timelines are shared during booking."],
+  ["Delivery", "How will we receive our photos?", "Photos are delivered through an online gallery or cloud drive for easy download."],
+  ["Pricing", "Do you offer different packages?", "Yes. We offer multiple packages to suit different requirements."],
+  ["Pricing", "Are travel charges included?", "Travel charges depend on the shoot location."],
+  ["Pricing", "Do you customize packages?", "Yes. Custom packages are available."],
+  ["Weather & Policies", "What happens if it rains?", "We'll either continue if conditions allow or reschedule the shoot."],
+  ["Weather & Policies", "What happens if we are late?", "We'll do our best to accommodate you, although delays may affect the planned schedule."],
+  ["Weather & Policies", "Is our booking amount refundable?", "Refunds are handled according to our booking policy."],
+  ["Weather & Policies", "Why should we choose your studio?", "We focus on luxury cinematic storytelling, personalized planning, professional guidance, premium editing, and creating a relaxed experience from booking to final delivery."],
+].map(([category, question, answer]) => ({ category, question, answer }));
 
 export default faqData;

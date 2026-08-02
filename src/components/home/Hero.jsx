@@ -16,7 +16,7 @@ function Hero() {
         loop
         playsInline
         poster={poster}
-        className="absolute inset-0 h-full w-full object-cover brightness-90 contrast-110 saturate-75 transition-transform duration-[20000ms] scale-105"
+        className="absolute inset-0 h-full w-full scale-100 bg-black object-contain brightness-100 contrast-105 saturate-90 transition-transform duration-[20000ms] md:scale-105 md:object-cover"
       >
         <source
           src={video}
@@ -25,13 +25,13 @@ function Hero() {
       </motion.video>
 
       {/* Cinematic Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-black/70" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/5 to-black/45" />
 
       {/* Warm Film Tone */}
-      <div className="absolute inset-0 bg-[#2a1c12]/15 mix-blend-multiply" />
+      <div className="absolute inset-0 bg-[#2a1c12]/5 mix-blend-multiply" />
 
       {/* Vignette */}
-      <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_250px_rgba(0,0,0,0.7)]" />
+      <div className="pointer-events-none absolute inset-0 shadow-[inset_0_0_250px_rgba(0,0,0,0.38)]" />
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-10 left-1/2 z-20 -translate-x-1/2">

@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { Calendar, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import Section from "../common/Section";
-import SectionHeading from "../common/SectionHeading";
 
 import blogPosts from "../../data/blogData";
 
