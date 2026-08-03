@@ -20,7 +20,7 @@ function PortfolioCategory() {
   useEffect(() => {
     if (!currentCategory) return undefined;
 
-    const title = `${currentCategory.name} Pre-Wedding Photography | LUXE`;
+    const title = `${currentCategory.name} Pre-Wedding Photography | Rishikesh Prewed Studio`;
     const description = currentCategory.description;
     const previousTitle = document.title;
     let meta = document.querySelector('meta[name="description"]');

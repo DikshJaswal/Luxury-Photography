@@ -9,31 +9,31 @@ function Achievements() {
   const stats = [
     {
       icon: Camera,
-      number: "250+",
-      label: "Shoots Captured",
+      number: "3",
+      label: "Packages",
       description:
         "Beautiful pre-wedding stories documented with authenticity and timeless elegance.",
     },
     {
       icon: Heart,
-      number: "500+",
-      label: "Happy Couples",
+      number: "6",
+      label: "Theme Options",
       description:
         "Couples who trusted us to turn their story into cinematic portraits and films.",
     },
     {
       icon: Globe,
-      number: "20+",
-      label: "Destinations",
+      number: "4K",
+      label: "Video Options",
       description:
         "From intimate local sessions to luxurious destination shoots across breathtaking locations.",
     },
     {
       icon: Award,
-      number: "8+",
-      label: "Years Experience",
+      number: "10%",
+      label: "Booking Advance",
       description:
-        "Years dedicated to mastering the art of luxury pre-wedding storytelling and visual craftsmanship.",
+        "Choose the package, themes, and video format that best fit your story.",
     },
   ];
 

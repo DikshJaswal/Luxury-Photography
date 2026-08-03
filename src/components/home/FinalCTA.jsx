@@ -89,26 +89,26 @@ function FinalCTA() {
         >
           <div className="flex flex-col items-center">
             <Heart className="mb-3 text-[var(--color-primary)]" />
-            <h3 className="text-3xl font-bold text-white">500+</h3>
-            <p className="mt-2 text-neutral-400">Happy Couples</p>
+            <h3 className="text-3xl font-bold text-white">3</h3>
+            <p className="mt-2 text-neutral-400">Packages</p>
           </div>
 
           <div className="flex flex-col items-center">
             <Camera className="mb-3 text-[var(--color-primary)]" />
-            <h3 className="text-3xl font-bold text-white">1200+</h3>
-            <p className="mt-2 text-neutral-400">Shoots Completed</p>
+            <h3 className="text-3xl font-bold text-white">6</h3>
+            <p className="mt-2 text-neutral-400">Theme Options</p>
           </div>
 
           <div className="flex flex-col items-center">
             <Star className="mb-3 text-[var(--color-primary)]" />
-            <h3 className="text-3xl font-bold text-white">5.0</h3>
-            <p className="mt-2 text-neutral-400">Average Rating</p>
+            <h3 className="text-3xl font-bold text-white">4K</h3>
+            <p className="mt-2 text-neutral-400">Video Options</p>
           </div>
 
           <div className="flex flex-col items-center">
             <Calendar className="mb-3 text-[var(--color-primary)]" />
-            <h3 className="text-3xl font-bold text-white">8+</h3>
-            <p className="mt-2 text-neutral-400">Years Experience</p>
+            <h3 className="text-3xl font-bold text-white">10%</h3>
+            <p className="mt-2 text-neutral-400">Booking Advance</p>
           </div>
         </motion.div>
       </div>

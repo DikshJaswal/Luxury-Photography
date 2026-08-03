@@ -15,7 +15,7 @@ function BlogDetails() {
     const meta = document.querySelector('meta[name="description"]');
     const previousDescription = meta?.getAttribute("content") || "";
 
-    document.title = `${post.title} | LUXE Photography`;
+    document.title = `${post.title} | Rishikesh Prewed Studio`;
     meta?.setAttribute("content", post.excerpt);
 
     return () => {
@@ -79,7 +79,7 @@ function BlogDetails() {
         <div className="mx-auto max-w-4xl px-6 text-center lg:px-10">
           <h2 className="font-serif text-4xl font-light md:text-5xl">Planning a shoot in {post.title.split(" ").slice(-1)}?</h2>
           <p className="mx-auto mt-6 max-w-2xl leading-8 text-neutral-400">Tell us your preferred date, location, and visual style. We&apos;ll help shape the right plan for your story.</p>
-          <Link to="/contact#contact-form" className="mt-8 inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] px-8 py-4 font-medium text-black transition hover:scale-105">Start Your Inquiry <ArrowRight size={18} /></Link>
+          <Link to="/book" className="mt-8 inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] px-8 py-4 font-medium text-black transition hover:scale-105">Start Your Inquiry <ArrowRight size={18} /></Link>
         </div>
       </section>
     </main>

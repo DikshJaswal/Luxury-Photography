@@ -2,7 +2,6 @@ import { useEffect } from "react";
 
 import BlogHero from "../components/blog/BlogHero";
 import BlogGrid from "../components/blog/BlogGrid";
-import Newsletter from "../components/blog/Newsletter";
 import PageIntro from "../components/common/PageIntro";
 
 function Blog() {
@@ -11,7 +10,7 @@ function Blog() {
     const meta = document.querySelector('meta[name="description"]');
     const previousDescription = meta?.getAttribute("content") || "";
 
-    document.title = "Pre-Wedding Photography Journal | LUXE";
+    document.title = "Pre-Wedding Photography Journal | Rishikesh Prewed Studio";
     if (meta) {
       meta.setAttribute(
         "content",
@@ -40,7 +39,6 @@ function Blog() {
 
       <BlogGrid />
 
-      <Newsletter />
     </main>
   );
 }

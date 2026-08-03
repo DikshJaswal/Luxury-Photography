@@ -1,61 +1,33 @@
-import { motion } from "framer-motion";
-import { FaStar } from "react-icons/fa";
-
+import { ExternalLink, Star } from "lucide-react";
 import Section from "../common/Section";
 import SectionHeading from "../common/SectionHeading";
-
-import testimonials from "../../data/testimonialsData";
+import { COMPANY } from "../../utils/constants";
 
 function Testimonials() {
   return (
     <Section className="bg-[#0b0b0b]">
       <SectionHeading
-        badge="Testimonials"
-        title="Loved By Couples Across India"
-        description="Every story we capture is built on trust, creativity, and unforgettable memories."
+        badge="Client Reviews"
+        title="Real Stories From Real Couples"
+        description="Read verified client feedback on our Google Business profile, then contact us to plan your own pre-wedding story."
       />
 
-      <div className="grid gap-8 lg:grid-cols-3">
-        {testimonials.map((testimonial, index) => (
-          <motion.div
-            key={testimonial.id}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.6,
-              delay: index * 0.15,
-            }}
-            viewport={{ once: true }}
-            className="group rounded-3xl border border-white/10 bg-white/[0.03] p-8 transition duration-500 hover:-translate-y-2 hover:border-[var(--color-primary)]"
-          >
-            <div className="mb-6 flex">
-              {[...Array(testimonial.rating)].map((_, i) => (
-                <FaStar
-                  key={i}
-                  className="mr-1 text-[var(--color-primary)]"
-                />
-              ))}
-            </div>
-
-            <p className="mb-8 leading-8 text-neutral-300">
-              "{testimonial.review}"
-            </p>
-
-            <div className="flex items-center gap-4">
-              <img
-                src={testimonial.image}
-                alt={testimonial.name}
-                className="h-16 w-16 rounded-full object-cover"
-              />
-
-              <div>
-                <h4 className="font-semibold text-white">
-                  {testimonial.name}
-                </h4>
-              </div>
-            </div>
-          </motion.div>
-        ))}
+      <div className="mx-auto max-w-3xl rounded-[32px] border border-white/10 bg-white/[0.04] p-10 text-center">
+        <div className="flex justify-center gap-1 text-[var(--color-primary)]">
+          {[1, 2, 3, 4, 5].map((star) => <Star key={star} size={24} fill="currentColor" />)}
+        </div>
+        <h3 className="mt-6 font-serif text-3xl text-white">See our latest Google reviews</h3>
+        <p className="mx-auto mt-5 max-w-xl leading-8 text-neutral-400">
+          We prefer to show genuine feedback directly from our Google Business profile instead of using placeholder testimonials.
+        </p>
+        <a
+          href={COMPANY.maps}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-8 inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] px-7 py-4 font-medium text-black transition hover:scale-105"
+        >
+          View Google Reviews <ExternalLink size={18} />
+        </a>
       </div>
     </Section>
   );

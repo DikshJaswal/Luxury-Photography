@@ -12,31 +12,37 @@ function FAQCategories() {
     {
       title: "Booking",
       description: "Reservations & Availability",
+      targetCategory: "Booking & Availability",
       icon: CalendarCheck,
     },
     {
       title: "Photography",
       description: "Coverage & Style",
+      targetCategory: "Photography & Videography",
       icon: Camera,
     },
     {
       title: "Destination",
       description: "Travel Information",
+      targetCategory: "Shoot Planning",
       icon: Globe2,
     },
     {
       title: "Packages",
       description: "Quotes & Experiences",
+      targetCategory: "Pricing",
       icon: CreditCard,
     },
     {
       title: "Gallery",
       description: "Delivery & Albums",
+      targetCategory: "Delivery",
       icon: Images,
     },
     {
       title: "Editing",
       description: "Retouching Process",
+      targetCategory: "Photography & Videography",
       icon: FileImage,
     },
   ];
@@ -77,9 +83,14 @@ function FAQCategories() {
             return (
               <button
                 key={item.title}
-                className="group rounded-[28px] border border-white/10 bg-white/[0.04] p-8 text-left transition-all duration-300 hover:-translate-y-2 hover:border-[var(--color-primary)]/40 hover:bg-white/[0.06]"
+                type="button"
+                onClick={() => {
+                  window.location.hash = `faq-${item.targetCategory.toLowerCase().replaceAll(" ", "-")}`;
+                  document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
+                }}
+                className="group rounded-[28px] border border-white/10 bg-white/[0.04] p-8 text-center transition-all duration-300 hover:-translate-y-2 hover:border-[var(--color-primary)]/40 hover:bg-white/[0.06]"
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] transition-all duration-300 group-hover:bg-[var(--color-primary)] group-hover:text-black">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--color-primary)]/10 text-[var(--color-primary)] transition-all duration-300 group-hover:bg-[var(--color-primary)] group-hover:text-black">
 
                   <Icon size={30} />
 

@@ -19,7 +19,7 @@ function Contact() {
 
     const data = new FormData(event.currentTarget);
     const message = [
-      "Hi, I want to enquire about a luxury pre-wedding shoot.",
+      "Hi, I want to enquire about a pre-wedding shoot with Rishikesh Prewed Studio.",
       `Name: ${data.get("name") || "-"}`,
       `Partner: ${data.get("partner") || "-"}`,
       `Email: ${data.get("email") || "-"}`,
@@ -74,11 +74,14 @@ function Contact() {
 
             </h3>
 
-            <p className="mt-4 text-neutral-400">
+            <a
+              href={`mailto:${COMPANY.email}`}
+              className="mt-4 block break-all text-sm text-neutral-400 hover:text-[var(--color-primary)] sm:text-base"
+            >
 
               {COMPANY.email}
 
-            </p>
+            </a>
 
           </div>
 
@@ -95,11 +98,14 @@ function Contact() {
 
             </h3>
 
-            <p className="mt-4 text-neutral-400">
+            <a
+              href={`tel:${COMPANY.phone.replace(/\s/g, "")}`}
+              className="mt-4 block text-neutral-400 hover:text-[var(--color-primary)]"
+            >
 
               {COMPANY.phone}
 
-            </p>
+            </a>
 
           </div>
 
@@ -118,7 +124,7 @@ function Contact() {
 
             <p className="mt-4 text-neutral-400">
 
-              {COMPANY.address}, India
+              {COMPANY.address}
 
             </p>
 
@@ -139,7 +145,7 @@ function Contact() {
 
             <p className="mt-4 text-neutral-400">
 
-              Within 24 Hours
+              {COMPANY.workingHours}
 
             </p>
 
@@ -315,10 +321,10 @@ function Contact() {
                 <div className="flex justify-between border-b border-white/10 pb-4">
 
                   <span className="text-neutral-400">
-                    Shoots Per Year
+                    Availability
                   </span>
 
-                  <span>25</span>
+                  <span>By appointment</span>
 
                 </div>
 
@@ -328,17 +334,17 @@ function Contact() {
                     Destination Shoots
                   </span>
 
-                  <span>Worldwide</span>
+                  <span>Rishikesh & destinations</span>
 
                 </div>
 
                 <div className="flex justify-between border-b border-white/10 pb-4">
 
                   <span className="text-neutral-400">
-                    Response Time
+                    Working Hours
                   </span>
 
-                  <span>&lt; 24 Hours</span>
+                  <span>{COMPANY.workingHours}</span>
 
                 </div>
 
@@ -391,10 +397,19 @@ function Contact() {
 
             <iframe
               title="Studio Location"
-              src="https://www.google.com/maps?q=Shimla,+Himachal+Pradesh&output=embed"
+              src="https://www.google.com/maps?q=Rishikesh,+Uttarakhand&output=embed"
               className="h-[550px] w-full"
               loading="lazy"
             />
+
+            <a
+              href={COMPANY.maps}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex text-sm text-[var(--color-primary)] hover:underline"
+            >
+              Open Rishikesh location in Google Maps
+            </a>
 
           </div>
 
@@ -445,7 +460,7 @@ function Contact() {
               <div className="flex justify-start lg:justify-end">
 
                 <a
-                  href="https://instagram.com"
+                  href={COMPANY.instagram}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] px-8 py-4 font-medium text-black transition hover:scale-105"

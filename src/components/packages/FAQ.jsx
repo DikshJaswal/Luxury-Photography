@@ -4,6 +4,11 @@ import { ChevronDown } from "lucide-react";
 function FAQ() {
   const faqs = [
     {
+      question: "What is the payment schedule?",
+      answer:
+        "A 10% booking advance confirms your date. 80% is due on the shoot day, and the remaining balance is payable at delivery. The booking advance is non-refundable.",
+    },
+    {
       question: "How do we book our shoot date?",
       answer:
         "Send an enquiry through the contact page. Once we discuss your shoot details and confirm availability, the booking process secures your date.",

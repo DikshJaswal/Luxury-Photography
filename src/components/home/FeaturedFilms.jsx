@@ -49,13 +49,13 @@ function FeaturedFilms() {
               </h3>
 
               <div className="mt-6 flex flex-wrap gap-4">
-                <Link
-                  to="/portfolio/cinematic-films"
+                <a
+                  href="/portfolio#portfolio-reels"
                   className="inline-flex items-center gap-2 rounded-full bg-[var(--color-primary)] px-5 py-3 text-sm font-medium text-black transition hover:scale-105"
                 >
                   View Cinematic Film
                   <ArrowRight size={16} />
-                </Link>
+                </a>
 
                 <Link
                   to="/book"

@@ -1,9 +1,7 @@
 import { Link } from "react-router-dom";
 import {
   FaInstagram,
-  FaFacebookF,
   FaYoutube,
-  FaPinterestP,
 } from "react-icons/fa";
 
 import Container from "../common/Container";
@@ -15,13 +13,17 @@ function Footer() {
       <Container>
         <div className="grid gap-16 py-24 lg:grid-cols-4">
           <div>
-            <h2 className="mb-8 font-serif text-5xl font-semibold uppercase tracking-[0.35em] text-white">
-              {COMPANY.name}
-            </h2>
+            <Link to="/" className="mb-8 block w-fit">
+              <img
+                src={COMPANY.logo}
+                alt={COMPANY.name}
+                className="h-28 w-44 object-contain object-left"
+              />
+            </Link>
 
             <p className="max-w-sm leading-9 text-neutral-400">
-              India&apos;s luxury pre-wedding storytelling studio, creating
-              cinematic photographs and films across India.
+              Cinematic pre-wedding photography and films from Rishikesh,
+              Uttarakhand, and destination locations across India.
             </p>
 
             <a
@@ -91,9 +93,7 @@ function Footer() {
             <div className="mt-10 flex gap-4">
               {[
                 [COMPANY.instagram, <FaInstagram key="instagram" />],
-                [COMPANY.facebook, <FaFacebookF key="facebook" />],
                 [COMPANY.youtube, <FaYoutube key="youtube" />],
-                [COMPANY.pinterest, <FaPinterestP key="pinterest" />],
               ].map(([href, icon]) => (
                 <a
                   key={href}

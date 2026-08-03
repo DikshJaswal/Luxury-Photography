@@ -47,10 +47,10 @@ function PortfolioCTA() {
         </div>
 
         <div className="mt-16 flex flex-wrap justify-center gap-10 text-sm uppercase tracking-[0.25em] text-neutral-500">
-          <span>500+ Couples</span>
+          <span>Rishikesh Based</span>
           <span>Destination Shoots</span>
-          <span>5★ Rated</span>
-          <span>Luxury Experience</span>
+          <span>By Appointment</span>
+          <span>Custom Packages</span>
         </div>
       </div>
     </section>

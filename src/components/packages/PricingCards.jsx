@@ -10,47 +10,63 @@ import { Link } from "react-router-dom";
 function PricingCards() {
   const packages = [
     {
-      name: "Essential",
-      subtitle: "Perfect for intimate love stories",
+      name: "Basic",
+      price: "₹20,000",
+      subtitle: "A complete essential pre-wedding experience",
       icon: <Camera size={28} />,
       featured: false,
       features: [
-        "6 Hours Coverage",
-        "300+ Edited Images",
-        "Private Online Gallery",
-        "High-Resolution Downloads",
-        "Sneak Peek Within 72 Hours",
+        "Cinematography",
+        "HD Shoot Quality",
+        "Candid Photography",
+        "Professional Drone",
+        "Six Selected Themes",
+        "Location Charges",
+        "Changing Room, Wooden Chair & Makeup Artist",
+        "Long Tail Gown",
+        "HD Video + 1 Cinematic Video (3–4 min)",
+        "1 Teaser, 40 Candid Photos & 7 Countdowns",
+        "Save the Date, 1 Instagram Reel & 10-Sheet Album",
       ],
     },
     {
-      name: "Signature",
-      subtitle: "Our most loved cinematic experience",
+      name: "Standard",
+      price: "₹28,000",
+      subtitle: "Our most popular 4K pre-wedding experience",
       icon: <Film size={28} />,
       featured: true,
       features: [
-        "10 Hours Coverage",
-        "700+ Edited Images",
-        "Cinematic Highlight Film",
-        "Drone Coverage",
-        "Luxury Online Gallery",
-        "Premium Photo Album",
-        "Priority Editing",
+        "Cinematography",
+        "4K Shoot Quality",
+        "Candid Photography",
+        "Professional Drone",
+        "Six Selected Themes",
+        "Location Charges",
+        "Changing Room, Wooden Chair & Makeup Artist",
+        "Long Tail Gown",
+        "4K Video + 1 Cinematic Video (3–5 min)",
+        "1 Teaser, 50 Candid Photos & 7 Countdowns",
+        "Save the Date, 1 Instagram Reel & 12-Sheet Album",
       ],
     },
     {
-      name: "Royal",
-      subtitle: "Luxury destination shoot experience",
+      name: "Premium",
+      price: "₹36,000",
+      subtitle: "A premium 4K experience with extra reels",
       icon: <Plane size={28} />,
       featured: false,
       features: [
-        "Multi-Day Coverage",
-        "Unlimited Edited Images",
-        "Cinematic Highlight Film",
-        "Drone Coverage",
-        "Pre-Wedding Session",
-        "Luxury Album",
-        "Dedicated Photographer Team",
-        "Travel Included",
+        "Cinematography",
+        "4K Shoot Quality",
+        "Candid Photography",
+        "Professional Drone",
+        "Six Selected Themes",
+        "Location Charges",
+        "Changing Room, Wooden Chair & Makeup Artist",
+        "Long Tail Gown",
+        "4K Video + 1 Cinematic Video (4–6 min)",
+        "1 Teaser, 60 Candid Photos & 10 Countdowns",
+        "Save the Date, 3 Instagram Reels & 12–15-Sheet Album",
       ],
     },
   ];
@@ -110,6 +126,10 @@ function PricingCards() {
 
               <p className="mt-3 text-neutral-400">
                 {pkg.subtitle}
+              </p>
+
+              <p className="mt-6 font-serif text-4xl text-[var(--color-primary)]">
+                {pkg.price}
               </p>
 
               <div className="my-10 h-px bg-white/10" />

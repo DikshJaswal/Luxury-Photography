@@ -64,7 +64,7 @@ function InstagramFeed() {
           className="inline-flex items-center gap-3 rounded-full border border-[var(--color-primary)] px-6 py-3.5 text-sm text-[var(--color-primary)] transition hover:bg-[var(--color-primary)] hover:text-black sm:px-8 sm:py-4 sm:text-base"
         >
           <FaInstagram />
-          Follow @luxepreweddings
+          Follow @rishikesh.prewed.studio
         </a>
       </div>
     </Section>

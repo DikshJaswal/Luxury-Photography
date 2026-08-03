@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Minus, Plus } from "lucide-react";
 import faqData from "../../data/faqData";
 
@@ -6,15 +6,35 @@ function FAQAccordion() {
   const faqs = faqData;
   const [openIndex, setOpenIndex] = useState(0);
 
+  useEffect(() => {
+    const openHashCategory = () => {
+      const category = window.location.hash.replace("#faq-", "").replaceAll("-", " ");
+      if (!category) return;
+
+      const matchingIndex = faqs.findIndex((faq) =>
+        faq.category.toLowerCase() === category
+      );
+
+      if (matchingIndex >= 0) setOpenIndex(matchingIndex);
+    };
+
+    openHashCategory();
+    window.addEventListener("hashchange", openHashCategory);
+
+    return () => window.removeEventListener("hashchange", openHashCategory);
+  }, [faqs]);
+
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? -1 : index);
   };
 
   return (
-    <section
-      id="faq"
-      className="bg-[#0B0B0B] py-24 lg:py-28"
-    >
+    <>
+      <div id="faq" className="scroll-mt-24" />
+      <section
+        id="common-questions"
+        className="scroll-mt-24 bg-[#0B0B0B] py-24 lg:py-28"
+      >
       <div className="mx-auto max-w-5xl px-6 lg:px-10">
 
         <div className="mb-16 text-center">
@@ -90,7 +110,8 @@ function FAQAccordion() {
         </div>
 
       </div>
-    </section>
+      </section>
+    </>
   );
 }
 

@@ -89,16 +89,16 @@ function FAQCTA() {
               <div className="rounded-3xl border border-white/10 bg-white/[0.03] p-7">
 
                 <h4 className="text-sm uppercase tracking-[0.3em] text-[var(--color-primary)]">
-                  Average Response Time
+                  Contact Us
                 </h4>
 
                 <p className="mt-4 font-serif text-5xl font-light text-white">
-                  &lt; 24 hrs
+                  By appointment
                 </p>
 
                 <p className="mt-4 leading-8 text-neutral-400">
-                  We personally respond to every inquiry within one business
-                  day because every celebration deserves thoughtful attention.
+                  Send your preferred date, location, and shoot requirements,
+                  and we&apos;ll guide you through the next steps.
                 </p>
 
               </div>

@@ -13,7 +13,7 @@ function FAQ() {
         title="Quick Answers Before You Enquire"
         description="Clear answers about booking, shoot planning, styling, delivery, pricing, and everything you can expect from our team."
         primaryLabel="Browse FAQs"
-        primaryTo="#faq"
+        primaryTo="#common-questions"
         secondaryLabel="Request Quote"
         secondaryTo="/book"
       />

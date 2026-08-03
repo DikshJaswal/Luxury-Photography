@@ -2,12 +2,8 @@ function SectionHeading({
   badge,
   title,
   description,
-  align = "center",
 }) {
-  const alignment =
-    align === "left"
-      ? "text-left items-start"
-      : "text-center items-center";
+  const alignment = "items-center text-center";
 
   return (
     <div className={`mb-16 flex flex-col ${alignment}`}>
@@ -17,12 +13,12 @@ function SectionHeading({
         </span>
       )}
 
-      <h2 className="max-w-4xl font-serif text-4xl leading-tight text-white md:text-6xl">
+      <h2 className="mx-auto max-w-3xl text-center font-serif text-4xl leading-tight text-balance text-white md:text-6xl">
         {title}
       </h2>
 
       {description && (
-        <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-400">
+        <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-neutral-400">
           {description}
         </p>
       )}

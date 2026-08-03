@@ -4,13 +4,13 @@ import FeaturedFilms from "../components/home/FeaturedFilms";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import Testimonials from "../components/home/Testimonials";
 import InstagramFeed from "../components/home/InstagramFeed";
-import SignatureLocations from "../components/locations/SignatureLocations";
 import PackagesPreview from "../components/home/PackagesPreview";
 import AvailabilityForm from "../components/home/AvailabilityForm";
-import BehindScenes from "../components/home/BehindScenes";
 import BlogPreview from "../components/home/BlogPreview";
 import FinalCTA from "../components/home/FinalCTA";
 import YouTubeVideos from "../components/home/YouTubeVideos";
+import ReviewVideos from "../components/home/ReviewVideos";
+import ReelsCarousel from "../components/common/ReelsCarousel";
 
 function Home() {
   return (
@@ -19,11 +19,11 @@ function Home() {
       <FeaturedCouples />
       <FeaturedFilms />
       <WhyChooseUs />
-      <SignatureLocations />
       <PackagesPreview />
       <AvailabilityForm />
       <Testimonials />
-      <BehindScenes />
+      <ReviewVideos />
+      <ReelsCarousel />
       <YouTubeVideos />
       <InstagramFeed />
       <BlogPreview />

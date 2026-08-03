@@ -1,9 +1,11 @@
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import Section from "../common/Section";
 import SectionHeading from "../common/SectionHeading";
+import Lightbox from "../portfolio/Lightbox";
+import { getOptimizedImageUrl } from "../../utils/helpers";
 
 import couples from "../../data/couplesData";
 
@@ -11,65 +13,80 @@ function FeaturedCouples() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
-    skipSnaps: false,
   });
+  const [selectedIndex, setSelectedIndex] = useState(null);
+
+  useEffect(() => {
+    if (!emblaApi) return undefined;
+
+    const interval = window.setInterval(() => {
+      emblaApi.scrollNext();
+    }, 3500);
+
+    return () => window.clearInterval(interval);
+  }, [emblaApi]);
 
   return (
-    <Section className="pt-16">
-      <div className="mb-14">
+    <>
+      <Section className="pt-16 pb-14">
         <SectionHeading
           badge="Featured Stories"
           title="Every Couple Has A Unique Story"
-          description="A curated collection of our favourite celebrations."
+          description="Explore our original pre-wedding stories in their natural portrait and landscape formats."
         />
-      </div>
+      </Section>
 
-      <div className="relative">
-        <button
-          onClick={() => emblaApi?.scrollPrev()}
-          className="absolute -left-7 top-1/2 z-20 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/30 text-white backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] lg:flex"
-        >
-          <FaArrowLeft />
-        </button>
+      <section className="overflow-hidden bg-[#0B0B0B] pb-24">
+        <div className="relative mx-auto max-w-7xl px-6">
+          <button
+            type="button"
+            onClick={() => emblaApi?.scrollPrev()}
+            className="absolute left-8 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-md transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] lg:flex"
+            aria-label="Previous featured image"
+          >
+            <FaArrowLeft />
+          </button>
 
-        <button
-          onClick={() => emblaApi?.scrollNext()}
-          className="absolute -right-7 top-1/2 z-20 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/30 text-white backdrop-blur-xl transition-all duration-300 hover:scale-110 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] lg:flex"
-        >
-          <FaArrowRight />
-        </button>
+          <button
+            type="button"
+            onClick={() => emblaApi?.scrollNext()}
+            className="absolute right-8 top-1/2 z-10 hidden h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-md transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] lg:flex"
+            aria-label="Next featured image"
+          >
+            <FaArrowRight />
+          </button>
 
-        <div className="overflow-hidden" ref={emblaRef}>
-          <div className="flex">
-            {couples.map((story, index) => (
-              <motion.div
-                key={story.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{
-                  duration: 0.6,
-                  delay: index * 0.1,
-                }}
-                viewport={{ once: true }}
-                className="min-w-[92%] px-2 sm:min-w-[70%] sm:px-3 md:min-w-[48%] lg:min-w-[32%]"
-              >
-                <div className="group cursor-pointer overflow-hidden rounded-2xl">
-                  <div className="relative overflow-hidden rounded-2xl">
-                    <img
-                      src={story.image}
-                      alt={story.title}
-                      className="h-[300px] w-full object-cover transition-transform duration-700 group-hover:scale-110 sm:h-[420px] lg:h-[520px]"
-                    />
-
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+          <div ref={emblaRef} className="overflow-hidden">
+            <div className="flex gap-4">
+              {couples.map((image, index) => (
+                <button
+                  key={image.id}
+                  type="button"
+                  onClick={() => setSelectedIndex(index)}
+                  className="group relative min-w-[86%] overflow-hidden rounded-3xl border border-white/10 bg-[#111] sm:min-w-[52%] lg:min-w-[32%]"
+                  aria-label={`Open featured image ${index + 1}`}
+                >
+                  <img
+                    src={getOptimizedImageUrl(image.image)}
+                    alt={image.title}
+                    loading={index < 3 ? "eager" : "lazy"}
+                    className="h-[360px] w-full object-contain transition duration-700 group-hover:scale-105 sm:h-[460px] lg:h-[540px]"
+                  />
+                  <span className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                </button>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
-    </Section>
+      </section>
+
+      <Lightbox
+        images={couples}
+        selectedIndex={selectedIndex}
+        onSelect={setSelectedIndex}
+        onClose={() => setSelectedIndex(null)}
+      />
+    </>
   );
 }
 

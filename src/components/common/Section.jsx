@@ -5,10 +5,12 @@ function Section({
   className = "",
   containerClass = "",
   background = "bg-[var(--color-background)]",
+  id,
 }) {
   return (
     <section
-        className={`${background} py-16 lg:py-20 ${className}`}
+      id={id}
+      className={`${background} scroll-mt-24 py-16 lg:py-20 ${className}`}
     >
       <Container className={containerClass}>
         {children}

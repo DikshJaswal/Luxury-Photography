@@ -33,7 +33,7 @@ function YouTubeVideos() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`Watch ${video.title} on YouTube`}
-              className="block h-[min(70svh,720px)] bg-black"
+              className="group relative block h-[min(70svh,720px)] bg-black"
             >
               <video
                 title={video.title}
@@ -45,6 +45,11 @@ function YouTubeVideos() {
                 playsInline
                 className="h-full w-full object-contain"
               />
+              <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                <span className="transition duration-300 group-hover:scale-110">
+                  <FaYoutube className="text-7xl text-[#ff0000] drop-shadow-2xl" />
+                </span>
+              </span>
             </a>
 
             <div className="p-6 sm:p-8">
@@ -63,6 +68,18 @@ function YouTubeVideos() {
             </div>
           </motion.article>
         ))}
+      </div>
+
+      <div className="flex justify-center pt-12">
+        <a
+          href={COMPANY.youtube}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] px-8 py-4 text-base font-semibold text-black transition hover:-translate-y-1 hover:shadow-lg hover:shadow-[var(--color-primary)]/20"
+        >
+          <FaYoutube className="text-2xl" />
+          Visit Our YouTube Channel
+        </a>
       </div>
     </Section>
   );

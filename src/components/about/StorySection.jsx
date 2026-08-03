@@ -16,11 +16,11 @@ function StorySection() {
 
           <div className="absolute -bottom-8 -right-8 hidden rounded-3xl border border-white/10 bg-black/80 p-8 backdrop-blur-lg lg:block">
             <h3 className="font-serif text-5xl text-[var(--color-primary)]">
-              250+
+              6
             </h3>
 
             <p className="mt-2 text-sm uppercase tracking-[0.3em] text-neutral-400">
-              Shoots Planned
+              Theme Options
             </p>
           </div>
 

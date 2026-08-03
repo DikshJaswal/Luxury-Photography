@@ -9,7 +9,7 @@ function AvailabilityForm() {
 
     const data = new FormData(event.currentTarget);
     const message = [
-      "Hi, I want to check availability for a luxury pre-wedding shoot.",
+      "Hi, I want to check availability for a pre-wedding shoot with Rishikesh Prewed Studio.",
       `Name: ${data.get("name") || "-"}`,
       `Phone: ${data.get("phone") || "-"}`,
       `Preferred date: ${data.get("date") || "-"}`,

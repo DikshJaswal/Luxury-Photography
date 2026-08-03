@@ -1,26 +1,14 @@
 const contactData = {
-  title: "Let's Create Something Beautiful Together",
-
+  title: "Plan Your Rishikesh Pre-Wedding Story",
   subtitle:
-    "Whether you're planning a mountain shoot, resort story, or grand destination pre-wedding film, we'd love to hear your story.",
-
-  phone: "+91 98765 43210",
-
-  email: "hello@luxestudio.com",
-
-  address: "Connaught Place, New Delhi, India",
-
-  workingHours: [
-    "Monday – Friday : 10:00 AM – 7:00 PM",
-    "Saturday : 10:00 AM – 5:00 PM",
-    "Sunday : By Appointment",
-  ],
-
-  whatsapp: "https://wa.me/919876543210",
-
-  instagram: "https://instagram.com/luxestudio",
-
-  youtube: "https://youtube.com/@luxestudio",
+    "Share your date, location, and vision. Our team will guide you through availability, planning, and booking.",
+  phone: "+91 82784 32425",
+  email: "rishikesh.prewed.studio@gmail.com",
+  address: "Rishikesh, Uttarakhand, India",
+  workingHours: ["By appointment"],
+  whatsapp: "https://wa.me/918278432425",
+  instagram: "https://www.instagram.com/rishikesh.prewed.studio",
+  youtube: "https://youtube.com/@rishikesh.prewed.studio",
 };
 
 export default contactData;

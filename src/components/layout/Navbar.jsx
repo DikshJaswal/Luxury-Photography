@@ -35,9 +35,13 @@ function Navbar() {
           {/* Logo */}
           <NavLink
             to="/"
-            className="justify-self-start font-serif text-4xl font-semibold tracking-wide text-white"
+            className="flex h-14 w-[150px] items-center justify-self-start sm:w-[180px]"
           >
-            LUXE
+            <img
+              src={COMPANY.logo}
+              alt={COMPANY.name}
+              className="h-full w-full object-contain object-left"
+            />
           </NavLink>
 
           {/* Desktop Navigation */}
