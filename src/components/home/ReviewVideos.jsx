@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ExternalLink } from "lucide-react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -6,12 +6,24 @@ import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Section from "../common/Section";
 import SectionHeading from "../common/SectionHeading";
 import reviewVideos from "../../data/reviewVideos";
+import { getOptimizedVideoUrl, getVideoPosterUrl } from "../../utils/helpers";
 
 function ReviewVideos() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
   });
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    if (!emblaApi) return undefined;
+
+    const updateActiveIndex = () => setActiveIndex(emblaApi.selectedScrollSnap());
+    updateActiveIndex();
+    emblaApi.on("select", updateActiveIndex);
+
+    return () => emblaApi.off("select", updateActiveIndex);
+  }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return undefined;
@@ -54,17 +66,21 @@ function ReviewVideos() {
 
         <div ref={emblaRef} className="overflow-hidden">
           <div className="flex gap-6">
-            {reviewVideos.map((review) => (
+            {reviewVideos.map((review, index) => (
               <article
                 key={review.id}
                 className="min-w-[86%] overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] sm:min-w-[52%] lg:min-w-[32%]"
               >
                 <video
-                  src={review.video}
+                  src={getOptimizedVideoUrl(review.video)}
+                  poster={getVideoPosterUrl(review.video)}
                   controls
+                  autoPlay={index === activeIndex}
+                  muted
+                  loop
                   playsInline
-                  preload="metadata"
-                  className="aspect-[9/16] w-full bg-black object-contain"
+                  preload={index === activeIndex ? "metadata" : "none"}
+                  className="aspect-video w-full bg-black object-contain"
                 />
                 <div className="p-6">
                   <h3 className="font-serif text-2xl text-white">{review.title}</h3>

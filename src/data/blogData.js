@@ -1,103 +1,104 @@
+const rishikeshGuideUrl = "https://www.incredibleindia.gov.in/en/uttarakhand/rishikesh";
+
 const blogPosts = [
   {
     id: 1,
-    title: "Best Pre-Wedding Shoot Locations in Shimla",
-    slug: "best-pre-wedding-shoot-locations-shimla",
-    category: "Location Guide",
-    date: "August 2, 2026",
+    title: "Best Pre-Wedding Shoot Locations in Rishikesh",
+    slug: "best-pre-wedding-shoot-locations-rishikesh",
+    category: "Rishikesh Location Guide",
+    date: "August 3, 2026",
     readTime: "4 min read",
     excerpt:
-      "Shimla brings pine forests, mountain views, colonial details, and soft hill light together for a cinematic pre-wedding story.",
+      "Discover riverside, forest, bridge, and mountain-backdrop ideas for a cinematic pre-wedding shoot in Rishikesh.",
     image:
-      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401974/blog-06.jpg_zcqzc5.jpg",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785738371/DSC05960_l446jk.jpg",
     intro:
-      "If you want a mountain pre-wedding shoot with a refined, timeless mood, Shimla is an excellent place to begin. The hill station combines forest paths, heritage architecture, open viewpoints, and a cool climate that works beautifully with layered styling.",
+      "Rishikesh is an ideal setting for couples who want natural emotion, river views, forest textures, and a relaxed cinematic atmosphere. With the right route and timing, one shoot can include several distinct visual moods without feeling rushed.",
     sections: [
       {
-        title: "Why Shimla works on camera",
+        title: "Riverside frames by the Ganga",
         body:
-          "Pine and oak surroundings create depth in portraits, while heritage streets and old buildings add texture without needing elaborate props. Early mornings are especially useful for quiet frames and softer light.",
+          "Open riverbanks create soft, spacious portraits and quiet walking moments. Morning light is especially useful for gentle skin tones and reflections, while comfortable footwear makes riverside movement easier.",
       },
       {
-        title: "Locations to discuss with your photographer",
+        title: "Bridges, roads, and movement",
         body:
-          "Consider Mashobra or Naldehra for natural greenery, Kufri for open mountain atmosphere, and heritage areas near the town for an editorial look. The final choice should account for travel time, permissions, and your outfit changes.",
+          "Rishikesh bridges and nearby roads can add structure, perspective, and energy to a pre-wedding story. Your photographer should plan safe shooting points and work around traffic and public access.",
       },
       {
-        title: "Best planning tip",
+        title: "Forest and mountain atmosphere",
         body:
-          "Build the day around two or three nearby visual moods instead of chasing too many locations. This leaves more time for relaxed movement, genuine expressions, and a complete cinematic gallery.",
+          "Green forest edges and hill views bring depth and intimacy to portraits. Combining one open location with one shaded location helps the final gallery feel varied and cinematic.",
       },
     ],
-    sourceUrl:
-      "https://www.incredibleindia.gov.in/en/himachal-pradesh/shimla/shimla-a-quick-and-handy-travel-guide",
-    sourceLabel: "Shimla travel reference: Incredible India",
+    sourceUrl: rishikeshGuideUrl,
+    sourceLabel: "Rishikesh travel reference: Incredible India",
   },
   {
     id: 2,
-    title: "Rishikesh Pre-Wedding Photography: A Practical Guide",
-    slug: "rishikesh-pre-wedding-photography-guide",
-    category: "Location Guide",
-    date: "August 2, 2026",
+    title: "Rishikesh Pre-Wedding Photography: Complete Planning Guide",
+    slug: "rishikesh-pre-wedding-photography-planning-guide",
+    category: "Rishikesh Planning Guide",
+    date: "August 3, 2026",
     readTime: "4 min read",
     excerpt:
-      "From riverside quiet to forest textures, Rishikesh offers an expressive setting for couples who want emotion, movement, and atmosphere.",
+      "Plan your Rishikesh pre-wedding photography experience with practical advice on locations, outfits, timing, travel, and styling.",
     image:
-      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401962/blog-01.jpg_t6i22c.jpg",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785737972/Copy_of_DSC03190_mblaal.jpg",
     intro:
-      "Rishikesh is more than a scenic backdrop. The Ganga, suspension bridges, forest edges, and peaceful ashram surroundings create a visual story with both energy and calm. It suits couples looking for photographs that feel natural rather than heavily posed.",
+      "A successful Rishikesh pre-wedding shoot is built around a realistic timeline. Choosing nearby locations, planning outfit changes, and leaving room for travel helps couples stay relaxed and gives the photography team more time to capture genuine moments.",
     sections: [
       {
-        title: "Choose your visual mood",
+        title: "Choose two or three visual moods",
         body:
-          "Riverside frames feel open and reflective, while forest paths add intimacy and movement. Spiritual and architectural details can be used carefully as atmosphere while respecting local customs and access rules.",
+          "Instead of trying to cover every location, select a combination such as riverside, greenery, and a structured bridge or architectural setting. This creates variety while keeping the day comfortable.",
       },
       {
-        title: "Plan around light and travel",
+        title: "Plan outfits around the route",
         body:
-          "Start near the river in the morning, then move to shaded or forest locations as the day develops. Keep the route realistic because bridges, traffic, and local access can affect the schedule.",
+          "Coordinated solid colors work well against Rishikesh landscapes. Bring comfortable footwear for walking and schedule formal outfits at locations with easy access and enough privacy for changes.",
       },
       {
-        title: "What to bring",
+        title: "Keep travel and permissions practical",
         body:
-          "Carry comfortable footwear, coordinated outfits, a light change of clothes, and anything needed for a riverside setting. Your photographer can help build a practical timeline around the locations you prefer.",
+          "Discuss access, parking, public crowds, weather, and any venue permissions before finalizing the plan. A local Rishikesh photography team can help build a route that works with the day’s light.",
       },
     ],
-    sourceUrl: "https://www.incredibleindia.gov.in/en/uttarakhand/rishikesh",
+    sourceUrl: rishikeshGuideUrl,
     sourceLabel: "Rishikesh travel reference: Incredible India",
   },
   {
     id: 3,
-    title: "Udaipur Pre-Wedding Shoot Ideas for a Royal Love Story",
-    slug: "udaipur-pre-wedding-shoot-ideas",
-    category: "Location Guide",
-    date: "August 2, 2026",
-    readTime: "4 min read",
+    title: "Best Time for a Pre-Wedding Shoot in Rishikesh",
+    slug: "best-time-for-pre-wedding-shoot-rishikesh",
+    category: "Rishikesh Seasonal Guide",
+    date: "August 3, 2026",
+    readTime: "3 min read",
     excerpt:
-      "Palaces, lakes, gardens, and warm evening light make Udaipur a natural choice for elegant destination photography.",
+      "Learn how season, light, river conditions, and travel planning affect a Rishikesh pre-wedding photography experience.",
     image:
-      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401966/blog-03.jpg_reaeqj.jpg",
+      "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785737931/DSC05961_lnfr6c.jpg",
     intro:
-      "Udaipur offers a rich mix of lakeside views, royal architecture, quiet gardens, and sunset color. It is a strong fit for couples who want their pre-wedding photographs to feel polished, romantic, and rooted in place.",
+      "The best time for a Rishikesh pre-wedding shoot depends on the visual style you want and the locations you plan to visit. Comfortable weather, soft light, and a flexible schedule help create a smoother experience for every couple.",
     sections: [
       {
-        title: "Build a balanced location plan",
+        title: "Comfortable months and soft light",
         body:
-          "Pair an architectural setting with a quieter outdoor location. City Palace surroundings, Lake Pichola views, Saheliyon Ki Bari, and elevated sunset points can each create a different chapter in the gallery.",
+          "October to March is often preferred for comfortable outdoor planning and clear, gentle light. Early mornings and late afternoons usually create the most flattering atmosphere for portraits.",
       },
       {
-        title: "Style for the setting",
+        title: "Summer planning",
         body:
-          "Long silhouettes, jewel tones, and clean neutral looks photograph well against stone, water, and warm palace details. Bring comfortable footwear for transitions and save the most formal look for the calmest location.",
+          "Warmer months can still work well when the schedule begins early and includes shaded locations. Lightweight styling, hydration, and shorter travel routes help couples stay comfortable.",
       },
       {
-        title: "Allow time for permissions",
+        title: "Monsoon and backup planning",
         body:
-          "Some heritage venues and private properties have their own photography rules. Confirm access, fees, timing, and any drone restrictions before finalizing the shoot schedule.",
+          "Rain can create beautiful greenery but may affect riverside access and travel. Always discuss a weather backup plan, alternate locations, and flexible timing with your Rishikesh photographer.",
       },
     ],
-    sourceUrl: "https://www.incredibleindia.gov.in/en/rajasthan/udaipur",
-    sourceLabel: "Udaipur travel reference: Incredible India",
+    sourceUrl: rishikeshGuideUrl,
+    sourceLabel: "Rishikesh travel reference: Incredible India",
   },
 ];
 

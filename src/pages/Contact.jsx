@@ -396,20 +396,13 @@ function Contact() {
           <div className="overflow-hidden rounded-[36px] border border-white/10">
 
             <iframe
-              title="Studio Location"
-              src="https://www.google.com/maps?q=Rishikesh,+Uttarakhand&output=embed"
-              className="h-[550px] w-full"
+              title="Rishikesh Prewed Studio exact location"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3452.4742074433802!2d78.19068180000001!3d30.080602499999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3909395a461a2a6b%3A0x146e015b2029d386!2sRishikesh%20Prewed%20Studio!5e0!3m2!1sen!2sin!4v1785734971410!5m2!1sen!2sin"
+              className="h-[550px] w-full border-0"
+              allowFullScreen
               loading="lazy"
+              referrerPolicy="strict-origin-when-cross-origin"
             />
-
-            <a
-              href={COMPANY.maps}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-flex text-sm text-[var(--color-primary)] hover:underline"
-            >
-              Open Rishikesh location in Google Maps
-            </a>
 
           </div>
 

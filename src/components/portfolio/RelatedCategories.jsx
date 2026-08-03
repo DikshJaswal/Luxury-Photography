@@ -16,11 +16,11 @@ function RelatedCategories({ currentCategory }) {
             Continue Exploring
           </span>
 
-          <h2 className="mt-6 font-serif text-4xl text-white md:text-5xl">
+          <h2 className="mx-auto mt-6 max-w-4xl text-center font-serif text-4xl text-balance text-white md:text-5xl">
             Explore More Collections
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-neutral-400">
+          <p className="mx-auto mt-6 max-w-2xl text-center text-balance text-neutral-400">
             Every destination tells a different story. Discover more
             breathtaking pre-wedding collections.
           </p>

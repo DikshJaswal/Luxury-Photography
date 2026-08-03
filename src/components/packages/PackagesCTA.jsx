@@ -32,7 +32,7 @@ function PackagesCTA() {
             Reserve Your Date
           </span>
 
-          <h2 className="mt-8 font-serif text-4xl leading-tight text-white md:text-6xl">
+          <h2 className="mx-auto max-w-4xl text-center font-serif text-4xl leading-tight text-balance text-white md:text-6xl">
             Let's Create Something
             <span className="text-[var(--color-primary)]">
               {" "}Extraordinary Together

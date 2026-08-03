@@ -90,12 +90,12 @@ function TravelProcess() {
             Your Journey With Us
           </span>
 
-          <h2 className="mt-6 font-serif text-4xl text-white md:text-6xl">
+          <h2 className="mx-auto max-w-4xl text-center font-serif text-4xl text-balance text-white md:text-6xl">
             From Inquiry To,
             <span className="text-[var(--color-primary)]"> Final Delivery</span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-neutral-400">
+          <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-lg leading-8 text-neutral-400">
             Every detail is thoughtfully planned so your pre-wedding experience
             feels relaxed, personal, and beautifully organized.
           </p>

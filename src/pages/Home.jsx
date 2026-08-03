@@ -1,6 +1,5 @@
 import Hero from "../components/home/Hero";
 import FeaturedCouples from "../components/home/FeaturedCouples";
-import FeaturedFilms from "../components/home/FeaturedFilms";
 import WhyChooseUs from "../components/home/WhyChooseUs";
 import Testimonials from "../components/home/Testimonials";
 import InstagramFeed from "../components/home/InstagramFeed";
@@ -17,7 +16,6 @@ function Home() {
     <>
       <Hero />
       <FeaturedCouples />
-      <FeaturedFilms />
       <WhyChooseUs />
       <PackagesPreview />
       <AvailabilityForm />

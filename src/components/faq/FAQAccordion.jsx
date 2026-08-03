@@ -43,14 +43,14 @@ function FAQAccordion() {
             Common Questions
           </span>
 
-          <h2 className="mt-6 font-serif text-4xl font-light text-white md:text-5xl">
+          <h2 className="mx-auto mt-6 max-w-4xl text-center font-serif text-4xl font-light text-balance text-white md:text-5xl">
             Everything
             <span className="text-[var(--color-primary)]">
               {" "}Answered
             </span>
           </h2>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-neutral-400">
+          <p className="mx-auto mt-6 max-w-2xl text-center text-balance text-lg leading-8 text-neutral-400">
             Here are the questions couples ask us most frequently before
             planning their pre-wedding photography experience.
           </p>

@@ -28,20 +28,20 @@ function BehindTheScenes() {
 
         {/* Heading */}
 
-        <div className="mx-auto mb-20 max-w-3xl text-center">
+        <div className="mx-auto mb-20 flex w-full max-w-5xl flex-col items-center text-center">
 
           <span className="inline-block rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-5 py-2 text-xs uppercase tracking-[0.35em] text-[var(--color-primary)]">
             Behind The Scenes
           </span>
 
-          <h2 className="mt-6 font-serif text-4xl text-white md:text-6xl">
+          <h2 className="mx-auto mt-6 w-full max-w-4xl text-center font-serif text-4xl text-balance text-white md:text-6xl">
             Where Every
             <span className="text-[var(--color-primary)]">
               {" "}Story Begins
             </span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-neutral-400">
+          <p className="mx-auto mt-8 w-full max-w-2xl text-center text-balance text-lg leading-8 text-neutral-400">
             Beautiful photographs do not happen by chance. Every shoot is
             approached with preparation, creativity, and a calm presence that
             allows moments to unfold naturally.

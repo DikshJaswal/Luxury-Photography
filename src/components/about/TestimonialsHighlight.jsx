@@ -8,10 +8,10 @@ function TestimonialsHighlight() {
         <span className="inline-block rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-5 py-2 text-xs uppercase tracking-[0.35em] text-[var(--color-primary)]">
           Client Reviews
         </span>
-        <h2 className="mt-6 font-serif text-4xl text-white md:text-6xl">
+        <h2 className="mx-auto mt-6 max-w-4xl text-center font-serif text-4xl text-balance text-white md:text-6xl">
           Kind Words From <span className="text-[var(--color-primary)]">Our Couples</span>
         </h2>
-        <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-neutral-400">
+        <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-lg leading-8 text-neutral-400">
           View genuine reviews and ratings on our official Google Business profile.
         </p>
         <div className="mt-8 flex justify-center gap-1 text-[var(--color-primary)]">

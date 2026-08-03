@@ -1,4 +1,5 @@
-import { Check } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ArrowRight, Check } from "lucide-react";
 
 function PackageComparison() {
   const comparisonData = [
@@ -14,16 +15,19 @@ function PackageComparison() {
     value === true ? <Check size={20} className="mx-auto text-[var(--color-primary)]" /> : value;
 
   return (
-    <section className="bg-black py-24">
+    <section
+      id="package-comparison"
+      className="bg-black py-24 scroll-mt-24"
+    >
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto mb-16 max-w-3xl text-center">
           <span className="inline-block rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-5 py-2 text-xs uppercase tracking-[0.35em] text-[var(--color-primary)]">
             Compare Packages
           </span>
-          <h2 className="mt-6 font-serif text-4xl text-white md:text-6xl">
+          <h2 className="mx-auto mt-6 max-w-4xl text-center font-serif text-4xl text-balance text-white md:text-6xl">
             Find Your <span className="text-[var(--color-primary)]">Perfect Fit</span>
           </h2>
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-neutral-400">
+          <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-lg leading-8 text-neutral-400">
             All packages include the listed deliverables. Confirm final location charges and schedule during consultation.
           </p>
         </div>
@@ -49,6 +53,21 @@ function PackageComparison() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        <div className="mt-10 flex justify-center">
+          <Link
+            to="/packages#signature-experiences"
+            className="group relative inline-flex overflow-hidden rounded-3xl bg-black/45 px-0 py-0 text-sm font-medium text-white focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)] focus:ring-offset-4"
+          >
+            <span className="absolute inset-0 z-10 flex items-center justify-center rounded-3xl bg-black/45 opacity-0 backdrop-blur-[3px] transition duration-300 group-hover:opacity-100 group-focus-within:opacity-100">
+              <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-primary)] px-6 py-3 font-medium text-black shadow-xl transition duration-300 group-hover:scale-100 group-focus-within:scale-100">
+                View Package
+                <ArrowRight size={18} />
+              </span>
+            </span>
+            <span className="relative z-0 block w-full px-12 py-5"> </span>
+          </Link>
         </div>
       </div>
     </section>

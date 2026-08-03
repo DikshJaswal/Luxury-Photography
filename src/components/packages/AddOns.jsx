@@ -58,14 +58,14 @@ function AddOns() {
             Optional Enhancements
           </span>
 
-          <h2 className="mt-6 font-serif text-4xl text-white md:text-6xl">
+          <h2 className="mx-auto mt-6 max-w-4xl text-center font-serif text-4xl text-balance text-white md:text-6xl">
             Elevate Your
             <span className="text-[var(--color-primary)]">
               {" "}Shoot Experience
             </span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-neutral-400">
+          <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-lg leading-8 text-neutral-400">
             Personalize your experience with premium services designed to make
             your pre-wedding story even more cinematic.
           </p>

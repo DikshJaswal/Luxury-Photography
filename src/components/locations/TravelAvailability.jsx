@@ -36,7 +36,7 @@ function TravelAvailability() {
             Availability
           </span>
 
-          <h2 className="mt-6 font-serif text-4xl text-white md:text-6xl">
+          <h2 className="mx-auto max-w-4xl text-center font-serif text-4xl text-balance text-white md:text-6xl">
             Booking &
             <span className="text-[var(--color-primary)]">
               {" "}Travel Availability

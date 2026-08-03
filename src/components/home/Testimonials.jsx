@@ -17,7 +17,7 @@ function Testimonials() {
           {[1, 2, 3, 4, 5].map((star) => <Star key={star} size={24} fill="currentColor" />)}
         </div>
         <h3 className="mt-6 font-serif text-3xl text-white">See our latest Google reviews</h3>
-        <p className="mx-auto mt-5 max-w-xl leading-8 text-neutral-400">
+        <p className="mx-auto mt-5 max-w-xl text-center text-balance leading-8 text-neutral-400">
           We prefer to show genuine feedback directly from our Google Business profile instead of using placeholder testimonials.
         </p>
         <a

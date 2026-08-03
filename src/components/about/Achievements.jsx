@@ -64,14 +64,14 @@ function Achievements() {
             Trusted By Couples
           </span>
 
-          <h2 className="mt-6 font-serif text-4xl text-white md:text-6xl">
+          <h2 className="mx-auto mt-6 max-w-4xl text-center font-serif text-4xl text-balance text-white md:text-6xl">
             A Journey Built On
             <span className="text-[var(--color-primary)]">
               {" "}Passion & Trust
             </span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-neutral-300">
+          <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-lg leading-8 text-neutral-300">
             Every couple has strengthened our commitment to creating timeless
             imagery they will cherish for generations.
           </p>

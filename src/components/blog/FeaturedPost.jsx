@@ -12,7 +12,7 @@ function FeaturedPost() {
             Featured Story
           </span>
 
-          <h2 className="mt-6 font-serif text-4xl font-light text-white md:text-5xl lg:text-6xl">
+          <h2 className="mx-auto max-w-4xl text-center font-serif text-4xl font-light text-balance text-white md:text-5xl lg:text-6xl">
             Editor's{" "}
             <span className="text-[var(--color-primary)]">
               Choice

@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import PackagesHero from "../components/packages/PackagesHero";
 import PricingCards from "../components/packages/PricingCards";
 import AddOns from "../components/packages/AddOns";
@@ -6,6 +8,37 @@ import PackagesCTA from "../components/packages/PackagesCTA";
 import PageIntro from "../components/common/PageIntro";
 
 function Packages() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (!hash) return;
+
+    const scrollToTarget = () => {
+      const targetId = hash.replace("#", "");
+      const targetElement = document.getElementById(targetId);
+
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "smooth" });
+        return true;
+      }
+
+      return false;
+    };
+
+    let attempts = 0;
+    const interval = window.setInterval(() => {
+      if (scrollToTarget() || attempts++ >= 10) {
+        window.clearInterval(interval);
+      }
+    }, 50);
+
+    if (scrollToTarget()) {
+      window.clearInterval(interval);
+    }
+
+    return () => window.clearInterval(interval);
+  }, [hash]);
+
   return (
     <>
       <PackagesHero />

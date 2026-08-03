@@ -29,7 +29,7 @@ function MeetPhotographer() {
             Meet Your Photographer
           </span>
 
-          <h2 className="mt-6 font-serif text-4xl leading-tight text-white md:text-6xl">
+          <h2 className="mx-auto max-w-4xl text-center font-serif text-4xl leading-tight text-balance text-white md:text-6xl">
             The Person Behind
             <span className="text-[var(--color-primary)]">
               {" "}The Camera

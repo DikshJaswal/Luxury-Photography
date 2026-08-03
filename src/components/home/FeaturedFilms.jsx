@@ -6,6 +6,7 @@ import Section from "../common/Section";
 import SectionHeading from "../common/SectionHeading";
 
 import films from "../../data/filmsData";
+import { getOptimizedVideoUrl } from "../../utils/helpers";
 
 function FeaturedFilms() {
   return (
@@ -37,7 +38,7 @@ function FeaturedFilms() {
                 playsInline
                 className="h-full w-full object-cover"
               >
-                <source src={film.video} type="video/mp4" />
+                <source src={getOptimizedVideoUrl(film.video)} type="video/mp4" />
               </video>
 
               <div className="absolute inset-0 bg-gradient-to-t from-black via-black/25 to-transparent" />

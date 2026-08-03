@@ -1,90 +1,136 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+
 import GalleryCard from "./GalleryCard";
 import Lightbox from "./Lightbox";
+import { getOptimizedImageUrl } from "../../utils/helpers";
+
+function PhotoRow({ items, label, direction, onSelect }) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+    duration: 55,
+  });
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    if (!emblaApi || isHovered || items.length < 2) return undefined;
+
+    const interval = window.setInterval(() => {
+      if (direction === "right") {
+        emblaApi.scrollPrev();
+      } else {
+        emblaApi.scrollNext();
+      }
+    }, 5200);
+
+    return () => window.clearInterval(interval);
+  }, [direction, emblaApi, isHovered, items.length]);
+
+  if (items.length === 0) return null;
+
+  return (
+    <div
+      className="space-y-5"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="flex items-center gap-4 px-1">
+        <span className="h-px w-10 bg-[var(--color-primary)]" />
+        <h2 className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--color-primary)] sm:text-base">
+          {label}
+        </h2>
+        <span className="h-px flex-1 bg-white/10" />
+      </div>
+
+      <div ref={emblaRef} className="overflow-hidden">
+        <div className="flex gap-5 sm:gap-7">
+          {items.map(({ image, index }) => (
+            <div
+              key={image.id}
+              className="min-w-[82%] sm:min-w-[48%] lg:min-w-[31.5%]"
+            >
+              <GalleryCard
+                image={image}
+                index={index}
+                onClick={() => onSelect(index)}
+                onImageLoad={() => {}}
+                imageClassName="h-[280px] w-full object-contain sm:h-[360px] lg:h-[430px]"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
 
 function GalleryGrid({ images }) {
   const [selectedIndex, setSelectedIndex] = useState(null);
-  const [containerWidth, setContainerWidth] = useState(1280);
-  const [imageRatios, setImageRatios] = useState({});
-  const galleryRef = useRef(null);
+  const [orientations, setOrientations] = useState({});
 
   useEffect(() => {
-    if (!galleryRef.current) return undefined;
+    let cancelled = false;
 
-    const observer = new ResizeObserver(([entry]) => {
-      setContainerWidth(entry.contentRect.width);
+    images.forEach((image) => {
+      const probe = new Image();
+      probe.onload = () => {
+        if (cancelled) return;
+        setOrientations((current) => ({
+          ...current,
+          [image.id]: probe.naturalWidth >= probe.naturalHeight ? "landscape" : "portrait",
+        }));
+      };
+      probe.onerror = () => {
+        if (cancelled) return;
+        setOrientations((current) => ({ ...current, [image.id]: "landscape" }));
+      };
+      probe.src = getOptimizedImageUrl(image.image);
     });
 
-    observer.observe(galleryRef.current);
+    return () => {
+      cancelled = true;
+    };
+  }, [images]);
 
-    return () => observer.disconnect();
-  }, []);
+  const rows = useMemo(() => {
+    const landscape = images
+      .map((image, index) => ({ image, index }))
+      .filter(({ image }) => orientations[image.id] === "landscape");
+    const portrait = images
+      .map((image, index) => ({ image, index }))
+      .filter(({ image }) => orientations[image.id] === "portrait");
 
-  const columnCount =
-    containerWidth >= 1200 ? 3 : containerWidth >= 640 ? 2 : 1;
-
-  const columns = useMemo(() => {
-    const columnWidth =
-      (containerWidth - (columnCount - 1) * 32) / columnCount;
-    const result = Array.from({ length: columnCount }, () => []);
-    const heights = Array.from({ length: columnCount }, () => 0);
-
-    images.forEach((image, index) => {
-      const ratio = imageRatios[image.id] || 1;
-      const imageHeight = columnWidth / ratio;
-      const shortestColumn = heights.indexOf(Math.min(...heights));
-
-      result[shortestColumn].push({ image, index });
-      heights[shortestColumn] += imageHeight + 32;
-    });
-
-    return result;
-  }, [columnCount, containerWidth, imageRatios, images]);
-
-  const handleImageLoad = (imageId, ratio) => {
-    setImageRatios((currentRatios) => {
-      if (currentRatios[imageId] === ratio) return currentRatios;
-      return { ...currentRatios, [imageId]: ratio };
-    });
-  };
+    return [
+      { items: landscape.filter((_, index) => index % 2 === 0), label: "Landscape Stories", direction: "left" },
+      { items: portrait, label: "Portrait Stories", direction: "right" },
+      { items: landscape.filter((_, index) => index % 2 === 1), label: "Landscape Stories", direction: "left" },
+    ];
+  }, [images, orientations]);
 
   if (!images || images.length === 0) {
     return (
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-6 text-center">
-          <h2 className="text-3xl font-serif text-white">
-            No images found.
-          </h2>
-
-          <p className="mt-4 text-neutral-400">
-            This collection will be updated soon.
-          </p>
+          <h2 className="font-serif text-3xl text-white">No images found.</h2>
+          <p className="mt-4 text-neutral-400">This collection will be updated soon.</p>
         </div>
       </section>
     );
   }
 
   return (
-    <section className="bg-[#0B0B0B] py-24">
-      <div ref={galleryRef} className="mx-auto max-w-7xl px-6">
-        <div
-          className="grid items-start gap-8"
-          style={{ gridTemplateColumns: `repeat(${columnCount}, minmax(0, 1fr))` }}
-        >
-          {columns.map((column, columnIndex) => (
-            <div key={columnIndex} className="space-y-8">
-              {column.map(({ image, index }) => (
-                <GalleryCard
-                  key={image.id}
-                  image={image}
-                  index={index}
-                  onClick={() => setSelectedIndex(index)}
-                  onImageLoad={(ratio) => handleImageLoad(image.id, ratio)}
-                />
-              ))}
-            </div>
-          ))}
-        </div>
+    <section className="overflow-hidden bg-[#0B0B0B] py-20 sm:py-24">
+      <div className="mx-auto max-w-7xl space-y-14 px-4 sm:px-6">
+        {rows.map((row, rowIndex) => (
+          <PhotoRow
+            key={`${row.label}-${row.direction}-${rowIndex}`}
+            items={row.items}
+            label={row.label}
+            direction={row.direction}
+            onSelect={setSelectedIndex}
+          />
+        ))}
       </div>
 
       <Lightbox

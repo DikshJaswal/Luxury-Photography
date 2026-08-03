@@ -6,3 +6,24 @@ export function getOptimizedImageUrl(url) {
     "/image/upload/f_auto,q_auto:best,dpr_auto/"
   );
 }
+
+export function getVideoPosterUrl(url) {
+  if (!url || !url.includes("/video/upload/")) return undefined;
+
+  const [source, query] = url.split("?");
+  const poster = source.replace(
+    "/video/upload/",
+    "/video/upload/w_640,q_auto,f_jpg/"
+  );
+
+  return query ? `${poster}?${query}` : poster;
+}
+
+export function getOptimizedVideoUrl(url) {
+  if (!url || !url.includes("/video/upload/")) return url;
+
+  return url.replace(
+    "/video/upload/",
+    "/video/upload/q_auto:good,vc_auto/"
+  );
+}

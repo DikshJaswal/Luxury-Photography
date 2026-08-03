@@ -33,7 +33,7 @@ function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           viewport={{ once: true }}
-          className="max-w-4xl font-serif text-4xl leading-tight text-white sm:text-5xl md:text-7xl"
+          className="mx-auto max-w-4xl text-center font-serif text-4xl leading-tight text-balance text-white sm:text-5xl md:text-7xl"
         >
           Your Love Story Deserves
           <br />
@@ -47,7 +47,7 @@ function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
           viewport={{ once: true }}
-          className="mt-8 max-w-2xl text-base leading-8 text-neutral-300 sm:text-lg"
+          className="mx-auto mt-8 max-w-2xl text-center text-base leading-8 text-neutral-300 sm:text-lg"
         >
           Every smile, every glance, every emotion deserves to be preserved
           beautifully. Let's turn your moments into memories you'll treasure

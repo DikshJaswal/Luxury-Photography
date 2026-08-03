@@ -57,7 +57,7 @@ function WhyChooseUs() {
           viewport={{ once: true }}
         >
           <img
-            src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785564100/WhatsApp_Image_2026-08-01_at_10.58.39_AM_ut3v8d.jpg"
+            src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785755244/new_kjeqld.jpg"
             alt="Couple during a pre-wedding shoot"
             className="h-[700px] w-full rounded-2xl object-cover"
           />

@@ -11,14 +11,14 @@ function LocationsCTA() {
               Let's Travel Together
             </span>
 
-            <h2 className="mt-8 font-serif text-4xl leading-tight text-white md:text-6xl">
+            <h2 className="mx-auto max-w-4xl text-center font-serif text-4xl leading-tight text-balance text-white md:text-6xl">
               Ready to Capture Your
               <span className="text-[var(--color-primary)]">
                 {" "}Dream Pre-Wedding Shoot?
               </span>
             </h2>
 
-            <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-neutral-300">
+            <p className="mx-auto mt-8 max-w-3xl text-center text-balance text-lg leading-8 text-neutral-300">
               From Himalayan peaks and waterfalls to palaces and beaches, we
               plan a location-led experience that feels completely yours.
             </p>

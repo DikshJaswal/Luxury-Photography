@@ -30,14 +30,14 @@ function FAQCTA() {
                 Still Have Questions?
               </span>
 
-              <h2 className="mt-8 max-w-3xl font-serif text-4xl font-light leading-tight text-white md:text-5xl lg:text-6xl">
+              <h2 className="mx-auto mt-8 max-w-4xl text-center font-serif text-4xl font-light leading-tight text-balance text-white md:text-5xl lg:text-6xl">
                 Let's Create Something
                 <span className="text-[var(--color-primary)]">
                   {" "}Extraordinary
                 </span>
               </h2>
 
-              <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-400">
+              <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-lg leading-8 text-neutral-400">
                 Every pre-wedding shoot is beautifully unique. If you couldn't find the
                 answer you were looking for, we'd love to learn more about your
                 celebration and guide you through every step of the experience.

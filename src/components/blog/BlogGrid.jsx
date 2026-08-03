@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import blogPosts from "../../data/blogData";
+import { getOptimizedImageUrl } from "../../utils/helpers";
 
 function BlogGrid() {
   return (
@@ -11,19 +12,21 @@ function BlogGrid() {
           {blogPosts.map((blog) => (
             <article
               key={blog.id}
-              className="group overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.04] transition-all duration-500 hover:-translate-y-2 hover:border-[var(--color-primary)]/40 hover:shadow-[0_30px_70px_rgba(0,0,0,0.45)]"
+              className="group flex h-full flex-col overflow-hidden rounded-[36px] border border-white/10 bg-white/[0.04] transition-all duration-500 hover:-translate-y-2 hover:border-[var(--color-primary)]/40 hover:shadow-[0_30px_70px_rgba(0,0,0,0.45)]"
             >
               <Link to={`/blog/${blog.slug}`} className="block">
                 <div className="relative overflow-hidden bg-black">
                   <img
-                    src={blog.image}
+                    src={getOptimizedImageUrl(blog.image)}
                     alt={blog.title}
-                    className="h-auto w-full object-contain transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/15 to-transparent" />
                 </div>
 
-                <div className="p-8">
+                <div className="flex flex-1 flex-col p-8">
                   <div className="flex flex-wrap gap-3 text-xs uppercase tracking-[0.2em] text-[var(--color-primary)]">
                     <span>{blog.category}</span>
                     <span className="text-white/40">{blog.readTime}</span>
@@ -33,7 +36,7 @@ function BlogGrid() {
                     {blog.title}
                   </h2>
 
-                  <p className="mt-6 leading-8 text-neutral-400">{blog.excerpt}</p>
+                  <p className="mt-6 flex-1 leading-8 text-neutral-400">{blog.excerpt}</p>
 
                   <span className="mt-7 inline-flex items-center gap-2 font-medium text-white">
                     Read guide <ArrowRight size={17} />

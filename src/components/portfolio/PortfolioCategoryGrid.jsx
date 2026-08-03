@@ -12,7 +12,7 @@ function PortfolioCategoryGrid() {
             Explore Collections
           </span>
 
-          <h2 className="mt-6 font-serif text-3xl text-white sm:text-4xl md:text-6xl">
+          <h2 className="mx-auto max-w-4xl text-center font-serif text-3xl text-balance text-white sm:text-4xl md:text-6xl">
             Choose Your
             <span className="text-[var(--color-primary)]">
               {" "}Dream Destination

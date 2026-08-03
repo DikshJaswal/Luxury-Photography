@@ -27,7 +27,7 @@ function PackagesPreview() {
               delay: index * 0.15,
             }}
             viewport={{ once: true }}
-            className={`rounded-3xl border p-10 transition duration-500 hover:-translate-y-2 ${
+            className={`group relative rounded-3xl border p-10 transition duration-500 hover:-translate-y-2 ${
               pkg.featured
                 ? "border-[var(--color-primary)] bg-white/[0.03]"
                 : "border-white/10 bg-white/[0.02]"
@@ -64,15 +64,14 @@ function PackagesPreview() {
             </ul>
 
             <Link
-              to="/book"
-              className="group inline-flex items-center gap-2 font-medium text-[var(--color-primary)]"
+              to="/packages#signature-experiences"
+              className="absolute inset-0 z-10 flex items-center justify-center rounded-3xl bg-black/45 opacity-0 backdrop-blur-[3px] transition duration-300 group-hover:opacity-100 group-focus-within:opacity-100"
+              aria-label={`View ${pkg.title} package details`}
             >
-              Request Quote
-
-              <ArrowRight
-                size={18}
-                className="transition group-hover:translate-x-1"
-              />
+              <span className="inline-flex items-center gap-2 rounded-full bg-[var(--color-primary)] px-6 py-3 font-medium text-black shadow-xl transition duration-300 group-hover:scale-100 group-focus-within:scale-100">
+                View Package
+                <ArrowRight size={18} />
+              </span>
             </Link>
           </motion.div>
         ))}

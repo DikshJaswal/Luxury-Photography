@@ -5,12 +5,13 @@ import { ArrowRight } from "lucide-react";
 import Section from "../common/Section";
 
 import blogPosts from "../../data/blogData";
+import { getOptimizedImageUrl } from "../../utils/helpers";
 
 function BlogPreview() {
   return (
     <Section>
       <div className="mx-auto mb-16 max-w-3xl text-center">
-        <h2 className="font-serif text-4xl text-white md:text-5xl lg:text-6xl">
+        <h2 className="mx-auto max-w-4xl text-center font-serif text-4xl text-balance text-white md:text-5xl lg:text-6xl">
           Our <span className="text-[var(--color-primary)]">Journal</span>
         </h2>
       </div>
@@ -30,8 +31,10 @@ function BlogPreview() {
           >
             <div className="overflow-hidden">
               <img
-                src={post.image}
+                src={getOptimizedImageUrl(post.image)}
                 alt={post.title}
+                loading="lazy"
+                decoding="async"
                 className="h-72 w-full object-cover transition duration-700 group-hover:scale-110"
               />
             </div>

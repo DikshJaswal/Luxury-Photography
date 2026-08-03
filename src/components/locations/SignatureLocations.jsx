@@ -15,14 +15,14 @@ function SignatureLocations() {
             Signature Destinations
           </span>
 
-          <h2 className="mt-6 font-serif text-4xl leading-tight text-white md:text-6xl">
+          <h2 className="mx-auto max-w-4xl text-center font-serif text-4xl leading-tight text-balance text-white md:text-6xl">
             Discover Our{" "}
             <span className="text-[var(--color-primary)]">
               Signature Locations
             </span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-neutral-400">
+          <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-lg leading-8 text-neutral-400">
             Explore the breathtaking destinations where we've captured timeless
             pre-wedding stories.
           </p>

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 import { getOptimizedImageUrl } from "../../utils/helpers";
 
-function GalleryCard({ image, index, onClick, onImageLoad }) {
+function GalleryCard({ image, index, onClick, onImageLoad, imageClassName = "" }) {
   return (
     <motion.article
       initial={{ opacity: 0, y: 40 }}
@@ -26,7 +26,7 @@ function GalleryCard({ image, index, onClick, onImageLoad }) {
           src={getOptimizedImageUrl(image.image)}
           alt={image.title || `Portfolio photo ${index + 1}`}
           loading="lazy"
-          className="h-auto w-full object-contain transition duration-700 group-hover:scale-110"
+          className={`h-auto w-full object-contain transition duration-700 group-hover:scale-110 ${imageClassName}`}
           onLoad={(event) => {
             const { naturalWidth, naturalHeight } = event.currentTarget;
             onImageLoad(naturalWidth / naturalHeight);

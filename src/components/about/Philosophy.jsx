@@ -39,20 +39,20 @@ function Philosophy() {
 
         {/* Heading */}
 
-        <div className="mx-auto mb-16 max-w-3xl text-center">
+        <div className="mx-auto mb-16 flex w-full max-w-5xl flex-col items-center text-center">
 
           <span className="inline-block rounded-full border border-[var(--color-primary)]/30 bg-[var(--color-primary)]/10 px-5 py-2 text-xs uppercase tracking-[0.35em] text-[var(--color-primary)]">
             Our Philosophy
           </span>
 
-          <h2 className="mt-6 font-serif text-4xl text-white md:text-6xl">
+          <h2 className="mx-auto mt-6 w-full max-w-4xl text-center font-serif text-4xl text-balance text-white md:text-6xl">
             More Than
             <span className="text-[var(--color-primary)]">
               {" "}Photography
             </span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-neutral-400">
+          <p className="mx-auto mt-8 w-full max-w-2xl text-center text-balance text-lg leading-8 text-neutral-400">
             Every photograph reflects our belief that pre-wedding stories
             deserve honest emotion, exceptional craftsmanship, and an
             unforgettable experience from beginning to end.
@@ -70,7 +70,7 @@ function Philosophy() {
             return (
               <div
                 key={item.title}
-                className="group rounded-[28px] border border-white/10 bg-white/5 p-8 transition duration-500 hover:-translate-y-2 hover:border-[var(--color-primary)]/40 hover:bg-white/10"
+                className="group min-w-0 rounded-[28px] border border-white/10 bg-white/5 p-8 transition duration-500 hover:-translate-y-2 hover:border-[var(--color-primary)]/40 hover:bg-white/10"
               >
                 <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[var(--color-primary)] text-black transition duration-300 group-hover:scale-110">
                   <Icon size={30} />

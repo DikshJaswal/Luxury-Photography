@@ -59,14 +59,14 @@ function FAQCategories() {
             Explore Topics
           </span>
 
-          <h2 className="mt-6 font-serif text-4xl font-light text-white md:text-5xl lg:text-6xl">
+          <h2 className="mx-auto mt-6 max-w-4xl text-center font-serif text-4xl font-light text-balance text-white md:text-5xl lg:text-6xl">
             Browse By
             <span className="text-[var(--color-primary)]">
               {" "}Category
             </span>
           </h2>
 
-          <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-neutral-400">
+          <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-lg leading-8 text-neutral-400">
             Find answers faster by browsing the most common pre-wedding
             photography topics.
           </p>

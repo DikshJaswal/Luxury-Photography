@@ -5,6 +5,7 @@ import Section from "../common/Section";
 import SectionHeading from "../common/SectionHeading";
 import videos from "../../data/youtubeVideos";
 import { COMPANY } from "../../utils/constants";
+import { getOptimizedVideoUrl } from "../../utils/helpers";
 
 function YouTubeVideos() {
   return (
@@ -37,7 +38,7 @@ function YouTubeVideos() {
             >
               <video
                 title={video.title}
-                src={video.embedUrl}
+                src={getOptimizedVideoUrl(video.embedUrl)}
                 poster={video.poster}
                 muted
                 loop

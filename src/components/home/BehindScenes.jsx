@@ -20,6 +20,8 @@ function BehindScenes() {
           <img
             src={featured.image}
             alt={featured.title}
+            loading="lazy"
+            decoding="async"
             className="h-[320px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[480px] lg:h-[650px]"
           />
 
@@ -42,6 +44,8 @@ function BehindScenes() {
               <img
                 src={item.image}
                 alt=""
+                loading="lazy"
+                decoding="async"
                 className="h-[220px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[260px] lg:h-[310px]"
               />
             </motion.div>

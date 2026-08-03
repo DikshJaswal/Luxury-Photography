@@ -14,14 +14,14 @@ function PortfolioCTA() {
           Ready To Begin?
         </span>
 
-        <h2 className="mt-8 font-serif text-5xl leading-tight text-white md:text-6xl">
+        <h2 className="mx-auto mt-8 max-w-4xl text-center font-serif text-5xl leading-tight text-balance text-white md:text-6xl">
           Let's Turn Your Story Into
           <span className="block text-[var(--color-primary)]">
             Timeless Memories
           </span>
         </h2>
 
-        <p className="mx-auto mt-8 max-w-2xl text-lg leading-8 text-neutral-400">
+        <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-lg leading-8 text-neutral-400">
           Whether it's a mountain escape, luxury destination shoot, or a
           cinematic pre-wedding film, we'd love to capture your journey.
         </p>

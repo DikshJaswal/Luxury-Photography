@@ -32,14 +32,14 @@ function AboutCTA() {
           Let's Create Together
         </span>
 
-        <h2 className="mt-8 font-serif text-4xl leading-tight text-white md:text-6xl">
+        <h2 className="mx-auto max-w-4xl text-center font-serif text-4xl leading-tight text-balance text-white md:text-6xl">
           Your Story Deserves
           <span className="text-[var(--color-primary)]">
             {" "}To Be Remembered Forever
           </span>
         </h2>
 
-        <p className="mx-auto mt-8 max-w-3xl text-lg leading-8 text-neutral-300">
+        <p className="mx-auto max-w-3xl text-center text-balance text-lg leading-8 text-neutral-300">
           Every couple is unique, and we&apos;d be honored to shape your story
           with timeless photography, cinematic films, thoughtful planning, and
           locations that feel made for you.
