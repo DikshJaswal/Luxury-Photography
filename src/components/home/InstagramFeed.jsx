@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion } from "framer-motion";
 import { FaInstagram } from "react-icons/fa";
@@ -9,6 +9,7 @@ import SectionHeading from "../common/SectionHeading";
 import instagramPosts from "../../data/instagramData";
 import { COMPANY } from "../../utils/constants";
 import { getOptimizedImageUrl } from "../../utils/helpers";
+import useHorizontalWheel from "../../hooks/useHorizontalWheel";
 
 function InstagramFeed() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
@@ -16,6 +17,9 @@ function InstagramFeed() {
     align: "start",
   });
   const [isHovered, setIsHovered] = useState(false);
+  const viewportRef = useRef(null);
+
+  useHorizontalWheel(viewportRef, emblaApi);
 
   useEffect(() => {
     if (!emblaApi || isHovered) return undefined;
@@ -33,7 +37,7 @@ function InstagramFeed() {
       />
 
       <div
-        ref={emblaRef}
+        ref={(node) => { viewportRef.current = node; emblaRef(node); }}
         className="overflow-hidden sm:overflow-visible"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}

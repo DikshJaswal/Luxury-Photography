@@ -35,30 +35,27 @@ function Navbar() {
           {/* Logo */}
           <NavLink
             to="/"
-            className="-ml-2 flex items-center gap-2.5 justify-self-start sm:gap-3 md:-ml-4"
+            className="-ml-2 flex max-w-[320px] items-center gap-2.5 justify-self-start sm:gap-3 md:-ml-3 md:max-w-[235px] md:gap-2 xl:-ml-4 xl:max-w-[320px] xl:gap-3"
           >
             <img
               src={COMPANY.logo}
               alt={COMPANY.name}
-              className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16"
+              className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16 md:h-12 md:w-12 xl:h-16 xl:w-16"
             />
-            <span className="-translate-y-0.5 font-[Comic_Sans_MS] leading-none text-[var(--color-primary)] [text-shadow:0_1px_8px_rgba(0,0,0,0.35)]">
-              <span className="block whitespace-nowrap text-[15px] font-semibold italic tracking-[0.1em] sm:text-[18px]">
-                Rishikesh Prewed
-              </span>
-              <span className="mt-1 block text-[22px] font-bold uppercase tracking-[0.24em] sm:text-[26px] sm:tracking-[0.26em]">
-                Studio
-              </span>
-            </span>
+            <img
+              src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785853739/studio_k2e7zp.png"
+              alt="Rishikesh Prewed Studio"
+              className="h-auto w-[270px] object-contain md:w-[210px] xl:w-[270px]"
+            />
           </NavLink>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-10 md:flex md:justify-self-center">
+          <nav className="hidden items-center gap-3 md:flex md:justify-self-center xl:gap-10">
             {navigation.map((item) => (
               <NavLink key={item.path} to={item.path}>
                 {({ isActive }) => (
                   <span
-                    className={`relative pb-2 text-[13px] font-medium uppercase tracking-[0.18em] transition-colors duration-300 ${
+                    className={`relative pb-2 text-[10px] font-medium uppercase tracking-[0.08em] transition-colors duration-300 xl:text-[13px] xl:tracking-[0.18em] ${
                       isActive
                         ? "text-[var(--color-primary)]"
                         : "text-white hover:text-[var(--color-primary)]"
@@ -84,7 +81,9 @@ function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button className="px-7 py-3">Book on WhatsApp</Button>
+              <Button className="whitespace-nowrap px-2 py-1.5 text-[9px] md:text-[9px] xl:px-7 xl:py-3 xl:text-base">
+                Book on WhatsApp
+              </Button>
             </a>
           </div>
 

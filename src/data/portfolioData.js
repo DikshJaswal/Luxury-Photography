@@ -10,19 +10,9 @@ const portfolioData = [
     "height": "h-[540px]"
   },
   {
-    "id": 3,
-    "image": "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785564100/WhatsApp_Image_2026-08-01_at_10.58.39_AM_ut3v8d.jpg",
-    "height": "h-[480px]"
-  },
-  {
     "id": 4,
     "image": "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785564100/WhatsApp_Image_2026-08-01_at_10.58.38_AM_zwiii5.jpg",
     "height": "h-[620px]"
-  },
-  {
-    "id": 5,
-    "image": "https://res.cloudinary.com/drlcnp9vf/image/upload/v1785564099/WhatsApp_Image_2026-08-01_at_10.58.38_AM_1_sigbfl.jpg",
-    "height": "h-[420px]"
   },
   {
     "id": 6,

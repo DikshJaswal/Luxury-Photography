@@ -18,6 +18,14 @@ p{
 
 }
 
+.navbar-brand-name {
+    font-family: "Great Vibes", "Cinzel Decorative", serif;
+}
+
+.navbar-brand-subtitle {
+    font-family: "Cinzel", "Cormorant Garamond", serif;
+}
+
 .section-title{
 
     font-size:clamp(2.5rem,6vw,5rem);

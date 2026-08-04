@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
@@ -6,6 +6,7 @@ import Section from "../common/Section";
 import SectionHeading from "../common/SectionHeading";
 import Lightbox from "../portfolio/Lightbox";
 import { getOptimizedImageUrl } from "../../utils/helpers";
+import useHorizontalWheel from "../../hooks/useHorizontalWheel";
 
 import couples from "../../data/couplesData";
 
@@ -15,9 +16,12 @@ function PhotoRow({ images, onSelect, isPortrait }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
-    duration: 45,
+    duration: 25,
   });
   const [isHovered, setIsHovered] = useState(false);
+  const viewportRef = useRef(null);
+
+  useHorizontalWheel(viewportRef, emblaApi);
 
   useEffect(() => {
     if (!emblaApi || isHovered) return undefined;
@@ -59,7 +63,7 @@ function PhotoRow({ images, onSelect, isPortrait }) {
           <FaArrowRight size={21} />
         </button>
 
-        <div ref={emblaRef} className="overflow-hidden">
+        <div ref={(node) => { viewportRef.current = node; emblaRef(node); }} className="overflow-hidden">
           <div className="flex items-start gap-8">
             {images.map(({ image, index }) => (
               <button

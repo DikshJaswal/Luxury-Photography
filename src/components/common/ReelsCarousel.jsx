@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 
@@ -6,14 +6,18 @@ import Section from "./Section";
 import SectionHeading from "./SectionHeading";
 import reels from "../../data/reelsData";
 import { getOptimizedVideoUrl, getVideoPosterUrl } from "../../utils/helpers";
+import useHorizontalWheel from "../../hooks/useHorizontalWheel";
 
 function ReelRow({ items, onOpen, isPortrait }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
-    duration: 45,
+    duration: 25,
   });
   const [isHovered, setIsHovered] = useState(false);
+  const viewportRef = useRef(null);
+
+  useHorizontalWheel(viewportRef, emblaApi);
 
   useEffect(() => {
     if (!emblaApi || isHovered) return undefined;
@@ -53,7 +57,7 @@ function ReelRow({ items, onOpen, isPortrait }) {
           <ChevronRight size={26} />
         </button>
 
-        <div ref={emblaRef} className="overflow-hidden">
+        <div ref={(node) => { viewportRef.current = node; emblaRef(node); }} className="overflow-hidden">
           <div className={`flex gap-6 ${isPortrait && items.length <= 2 ? "justify-center" : ""}`}>
             {items.map((reel) => (
               <button
