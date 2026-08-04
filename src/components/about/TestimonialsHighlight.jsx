@@ -18,12 +18,12 @@ function TestimonialsHighlight() {
           {[1, 2, 3, 4, 5].map((star) => <Star key={star} size={22} fill="currentColor" />)}
         </div>
         <a
-          href={COMPANY.maps}
+          href={COMPANY.googleReviews}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 inline-flex items-center gap-3 rounded-full border border-[var(--color-primary)] px-7 py-4 text-[var(--color-primary)] transition hover:bg-[var(--color-primary)] hover:text-black"
         >
-          Read Google Reviews <ExternalLink size={18} />
+          Review Us on Google <ExternalLink size={18} />
         </a>
       </div>
     </section>

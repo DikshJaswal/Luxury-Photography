@@ -9,7 +9,7 @@ function Testimonials() {
       <SectionHeading
         badge="Client Reviews"
         title="Real Stories From Real Couples"
-        description="Read verified client feedback on our Google Business profile, then contact us to plan your own pre-wedding story."
+        description="Leave a review on our Google Business profile, then contact us to plan your own pre-wedding story."
       />
 
       <div className="mx-auto max-w-3xl rounded-[32px] border border-white/10 bg-white/[0.04] p-10 text-center">
@@ -21,12 +21,12 @@ function Testimonials() {
           We prefer to show genuine feedback directly from our Google Business profile instead of using placeholder testimonials.
         </p>
         <a
-          href={COMPANY.maps}
+          href={COMPANY.googleReviews}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-8 inline-flex items-center gap-3 rounded-full bg-[var(--color-primary)] px-7 py-4 font-medium text-black transition hover:scale-105"
         >
-          View Google Reviews <ExternalLink size={18} />
+          Review Us on Google <ExternalLink size={18} />
         </a>
       </div>
     </Section>

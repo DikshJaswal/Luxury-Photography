@@ -17,6 +17,7 @@ export const COMPANY = {
 
   instagram: "https://www.instagram.com/rishikesh.prewed.studio",
   youtube: "https://youtube.com/@rishikesh.prewed.studio",
+  googleReviews: "https://maps.app.goo.gl/svhfiNEZsaBDgBo6A",
   maps: "https://maps.app.goo.gl/svhfiNEZsaBDgBo6A",
 };
 

@@ -9,7 +9,9 @@ import { getOptimizedImageUrl } from "../../utils/helpers";
 
 import couples from "../../data/couplesData";
 
-function PhotoRow({ images, label, onSelect }) {
+const featuredCouples = couples.filter((image) => image.id !== 10);
+
+function PhotoRow({ images, onSelect, isPortrait }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
@@ -26,16 +28,15 @@ function PhotoRow({ images, label, onSelect }) {
 
   if (images.length === 0) return null;
 
+  const cardWidth = isPortrait
+    ? "min-w-[88%] sm:min-w-[56%] lg:min-w-[32%]"
+    : "min-w-[88%] sm:min-w-[70%] lg:min-w-[48%]";
+  const imageClassName = isPortrait
+    ? "h-[300px] w-full object-cover sm:h-[400px] lg:h-[460px]"
+    : "h-auto w-full object-contain";
+
   return (
     <div>
-      <div className="mb-6 flex items-center gap-4">
-        <span className="h-px w-10 bg-[var(--color-primary)]" />
-        <h3 className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--color-primary)] sm:text-base">
-          {label}
-        </h3>
-        <span className="h-px flex-1 bg-white/10" />
-      </div>
-
       <div
         className="relative"
         onMouseEnter={() => setIsHovered(true)}
@@ -45,7 +46,7 @@ function PhotoRow({ images, label, onSelect }) {
           type="button"
           onClick={() => emblaApi?.scrollPrev()}
           className="absolute left-3 top-1/2 z-10 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/80 text-white shadow-xl backdrop-blur-md transition hover:scale-105 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] lg:flex"
-          aria-label={`Previous ${label.toLowerCase()} photo`}
+          aria-label="Previous photo"
         >
           <FaArrowLeft size={21} />
         </button>
@@ -53,26 +54,26 @@ function PhotoRow({ images, label, onSelect }) {
           type="button"
           onClick={() => emblaApi?.scrollNext()}
           className="absolute right-3 top-1/2 z-10 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/80 text-white shadow-xl backdrop-blur-md transition hover:scale-105 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] lg:flex"
-          aria-label={`Next ${label.toLowerCase()} photo`}
+          aria-label="Next photo"
         >
           <FaArrowRight size={21} />
         </button>
 
         <div ref={emblaRef} className="overflow-hidden">
-          <div className="flex gap-8">
+          <div className="flex items-start gap-8">
             {images.map(({ image, index }) => (
               <button
                 key={image.id}
                 type="button"
                 onClick={() => onSelect(index)}
-                className="group min-w-[88%] overflow-hidden rounded-3xl border border-white/10 bg-[#111] sm:min-w-[56%] lg:min-w-[32%]"
+                className={`group ${cardWidth} overflow-hidden rounded-3xl border border-white/10 bg-[#111]`}
                 aria-label={`Open photo ${index + 1}`}
               >
                 <img
                   src={getOptimizedImageUrl(image.image)}
                   alt={image.title}
                   loading="lazy"
-                  className="h-[300px] w-full object-contain transition duration-700 group-hover:scale-105 sm:h-[400px] lg:h-[460px]"
+                  className={`${imageClassName} transition duration-700 group-hover:scale-105`}
                 />
               </button>
             ))}
@@ -90,7 +91,7 @@ function FeaturedCouples() {
   useEffect(() => {
     let cancelled = false;
 
-    couples.forEach((image) => {
+    featuredCouples.forEach((image) => {
       const probe = new Image();
       probe.onload = () => {
         if (cancelled) return;
@@ -107,10 +108,10 @@ function FeaturedCouples() {
     };
   }, []);
 
-  const landscapeImages = couples
+  const landscapeImages = featuredCouples
     .map((image, index) => ({ image, index }))
     .filter(({ image }) => orientations[image.id] === "landscape");
-  const portraitImages = couples
+  const portraitImages = featuredCouples
     .map((image, index) => ({ image, index }))
     .filter(({ image }) => orientations[image.id] === "portrait");
 
@@ -120,7 +121,7 @@ function FeaturedCouples() {
         <SectionHeading
           badge="Featured Stories"
           title="Every Couple Has A Unique Story"
-          description="Explore our original pre-wedding stories, arranged by their natural landscape and portrait formats."
+          description="Explore our original pre-wedding stories and the moments that make each one unique."
         />
       </Section>
 
@@ -128,19 +129,19 @@ function FeaturedCouples() {
         <div className="mx-auto max-w-7xl space-y-14 px-6">
           <PhotoRow
             images={landscapeImages}
-            label="Landscape Frames"
             onSelect={setSelectedIndex}
+            isPortrait={false}
           />
           <PhotoRow
             images={portraitImages}
-            label="Portrait Frames"
             onSelect={setSelectedIndex}
+            isPortrait
           />
         </div>
       </section>
 
       <Lightbox
-        images={couples}
+        images={featuredCouples}
         selectedIndex={selectedIndex}
         onSelect={setSelectedIndex}
         onClose={() => setSelectedIndex(null)}

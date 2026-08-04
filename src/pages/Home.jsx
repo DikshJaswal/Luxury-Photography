@@ -21,7 +21,7 @@ function Home() {
       <AvailabilityForm />
       <Testimonials />
       <ReviewVideos />
-      <ReelsCarousel />
+      <ReelsCarousel excludedReelIds={[10]} />
       <YouTubeVideos />
       <InstagramFeed />
       <BlogPreview />

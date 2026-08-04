@@ -8,6 +8,13 @@ import {
 function Achievements() {
   const stats = [
     {
+      icon: Award,
+      number: "14+",
+      label: "Years of Studio",
+      description:
+        "A long-standing creative journey focused on cinematic pre-wedding photography and film.",
+    },
+    {
       icon: Camera,
       number: "3",
       label: "Packages",
@@ -80,7 +87,7 @@ function Achievements() {
 
         {/* Statistics */}
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-5">
 
           {stats.map((item) => {
             const Icon = item.icon;

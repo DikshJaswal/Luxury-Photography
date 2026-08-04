@@ -7,13 +7,14 @@ export function getOptimizedImageUrl(url) {
   );
 }
 
-export function getVideoPosterUrl(url) {
+export function getVideoPosterUrl(url, startOffset) {
   if (!url || !url.includes("/video/upload/")) return undefined;
 
   const [source, query] = url.split("?");
+  const startOffsetTransformation = startOffset ? `so_${startOffset},` : "";
   const poster = source.replace(
     "/video/upload/",
-    "/video/upload/w_640,q_auto,f_jpg/"
+    `/video/upload/${startOffsetTransformation}w_640,q_auto,f_jpg/`
   );
 
   return query ? `${poster}?${query}` : poster;

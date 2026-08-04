@@ -1,30 +1,19 @@
 import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Play, X } from "lucide-react";
 
 import Section from "./Section";
 import SectionHeading from "./SectionHeading";
 import reels from "../../data/reelsData";
 import { getOptimizedVideoUrl, getVideoPosterUrl } from "../../utils/helpers";
 
-function ReelRow({ items, label, onOpen, isPortrait }) {
+function ReelRow({ items, onOpen, isPortrait }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "start",
     duration: 45,
   });
-  const [activeIndex, setActiveIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
-
-  useEffect(() => {
-    if (!emblaApi) return undefined;
-
-    const updateActiveIndex = () => setActiveIndex(emblaApi.selectedScrollSnap());
-    updateActiveIndex();
-    emblaApi.on("select", updateActiveIndex);
-
-    return () => emblaApi.off("select", updateActiveIndex);
-  }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi || isHovered) return undefined;
@@ -42,14 +31,6 @@ function ReelRow({ items, label, onOpen, isPortrait }) {
 
   return (
     <div className="mx-auto max-w-6xl">
-      <div className="mb-6 flex items-center gap-4">
-        <span className="h-px w-10 bg-[var(--color-primary)]" />
-        <h3 className="text-sm font-medium uppercase tracking-[0.3em] text-[var(--color-primary)] sm:text-base">
-          {label}
-        </h3>
-        <span className="h-px flex-1 bg-white/10" />
-      </div>
-
       <div
         className="relative"
         onMouseEnter={() => setIsHovered(true)}
@@ -59,7 +40,7 @@ function ReelRow({ items, label, onOpen, isPortrait }) {
           type="button"
           onClick={() => emblaApi?.scrollPrev()}
           className="absolute left-3 top-1/2 z-10 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/80 text-white shadow-xl backdrop-blur-md transition hover:scale-105 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] lg:flex"
-          aria-label={`Previous ${label.toLowerCase()}`}
+          aria-label="Previous reel"
         >
           <ChevronLeft size={26} />
         </button>
@@ -67,14 +48,14 @@ function ReelRow({ items, label, onOpen, isPortrait }) {
           type="button"
           onClick={() => emblaApi?.scrollNext()}
           className="absolute right-3 top-1/2 z-10 hidden h-14 w-14 -translate-y-1/2 items-center justify-center rounded-full border border-white/30 bg-black/80 text-white shadow-xl backdrop-blur-md transition hover:scale-105 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] lg:flex"
-          aria-label={`Next ${label.toLowerCase()}`}
+          aria-label="Next reel"
         >
           <ChevronRight size={26} />
         </button>
 
         <div ref={emblaRef} className="overflow-hidden">
           <div className={`flex gap-6 ${isPortrait && items.length <= 2 ? "justify-center" : ""}`}>
-            {items.map((reel, index) => (
+            {items.map((reel) => (
               <button
                 key={reel.id}
                 type="button"
@@ -82,16 +63,19 @@ function ReelRow({ items, label, onOpen, isPortrait }) {
                 className={`group ${cardWidth} overflow-hidden rounded-3xl border border-white/10 bg-black text-left`}
                 aria-label={`Open ${reel.title}`}
               >
-                <video
-                  src={getOptimizedVideoUrl(reel.video)}
-                  poster={getVideoPosterUrl(reel.video)}
-                  muted
-                  loop
-                  autoPlay={index === activeIndex}
-                  playsInline
-                  preload={index === activeIndex ? "metadata" : "none"}
-                  className={`${videoRatio} w-full object-contain transition duration-700 group-hover:scale-105`}
-                />
+                <div className={`relative overflow-hidden bg-black ${videoRatio}`}>
+                  <img
+                    src={getVideoPosterUrl(reel.video, reel.posterOffset)}
+                    alt={`${reel.title} thumbnail`}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                  />
+                  <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition group-hover:bg-black/35">
+                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-black shadow-xl transition group-hover:scale-110">
+                      <Play size={22} fill="currentColor" />
+                    </span>
+                  </span>
+                </div>
                 <span className="block border-t border-white/10 p-4 font-serif text-xl text-white">
                   {reel.title}
                 </span>
@@ -104,7 +88,7 @@ function ReelRow({ items, label, onOpen, isPortrait }) {
   );
 }
 
-function ReelsCarousel({ className = "" }) {
+function ReelsCarousel({ className = "", excludedReelIds = [] }) {
   const [selectedReel, setSelectedReel] = useState(null);
   const [orientations, setOrientations] = useState({});
 
@@ -145,8 +129,9 @@ function ReelsCarousel({ className = "" }) {
     };
   }, [selectedReel]);
 
-  const portraitReels = reels.filter((reel) => orientations[reel.id] === "portrait");
-  const landscapeReels = reels.filter((reel) => orientations[reel.id] === "landscape");
+  const visibleReels = reels.filter((reel) => !excludedReelIds.includes(reel.id));
+  const portraitReels = visibleReels.filter((reel) => orientations[reel.id] === "portrait");
+  const landscapeReels = visibleReels.filter((reel) => orientations[reel.id] === "landscape");
 
   return (
     <>
@@ -160,13 +145,11 @@ function ReelsCarousel({ className = "" }) {
         <div className="space-y-14">
           <ReelRow
             items={portraitReels}
-            label="Portrait Reels"
             onOpen={setSelectedReel}
             isPortrait
           />
           <ReelRow
             items={landscapeReels}
-            label="Landscape Films"
             onOpen={setSelectedReel}
             isPortrait={false}
           />
@@ -191,7 +174,7 @@ function ReelsCarousel({ className = "" }) {
           </button>
           <video
             src={getOptimizedVideoUrl(selectedReel.video)}
-            poster={getVideoPosterUrl(selectedReel.video)}
+            poster={getVideoPosterUrl(selectedReel.video, selectedReel.posterOffset)}
             controls
             autoPlay
             playsInline

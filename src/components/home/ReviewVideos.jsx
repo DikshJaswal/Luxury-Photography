@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ExternalLink } from "lucide-react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
@@ -14,6 +14,7 @@ function ReviewVideos() {
     align: "start",
   });
   const [activeIndex, setActiveIndex] = useState(0);
+  const videoRefs = useRef(new Map());
 
   useEffect(() => {
     if (!emblaApi) return undefined;
@@ -26,14 +27,18 @@ function ReviewVideos() {
   }, [emblaApi]);
 
   useEffect(() => {
-    if (!emblaApi) return undefined;
+    const videos = videoRefs.current;
 
-    const interval = window.setInterval(() => {
-      emblaApi.scrollNext();
-    }, 5000);
+    return () => {
+      videos.forEach((video) => video.pause());
+    };
+  }, []);
 
-    return () => window.clearInterval(interval);
-  }, [emblaApi]);
+  const handleVideoPlay = (playingReviewId) => {
+    videoRefs.current.forEach((video, reviewId) => {
+      if (reviewId !== playingReviewId) video.pause();
+    });
+  };
 
   if (reviewVideos.length === 0) return null;
 
@@ -72,14 +77,19 @@ function ReviewVideos() {
                 className="min-w-[86%] overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] sm:min-w-[52%] lg:min-w-[32%]"
               >
                 <video
+                  ref={(video) => {
+                    if (video) {
+                      videoRefs.current.set(review.id, video);
+                    } else {
+                      videoRefs.current.delete(review.id);
+                    }
+                  }}
                   src={getOptimizedVideoUrl(review.video)}
-                  poster={getVideoPosterUrl(review.video)}
+                  poster={getVideoPosterUrl(review.video, review.posterOffset)}
                   controls
-                  autoPlay={index === activeIndex}
-                  muted
-                  loop
                   playsInline
                   preload={index === activeIndex ? "metadata" : "none"}
+                  onPlay={() => handleVideoPlay(review.id)}
                   className="aspect-video w-full bg-black object-contain"
                 />
                 <div className="p-6">

@@ -22,7 +22,7 @@ function VideoHero({
         loop
         playsInline
         poster={heroPoster}
-        className="absolute inset-0 h-full w-full bg-black object-contain brightness-100 contrast-105 saturate-90 md:object-cover"
+        className="absolute inset-0 h-full w-full scale-[1.08] bg-black object-cover object-center brightness-100 contrast-105 saturate-90 md:scale-105"
       >
         <source
           src={heroVideo}

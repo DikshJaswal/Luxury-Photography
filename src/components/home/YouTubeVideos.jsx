@@ -5,7 +5,7 @@ import Section from "../common/Section";
 import SectionHeading from "../common/SectionHeading";
 import videos from "../../data/youtubeVideos";
 import { COMPANY } from "../../utils/constants";
-import { getOptimizedVideoUrl } from "../../utils/helpers";
+import { getVideoPosterUrl } from "../../utils/helpers";
 
 function YouTubeVideos() {
   return (
@@ -36,14 +36,10 @@ function YouTubeVideos() {
               aria-label={`Watch ${video.title} on YouTube`}
               className="group relative block h-[min(70svh,720px)] bg-black"
             >
-              <video
-                title={video.title}
-                src={getOptimizedVideoUrl(video.embedUrl)}
-                poster={video.poster}
-                muted
-                loop
-                autoPlay
-                playsInline
+              <img
+                src={getVideoPosterUrl(video.embedUrl, video.posterOffset)}
+                alt={`${video.title} video thumbnail`}
+                loading="lazy"
                 className="h-full w-full object-contain"
               />
               <span className="pointer-events-none absolute inset-0 flex items-center justify-center">

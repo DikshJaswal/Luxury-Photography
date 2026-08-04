@@ -16,7 +16,7 @@ function Hero() {
         loop
         playsInline
         poster={poster}
-        className="absolute inset-0 h-full w-full scale-100 bg-black object-contain brightness-100 contrast-105 saturate-90 transition-transform duration-[20000ms] md:scale-105 md:object-cover"
+        className="absolute inset-0 h-full w-full scale-[1.08] bg-black object-cover object-center brightness-100 contrast-105 saturate-90 transition-transform duration-[20000ms] md:scale-105"
       >
         <source
           src={video}

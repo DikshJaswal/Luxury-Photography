@@ -1,3 +1,5 @@
+const posterOffsets = [3, 6, 3, 3, 4, 3, 5, 3, 3, 3, 3, 9];
+
 const reels = [
   ["4K Cinematic Reel", "https://res.cloudinary.com/drlcnp9vf/video/upload/v1785739451/4k_1_lelas6.mp4"],
   ["Save The Date", "https://res.cloudinary.com/drlcnp9vf/video/upload/v1785739409/Save_the_date_ojbksh.mp4"],
@@ -15,6 +17,7 @@ const reels = [
   id: index + 1,
   title,
   video,
+  posterOffset: posterOffsets[index],
 }));
 
 export default reels;

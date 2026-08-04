@@ -35,13 +35,21 @@ function Navbar() {
           {/* Logo */}
           <NavLink
             to="/"
-            className="flex h-14 w-[150px] items-center justify-self-start sm:w-[180px]"
+            className="-ml-2 flex items-center gap-2.5 justify-self-start sm:gap-3 lg:-ml-4"
           >
             <img
               src={COMPANY.logo}
               alt={COMPANY.name}
-              className="h-full w-full object-contain object-left"
+              className="h-14 w-14 shrink-0 object-contain sm:h-16 sm:w-16"
             />
+            <span className="-translate-y-0.5 font-[Comic_Sans_MS] leading-none text-[var(--color-primary)] [text-shadow:0_1px_8px_rgba(0,0,0,0.35)]">
+              <span className="block whitespace-nowrap text-[15px] font-semibold italic tracking-[0.1em] sm:text-[18px]">
+                Rishikesh Prewed
+              </span>
+              <span className="mt-1 block text-[22px] font-bold uppercase tracking-[0.24em] sm:text-[26px] sm:tracking-[0.26em]">
+                Studio
+              </span>
+            </span>
           </NavLink>
 
           {/* Desktop Navigation */}
