@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import portfolioCategories from "../../data/portfolioCategories";
+import { getOptimizedImageUrl } from "../../utils/helpers";
 
 function RelatedCategories({ currentCategory }) {
   const related = portfolioCategories
@@ -35,8 +36,10 @@ function RelatedCategories({ currentCategory }) {
             >
               <div className="overflow-hidden">
                 <img
-                  src={category.cover}
+                  src={getOptimizedImageUrl(category.cover, { width: 900, height: 600, crop: "fill" })}
                   alt={category.name}
+                  loading="lazy"
+                  decoding="async"
                   className="h-72 w-full object-cover transition duration-700 group-hover:scale-110"
                 />
               </div>

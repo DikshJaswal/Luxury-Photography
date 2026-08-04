@@ -70,7 +70,7 @@ function PhotoRow({ images, onSelect, isPortrait }) {
                 aria-label={`Open photo ${index + 1}`}
               >
                 <img
-                  src={getOptimizedImageUrl(image.image)}
+                  src={getOptimizedImageUrl(image.image, { width: 1000 })}
                   alt={image.title}
                   loading="lazy"
                   className={`${imageClassName} transition duration-700 group-hover:scale-105`}
@@ -100,7 +100,7 @@ function FeaturedCouples() {
           [image.id]: probe.naturalWidth >= probe.naturalHeight ? "landscape" : "portrait",
         }));
       };
-      probe.src = getOptimizedImageUrl(image.image);
+      probe.src = getOptimizedImageUrl(image.image, { width: 1000 });
     });
 
     return () => {

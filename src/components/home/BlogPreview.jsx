@@ -31,7 +31,7 @@ function BlogPreview() {
           >
             <div className="overflow-hidden">
               <img
-                src={getOptimizedImageUrl(post.image)}
+                src={getOptimizedImageUrl(post.image, { width: 900 })}
                 alt={post.title}
                 loading="lazy"
                 decoding="async"

@@ -1,5 +1,6 @@
 import { ArrowRight, CalendarHeart } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getOptimizedImageUrl } from "../../utils/helpers";
 
 function AboutCTA() {
   return (
@@ -10,8 +11,10 @@ function AboutCTA() {
       <div className="absolute inset-0">
 
         <img
-          src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401805/about-01.jpg_d7dibu.jpg"
+          src={getOptimizedImageUrl("https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401805/about-01.jpg_d7dibu.jpg", { width: 1600 })}
           alt="Luxury pre-wedding couple"
+          loading="lazy"
+          decoding="async"
           className="h-full w-full object-cover brightness-90 contrast-110"
         />
 

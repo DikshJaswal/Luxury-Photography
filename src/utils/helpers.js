@@ -1,9 +1,13 @@
-export function getOptimizedImageUrl(url) {
+export function getOptimizedImageUrl(url, { width = 1600, height } = {}) {
   if (!url || !url.includes("/image/upload/")) return url;
+
+  const resize = height
+    ? `c_limit,w_${width},h_${height}`
+    : `c_limit,w_${width}`;
 
   return url.replace(
     "/image/upload/",
-    "/image/upload/f_auto,q_auto:best,dpr_auto/"
+    `/image/upload/${resize},f_auto,q_auto:best,dpr_auto/`
   );
 }
 

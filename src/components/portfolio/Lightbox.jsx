@@ -73,8 +73,9 @@ function Lightbox({ images, selectedIndex, onSelect, onClose }) {
           key={image.id}
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          src={getOptimizedImageUrl(image.image)}
+          src={getOptimizedImageUrl(image.image, { width: 2000 })}
           alt={image.title || `Portfolio photo ${selectedIndex + 1}`}
+          decoding="async"
           className="max-h-[70vh] max-w-[calc(100vw-7rem)] object-contain sm:max-h-[76vh] sm:max-w-[calc(100vw-12rem)]"
           onClick={(event) => event.stopPropagation()}
         />
@@ -110,8 +111,10 @@ function Lightbox({ images, selectedIndex, onSelect, onClose }) {
                 aria-label={`Open photo ${thumbnailIndex + 1}`}
               >
                 <img
-                  src={getOptimizedImageUrl(thumbnail.image)}
+                  src={getOptimizedImageUrl(thumbnail.image, { width: 240, height: 160, crop: "fill" })}
                   alt=""
+                  loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover"
                 />
               </button>

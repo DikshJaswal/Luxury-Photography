@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 import portfolioCategories from "../../data/portfolioCategories";
+import { getOptimizedImageUrl } from "../../utils/helpers";
 
 function PortfolioCategoryGrid() {
   return (
@@ -44,8 +45,10 @@ function PortfolioCategoryGrid() {
               >
                 <div className="relative overflow-hidden">
                   <img
-                    src={category.cover}
+                    src={getOptimizedImageUrl(category.cover, { width: 900, height: 600, crop: "fill" })}
                     alt={category.name}
+                    loading="lazy"
+                    decoding="async"
                     className="h-[280px] w-full object-cover transition duration-700 group-hover:scale-110 sm:h-[360px] lg:h-[420px]"
                   />
 

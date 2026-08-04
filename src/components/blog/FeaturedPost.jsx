@@ -1,5 +1,6 @@
 import { ArrowRight, Calendar, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getOptimizedImageUrl } from "../../utils/helpers";
 
 function FeaturedPost() {
   return (
@@ -28,8 +29,10 @@ function FeaturedPost() {
 
           <div className="relative h-[420px] overflow-hidden lg:h-[650px]">
             <img
-              src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401962/blog-01.jpg_t6i22c.jpg"
+              src={getOptimizedImageUrl("https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401962/blog-01.jpg_t6i22c.jpg", { width: 1200 })}
               alt="Luxury Destination Pre-Wedding Shoot"
+              loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
             />
 

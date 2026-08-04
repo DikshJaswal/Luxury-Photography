@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { getHeroMedia } from "../../utils/constants";
+import { getOptimizedImageUrl, getOptimizedVideoUrl } from "../../utils/helpers";
 
 function Hero() {
   const { video, poster } = getHeroMedia("home");
@@ -15,11 +16,12 @@ function Hero() {
         muted
         loop
         playsInline
-        poster={poster}
+        preload="metadata"
+        poster={getOptimizedImageUrl(poster, { width: 1600 })}
         className="absolute inset-0 h-full w-full scale-[1.08] bg-black object-cover object-center brightness-100 contrast-105 saturate-90 transition-transform duration-[20000ms] md:scale-105"
       >
         <source
-          src={video}
+          src={getOptimizedVideoUrl(video)}
           type="video/mp4"
         />
       </motion.video>

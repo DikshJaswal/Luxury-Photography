@@ -1,4 +1,5 @@
 import { Camera, Heart, Sparkles } from "lucide-react";
+import { getOptimizedImageUrl } from "../../utils/helpers";
 
 function StorySection() {
   return (
@@ -9,8 +10,10 @@ function StorySection() {
         <div className="relative">
 
           <img
-            src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401822/about-02.jpg_dddhol.jpg"
+            src={getOptimizedImageUrl("https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401822/about-02.jpg_dddhol.jpg", { width: 1200, height: 900 })}
             alt="Pre-wedding photographer"
+            loading="lazy"
+            decoding="async"
             className="h-[650px] w-full rounded-[32px] object-cover"
           />
 

@@ -4,6 +4,7 @@ import {
   Globe,
   Award,
 } from "lucide-react";
+import { getOptimizedImageUrl } from "../../utils/helpers";
 
 function Achievements() {
   const stats = [
@@ -52,8 +53,10 @@ function Achievements() {
       <div className="absolute inset-0">
 
         <img
-          src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401820/about-03.jpg_pmjgtv.jpg"
+          src={getOptimizedImageUrl("https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401820/about-03.jpg_pmjgtv.jpg", { width: 1600 })}
           alt="Luxury pre-wedding shoot"
+          loading="lazy"
+          decoding="async"
           className="h-full w-full object-cover brightness-90 contrast-110"
         />
 

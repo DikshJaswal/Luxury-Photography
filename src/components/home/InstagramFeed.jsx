@@ -65,7 +65,7 @@ function InstagramFeed() {
               />
             ) : (
               <img
-                src={getOptimizedImageUrl(post.image)}
+                  src={getOptimizedImageUrl(post.image, { width: 900 })}
                 alt="Instagram Post"
                 loading="lazy"
                 decoding="async"

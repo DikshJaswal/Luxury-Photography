@@ -3,6 +3,7 @@ import { Link, Navigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
 
 import blogPosts from "../data/blogData";
+import { getOptimizedImageUrl } from "../utils/helpers";
 
 function BlogDetails() {
   const { slug } = useParams();
@@ -29,7 +30,7 @@ function BlogDetails() {
   return (
     <main className="bg-[#0B0B0B] text-white">
       <section className="relative h-[65vh] min-h-[520px] overflow-hidden">
-        <img src={post.image} alt={post.title} className="h-full w-full bg-black object-contain" />
+        <img src={getOptimizedImageUrl(post.image, { width: 1600 })} alt={post.title} loading="eager" fetchPriority="high" decoding="async" className="h-full w-full bg-black object-contain" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-black/45 to-black/20" />
 
         <div className="absolute bottom-14 left-1/2 w-full max-w-7xl -translate-x-1/2 px-6 lg:px-10">

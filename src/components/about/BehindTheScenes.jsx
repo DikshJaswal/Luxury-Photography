@@ -1,4 +1,5 @@
 import { Camera, Image, Users } from "lucide-react";
+import { getOptimizedImageUrl } from "../../utils/helpers";
 
 function BehindTheScenes() {
   const highlights = [
@@ -57,8 +58,10 @@ function BehindTheScenes() {
 
           <div className="lg:col-span-2">
             <img
-              src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401820/about-03.jpg_pmjgtv.jpg"
+              src={getOptimizedImageUrl("https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401820/about-03.jpg_pmjgtv.jpg", { width: 1200, height: 900 })}
               alt="Photographer at work"
+              loading="lazy"
+              decoding="async"
               className="h-[550px] w-full rounded-[32px] object-cover transition duration-500 hover:scale-[1.02]"
             />
           </div>
@@ -68,14 +71,18 @@ function BehindTheScenes() {
           <div className="space-y-6">
 
             <img
-              src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401822/about-02.jpg_dddhol.jpg"
+              src={getOptimizedImageUrl("https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401822/about-02.jpg_dddhol.jpg", { width: 700, height: 500 })}
               alt="Pre-wedding details"
+              loading="lazy"
+              decoding="async"
               className="h-[262px] w-full rounded-[28px] object-cover transition duration-500 hover:scale-[1.02]"
             />
 
             <img
-              src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401805/about-01.jpg_d7dibu.jpg"
+              src={getOptimizedImageUrl("https://res.cloudinary.com/drlcnp9vf/image/upload/v1785401805/about-01.jpg_d7dibu.jpg", { width: 700, height: 500 })}
               alt="Bride and groom"
+              loading="lazy"
+              decoding="async"
               className="h-[262px] w-full rounded-[28px] object-cover transition duration-500 hover:scale-[1.02]"
             />
 

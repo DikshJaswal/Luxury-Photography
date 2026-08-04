@@ -17,7 +17,7 @@ function BlogGrid() {
               <Link to={`/blog/${blog.slug}`} className="block">
                 <div className="relative overflow-hidden bg-black">
                   <img
-                    src={getOptimizedImageUrl(blog.image)}
+                    src={getOptimizedImageUrl(blog.image, { width: 900 })}
                     alt={blog.title}
                     loading="lazy"
                     decoding="async"

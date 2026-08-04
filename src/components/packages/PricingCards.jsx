@@ -1,5 +1,6 @@
 import { Camera, Film, Plane, Check, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getOptimizedImageUrl } from "../../utils/helpers";
 
 const albumImages = {
   Basic:
@@ -153,7 +154,7 @@ function PricingCards() {
                       </span>
                       {feature.toLowerCase().includes("album") && (
                         <img
-                          src={albumImages[pkg.name]}
+                          src={getOptimizedImageUrl(albumImages[pkg.name], { width: 700, height: 500 })}
                           alt={`${pkg.name} album preview`}
                           loading="lazy"
                           decoding="async"

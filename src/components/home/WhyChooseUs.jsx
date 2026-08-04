@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Section from "../common/Section";
 import SectionHeading from "../common/SectionHeading";
 import Button from "../common/Button";
+import { getOptimizedImageUrl } from "../../utils/helpers";
 
 const features = [
   {
@@ -57,8 +58,10 @@ function WhyChooseUs() {
           viewport={{ once: true }}
         >
           <img
-            src="https://res.cloudinary.com/drlcnp9vf/image/upload/v1785755244/new_kjeqld.jpg"
+            src={getOptimizedImageUrl("https://res.cloudinary.com/drlcnp9vf/image/upload/v1785755244/new_kjeqld.jpg", { width: 1200, height: 1400 })}
             alt="Couple during a pre-wedding shoot"
+            loading="lazy"
+            decoding="async"
             className="h-[700px] w-full rounded-2xl object-cover"
           />
         </motion.div>

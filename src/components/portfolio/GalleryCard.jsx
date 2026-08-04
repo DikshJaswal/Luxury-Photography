@@ -23,9 +23,10 @@ function GalleryCard({ image, index, onClick, onImageLoad, imageClassName = "" }
       >
         <div className="relative overflow-hidden">
         <img
-          src={getOptimizedImageUrl(image.image)}
+          src={getOptimizedImageUrl(image.image, { width: 1000 })}
           alt={image.title || `Portfolio photo ${index + 1}`}
           loading="lazy"
+          decoding="async"
           className={`h-auto w-full object-contain transition duration-700 group-hover:scale-110 ${imageClassName}`}
           onLoad={(event) => {
             const { naturalWidth, naturalHeight } = event.currentTarget;
