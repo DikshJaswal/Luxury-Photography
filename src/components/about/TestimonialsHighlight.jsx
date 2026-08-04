@@ -1,4 +1,4 @@
-import { ExternalLink, Star } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { COMPANY } from "../../utils/constants";
 
 function TestimonialsHighlight() {
@@ -9,14 +9,11 @@ function TestimonialsHighlight() {
           Client Reviews
         </span>
         <h2 className="mx-auto mt-6 max-w-4xl text-center font-serif text-4xl text-balance text-white md:text-6xl">
-          Kind Words From <span className="text-[var(--color-primary)]">Our Couples</span>
+          <span className="text-[var(--color-primary)]">Review Us</span> on Google
         </h2>
         <p className="mx-auto mt-8 max-w-2xl text-center text-balance text-lg leading-8 text-neutral-400">
-          View genuine reviews and ratings on our official Google Business profile.
+          Had a great experience with us? We would love your feedback.
         </p>
-        <div className="mt-8 flex justify-center gap-1 text-[var(--color-primary)]">
-          {[1, 2, 3, 4, 5].map((star) => <Star key={star} size={22} fill="currentColor" />)}
-        </div>
         <a
           href={COMPANY.googleReviews}
           target="_blank"

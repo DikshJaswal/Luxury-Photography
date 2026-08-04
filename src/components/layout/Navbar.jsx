@@ -35,7 +35,7 @@ function Navbar() {
           {/* Logo */}
           <NavLink
             to="/"
-            className="-ml-2 flex items-center gap-2.5 justify-self-start sm:gap-3 lg:-ml-4"
+            className="-ml-2 flex items-center gap-2.5 justify-self-start sm:gap-3 md:-ml-4"
           >
             <img
               src={COMPANY.logo}
@@ -53,7 +53,7 @@ function Navbar() {
           </NavLink>
 
           {/* Desktop Navigation */}
-          <nav className="hidden items-center gap-10 lg:flex lg:justify-self-center">
+          <nav className="hidden items-center gap-10 md:flex md:justify-self-center">
             {navigation.map((item) => (
               <NavLink key={item.path} to={item.path}>
                 {({ isActive }) => (
@@ -78,7 +78,7 @@ function Navbar() {
           </nav>
 
           {/* CTA */}
-          <div className="hidden justify-self-end lg:block">
+          <div className="hidden justify-self-end md:block">
             <a
               href={`https://wa.me/${COMPANY.whatsapp}?text=${encodeURIComponent("Hi, I would like to book a pre-wedding consultation.")}`}
               target="_blank"
@@ -92,7 +92,7 @@ function Navbar() {
           <button
             type="button"
             onClick={() => setMenuOpen(!menuOpen)}
-            className="col-start-3 justify-self-end text-white lg:hidden"
+            className="col-start-3 justify-self-end text-white md:hidden"
             aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={menuOpen}
           >
@@ -107,7 +107,7 @@ function Navbar() {
 
       {/* Mobile Menu */}
       <div
-        className={`overflow-hidden bg-black/95 transition-all duration-500 lg:hidden ${
+        className={`overflow-hidden bg-black/95 transition-all duration-500 md:hidden ${
           menuOpen ? "max-h-[500px]" : "max-h-0"
         }`}
       >
