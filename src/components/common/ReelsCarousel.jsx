@@ -29,8 +29,8 @@ function ReelRow({ items, onOpen, isPortrait }) {
   if (items.length === 0) return null;
 
   const cardWidth = isPortrait
-    ? "min-w-[82%] sm:min-w-[45%] lg:min-w-[360px] lg:max-w-[360px]"
-    : "min-w-[88%] sm:min-w-[58%] lg:min-w-[48%]";
+    ? "shrink-0 basis-[82%] sm:basis-[45%] lg:basis-[360px] lg:max-w-[360px]"
+    : "shrink-0 basis-[88%] sm:basis-[58%] lg:basis-[48%]";
   const videoRatio = isPortrait ? "aspect-[9/16]" : "aspect-video";
 
   return (
@@ -58,32 +58,33 @@ function ReelRow({ items, onOpen, isPortrait }) {
         </button>
 
         <div ref={(node) => { viewportRef.current = node; emblaRef(node); }} className="overflow-hidden">
-          <div className={`flex gap-6 ${isPortrait && items.length <= 2 ? "justify-center" : ""}`}>
+          <div className={`flex gap-0 ${isPortrait && items.length <= 2 ? "justify-center" : ""}`}>
             {items.map((reel) => (
-              <button
-                key={reel.id}
-                type="button"
-                onClick={() => onOpen(reel)}
-                className={`group ${cardWidth} overflow-hidden rounded-3xl border border-white/10 bg-black text-left`}
-                aria-label={`Open ${reel.title}`}
-              >
-                <div className={`relative overflow-hidden bg-black ${videoRatio}`}>
-                  <img
-                    src={getVideoPosterUrl(reel.video, reel.posterOffset)}
-                    alt={`${reel.title} thumbnail`}
-                    loading="lazy"
-                    className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                  />
-                  <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition group-hover:bg-black/35">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-black shadow-xl transition group-hover:scale-110">
-                      <Play size={22} fill="currentColor" />
+              <div key={reel.id} className={`${cardWidth} shrink-0 px-4`}>
+                <button
+                  type="button"
+                  onClick={() => onOpen(reel)}
+                  className="group block w-full overflow-hidden rounded-3xl border border-white/10 bg-black text-left"
+                  aria-label={`Open ${reel.title}`}
+                >
+                  <div className={`relative overflow-hidden bg-black ${videoRatio}`}>
+                    <img
+                      src={getVideoPosterUrl(reel.video, reel.posterOffset)}
+                      alt={`${reel.title} thumbnail`}
+                      loading="lazy"
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
+                    <span className="absolute inset-0 flex items-center justify-center bg-black/20 transition group-hover:bg-black/35">
+                      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white/90 text-black shadow-xl transition group-hover:scale-110">
+                        <Play size={22} fill="currentColor" />
+                      </span>
                     </span>
+                  </div>
+                  <span className="block border-t border-white/10 p-4 font-serif text-xl text-white">
+                    {reel.title}
                   </span>
-                </div>
-                <span className="block border-t border-white/10 p-4 font-serif text-xl text-white">
-                  {reel.title}
-                </span>
-              </button>
+                </button>
+              </div>
             ))}
           </div>
         </div>

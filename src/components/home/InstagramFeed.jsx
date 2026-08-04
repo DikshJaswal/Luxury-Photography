@@ -42,7 +42,7 @@ function InstagramFeed() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        <div className="flex gap-4 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+        <div className="flex gap-0 sm:grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
           {instagramPosts.map((post, index) => (
             <motion.a
               key={post.id}
@@ -56,7 +56,7 @@ function InstagramFeed() {
                 delay: index * 0.08,
               }}
               viewport={{ once: true }}
-              className="group relative min-w-[78%] overflow-hidden rounded-2xl sm:min-w-0"
+              className="group relative mr-4 shrink-0 basis-[78%] overflow-hidden rounded-2xl last:mr-0 sm:mr-0 sm:basis-auto"
             >
             {post.video ? (
               <video

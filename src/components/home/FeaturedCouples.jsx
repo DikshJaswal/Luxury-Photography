@@ -33,8 +33,8 @@ function PhotoRow({ images, onSelect, isPortrait }) {
   if (images.length === 0) return null;
 
   const cardWidth = isPortrait
-    ? "min-w-[88%] sm:min-w-[56%] lg:min-w-[32%]"
-    : "min-w-[88%] sm:min-w-[70%] lg:min-w-[48%]";
+    ? "shrink-0 basis-[88%] sm:basis-[56%] lg:basis-[32%]"
+    : "shrink-0 basis-[88%] sm:basis-[70%] lg:basis-[48%]";
   const imageClassName = isPortrait
     ? "h-[300px] w-full object-cover sm:h-[400px] lg:h-[460px]"
     : "h-auto w-full object-contain";
@@ -64,22 +64,23 @@ function PhotoRow({ images, onSelect, isPortrait }) {
         </button>
 
         <div ref={(node) => { viewportRef.current = node; emblaRef(node); }} className="overflow-hidden">
-          <div className="flex items-start gap-8">
+          <div className="flex items-start gap-0">
             {images.map(({ image, index }) => (
-              <button
-                key={image.id}
-                type="button"
-                onClick={() => onSelect(index)}
-                className={`group ${cardWidth} overflow-hidden rounded-3xl border border-white/10 bg-[#111]`}
-                aria-label={`Open photo ${index + 1}`}
-              >
-                <img
-                  src={getOptimizedImageUrl(image.image, { width: 1000 })}
-                  alt={image.title}
-                  loading="lazy"
-                  className={`${imageClassName} transition duration-700 group-hover:scale-105`}
-                />
-              </button>
+              <div key={image.id} className={`${cardWidth} shrink-0 px-4`}>
+                <button
+                  type="button"
+                  onClick={() => onSelect(index)}
+                  className="group block w-full overflow-hidden rounded-3xl border border-white/10 bg-[#111]"
+                  aria-label={`Open photo ${index + 1}`}
+                >
+                  <img
+                    src={getOptimizedImageUrl(image.image, { width: 1000 })}
+                    alt={image.title}
+                    loading="lazy"
+                    className={`${imageClassName} transition duration-700 group-hover:scale-105`}
+                  />
+                </button>
+              </div>
             ))}
           </div>
         </div>

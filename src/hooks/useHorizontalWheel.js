@@ -5,29 +5,22 @@ function useHorizontalWheel(viewportRef, emblaApi) {
     const viewport = viewportRef.current;
     if (!viewport || !emblaApi) return undefined;
 
-    let locked = false;
-
     const handleWheel = (event) => {
       if (event.ctrlKey) return;
 
-      const delta = Math.abs(event.deltaX) > Math.abs(event.deltaY)
+      const isHorizontalGesture = Math.abs(event.deltaX) > Math.abs(event.deltaY);
+      const delta = isHorizontalGesture
         ? event.deltaX
-        : event.deltaY;
+        : event.shiftKey
+          ? event.deltaY
+          : 0;
 
       if (!delta) return;
 
       event.preventDefault();
-      if (locked) return;
-
-      locked = true;
-      if (delta > 0) {
-        emblaApi.scrollNext();
-      } else {
-        emblaApi.scrollPrev();
-      }
-      window.setTimeout(() => {
-        locked = false;
-      }, 180);
+      const engine = emblaApi.internalEngine();
+      engine.scrollBody.useDuration(0).useFriction(0.3);
+      engine.scrollTo.distance(-delta * 1.2, false);
     };
 
     viewport.addEventListener("wheel", handleWheel, { passive: false });
